@@ -29,12 +29,19 @@
     border-radius: 30px;
 }
 .toggle-btn{
+    color: darkslateblue;
     padding: 10px 30px;
+    width: 100px;
     cursor: pointer;
     background:  transparent;
     border: 0;
     outline: none;
     position: relative;
+
+}
+.toggle-btn:hover{
+    color:rgb(54, 30, 160);
+    font-weight: bold;
 }
 #btn{
     top: 0;
@@ -74,6 +81,12 @@
     border: 0;
     outline: none;
     border-radius: 30px;
+    color: darkslateblue;
+}
+.submit-btn:hover{
+    color:rgb(54, 30, 160);
+    font-weight: bold;
+    box-shadow: 0 0 20px 9px #01168f1f;
 }
 .check-box{
     margin: 30px 10px 30px 0;
