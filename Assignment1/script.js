@@ -51,7 +51,7 @@ window.addEventListener("DOMContentLoaded", function () {
   // get the form elements defined in your form HTML above
   var form = document.getElementById("register");
   var button = document.getElementById("register-btn");
-  var status = document.getElementById("form-status");
+  var status = document.getElementById("register-btn");
 
   // Success and Error functions for after the form is submitted
 

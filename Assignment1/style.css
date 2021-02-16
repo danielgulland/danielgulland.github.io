@@ -111,54 +111,26 @@ body {
   margin-top: 2rem;
   margin-left: auto;
   margin-right: auto;
-  background: linear-gradient(to right, rgb(202, 181, 250), rgb(140, 136, 230));
+  background: rgb(140, 136, 230);
   border: 0;
   outline: none;
   border-radius: 30px;
-  color: darkslateblue;
+  color: rgba(54, 30, 160, 0.8);
 }
 
 .submit-btn:hover {
-  color: rgb(54, 30, 160);
+  color: rgba(54, 30, 160, 1);
   font-weight: bold;
   box-shadow: 0 0 20px 9px #01168f1f;
 }
 
 #register-btn.submit {
-    background: #d3d3d3;;
+    background: #d3d3d3;
+    pointer-events: none;
+    box-shadow: 0 0 20px 9px #01168f1f;
+    font-weight: bold;
 }
 
 .status-container {
-    margin-top: 1.5rem;
+  margin-top: 1.5rem;
 }
-
-#form-status {
-    margin-top: 2rem;
-    width: 60%;
-    text-align: center;
-}
-
-#form-status.success {
-    animation: status 3.5s ease forwards;
-    background: linear-gradient(to right, rgb(202, 181, 250), rgb(140, 136, 230));
-    margin: 0 auto;
-    border-radius: 0.75rem;
-    padding: 0.25rem;
-}
-
-@keyframes status {
-    0% {
-      opacity: 1;
-      pointer-events: all;
-    }
-  
-    90% {
-      opacity: 1;
-      pointer-events: all;
-    }
-  
-    100% {
-      opacity: 0;
-      pointer-events: all;
-    }
-  }
