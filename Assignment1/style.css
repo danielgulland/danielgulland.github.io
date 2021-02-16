@@ -134,3 +134,24 @@ body {
     font-weight: bold;
     font-style: italic;
 }
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  margin: -40px 0 0 -40px;
+  border: 16px solid gray;
+  border-top: 16px darkblue;
+  border-bottom: 16px darkblue;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spinner 2s ease-in-out infinite;
+}
+
+@keyframes spinner{
+  0% {transform: rotate(0deg);}
+  75% {border-top-color: gray; border-bottom-color: gray;}
+  100% {transform: rotate(1800deg);}
+}
