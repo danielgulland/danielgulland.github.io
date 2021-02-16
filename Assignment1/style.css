@@ -154,10 +154,16 @@ body {
 
 @keyframes spinner{
   0% {transform: rotate(0deg);}
+<<<<<<< Updated upstream
   75% {}
   100% {transform: rotate(1800deg);}
 }
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
+>>>>>>> Stashed changes
+=======
+  75% {border-top-color: gray; border-bottom-color: gray;}
+  100% {transform: rotate(1800deg);}
+}
 >>>>>>> Stashed changes
