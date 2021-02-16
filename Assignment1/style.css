@@ -1,0 +1,160 @@
+<<<<<<< Updated upstream
+=======
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: lightslategrey;
+  background-position: center;
+  background-size: cover;
+}
+
+.form-box {
+  width: 700px;
+  position: relative;
+  margin: 6% auto;
+  background: lightsteelblue;
+  padding: 5px;
+  border-radius: 10px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.upload-box {
+  position: relative;
+  margin-top: 30px;
+  padding: 3px;
+  border-radius: 100%;
+  border: 2px dashed dimgray;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.upload-box.active {
+  border: 5px solid lightslategray;
+}
+
+.upload-box img {
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+}
+
+.upload-box .icon img {
+  height: 70px;
+  width: 75px;
+  border-radius: 0%;
+}
+
+.upload-box header {
+  font-size: 17px;
+  font-weight: 500;
+  font-style: italic;
+  color: dimgray;
+}
+
+.upload-box span {
+  font-size: 12px;
+  color: gray;
+  margin: 5px;
+}
+
+.upload-box button {
+  padding: 5px 5px;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  background: rgb(161, 185, 221);
+  color: darkslategray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upload-box button:hover {
+  text-decoration: underline;
+  color: teal;
+}
+
+.input-group {
+  position: relative;
+  margin: 50px;
+  width: 280px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0px;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+}
+
+.submit-btn {
+  width: 50%;
+  padding: 10px;
+  cursor: pointer;
+  display: block;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgb(75, 125, 158);
+  border: 0;
+  outline: none;
+  border-radius: 50px;
+  color: lightgray;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.submit-btn:hover {
+  color:burlywood;
+  font-weight: bold;
+  box-shadow: 0 0 20px 9px #01168f1f;
+}
+
+#register-btn.submit {
+    color:brown;
+    background:lightgrey;
+    pointer-events: none;
+    box-shadow: 0 0 20px 9px #01168f1f;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  margin: -40px 0 0 -40px;
+  border: 16px solid gray;
+  border-top: 16px darkblue;
+  border-bottom: 16px darkblue;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spinner 2s ease-in-out infinite;
+}
+
+@keyframes spinner{
+  0% {transform: rotate(0deg);}
+  75% {}
+  100% {transform: rotate(1800deg);}
+}
+>>>>>>> Stashed changes
