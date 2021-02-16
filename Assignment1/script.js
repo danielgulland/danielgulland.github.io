@@ -59,7 +59,7 @@ window.addEventListener("DOMContentLoaded", function () {
     form.reset();
     button.classList.add("submit");
     status.classList.add("success");
-    status.innerHTML = "Account Created!";
+    status.innerHTML = "Submitted!";
   }
 
   function error() {

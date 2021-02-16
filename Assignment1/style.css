@@ -104,29 +104,33 @@ body {
 }
 
 .submit-btn {
-  width: 85%;
-  padding: 10px 30px;
+  width: 50%;
+  padding: 10px;
   cursor: pointer;
   display: block;
   margin-top: 2rem;
   margin-left: auto;
   margin-right: auto;
-  background: rgb(140, 136, 230);
+  background: rgb(75, 125, 158);
   border: 0;
   outline: none;
-  border-radius: 30px;
-  color: rgba(54, 30, 160, 0.8);
+  border-radius: 50px;
+  color: lightgray;
+  font-size: 18px;
+  font-weight: lighter;
 }
 
 .submit-btn:hover {
-  color: rgba(54, 30, 160, 1);
+  color:burlywood;
   font-weight: bold;
   box-shadow: 0 0 20px 9px #01168f1f;
 }
 
 #register-btn.submit {
-    background: #d3d3d3;
+    color:brown;
+    background:lightgrey;
     pointer-events: none;
     box-shadow: 0 0 20px 9px #01168f1f;
     font-weight: bold;
+    font-style: italic;
 }
