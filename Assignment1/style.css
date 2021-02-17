@@ -137,12 +137,7 @@ body {
 
 #loader {
   position: absolute;
-<<<<<<< Updated upstream
-  left: 50%;
-  top: 50%;
-=======
   top: auto;
->>>>>>> Stashed changes
   z-index: 1;
   margin: 40px 30px 40px 30px;
   border: 16px solid gray;
@@ -154,16 +149,8 @@ body {
   animation: spinner 2s ease-in-out infinite;
 }
 
-<<<<<<< Updated upstream
-@keyframes spinner{
-  0% {transform: rotate(0deg);}
-  75% {border-top-color: gray; border-bottom-color: gray;}
-  100% {transform: rotate(1800deg);}
-}
-=======
 @keyframes spinner {
   0% { transform: rotate(0deg); }
   75% { border-top-color: gray; border-bottom-color: gray; }
   100% { transform: rotate(1800deg); }
 }
->>>>>>> Stashed changes
