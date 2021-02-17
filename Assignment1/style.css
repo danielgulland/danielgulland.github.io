@@ -137,21 +137,33 @@ body {
 
 #loader {
   position: absolute;
+<<<<<<< Updated upstream
   left: 50%;
   top: 50%;
+=======
+  top: auto;
+>>>>>>> Stashed changes
   z-index: 1;
-  margin: -40px 0 0 -40px;
+  margin: 40px 30px 40px 30px;
   border: 16px solid gray;
-  border-top: 16px darkblue;
-  border-bottom: 16px darkblue;
+  border-top: 16px solid darkblue;
+  border-bottom: 16px solid darkblue;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   animation: spinner 2s ease-in-out infinite;
 }
 
+<<<<<<< Updated upstream
 @keyframes spinner{
   0% {transform: rotate(0deg);}
   75% {border-top-color: gray; border-bottom-color: gray;}
   100% {transform: rotate(1800deg);}
 }
+=======
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  75% { border-top-color: gray; border-bottom-color: gray; }
+  100% { transform: rotate(1800deg); }
+}
+>>>>>>> Stashed changes
