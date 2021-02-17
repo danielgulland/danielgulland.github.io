@@ -92,22 +92,23 @@ body{
 }
 .progress svg{
     margin-left: 220px;
-    margin-top: 16px;
+    margin-top: 14px;
     height: 220px;
     width: 220px;
     left: 50%;
     transform:  translate(-50%, -50%) rotate(-90deg);
+    display: none;
 
 }
 
 .progress svg circle{
     fill: transparent;
-    stroke:teal;
-    stroke-width: 12;
+    stroke:steelblue;
+    stroke-width: 6;
     stroke-linecap: round;
     stroke-dasharray: 600;
     stroke-dashoffset: 600;
-    animation: animate 2s linear infinite;
+    animation: animate 2s linear;
 }
 
 @keyframes animate{
@@ -117,13 +118,13 @@ body{
 }
 
 .progress .stop {
-    height: 187px;
-    width: 187px;
+    height: 200px;
+    width: 200px;
     background: transparent;
     border-radius: 50%;
-    border: 12px solid teal;
+    border: 8px solid rgb(70, 131, 180);
     position: absolute;
-    top: 6.5%;
+    top: 5.5%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
@@ -132,10 +133,12 @@ body{
 .progress .counter{
     position: absolute;
     left: 50%;
-    top: 8%;
+    top: 57%;
     transform: translate(-50%, -50%);
     font-size: 20px;
     font-weight: 800;
+    color:darkslategray;
+    display: none;
 }
 
 .input-group{

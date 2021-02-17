@@ -25,6 +25,7 @@ dropBox.addEventListener("drop", (event) => {
 dropBox.querySelector("input").addEventListener("change", function() {
     file = this.files[0];
     dropBox.classList.add("active");
+    
     displayImage();
 });
 
@@ -32,6 +33,7 @@ function displayImage() {
     let fileType = file.type;
     let extensions = ["image/jpeg", "image/jpg", "image/png"];
     if (extensions.includes(fileType)) {
+        progressRing();
         let fileReader = new FileReader();
         fileReader.onload = () => {
             let ulr = fileReader.result;
@@ -43,24 +45,34 @@ function displayImage() {
     else {
         alert("The uploaded file is not an image");
         dropBox.classList.remove("active");
+        dropBox.querySelector("header").textContent = "Drop Your Photo Here";
     }
 }
 
-var a = 0;
-var run = setInterval(frames, 20);
-function frames (){
-    a = a + 1;
-    if (a == 101) {
-        clearInterval(run);
-    }
-    else {
-        var counter = document.querySelector(".counter");
-        counter.textContent = a + "%";
-    }
-}
+function progressRing() {
+    var a = 0;
+    var run = setInterval(frames, 20);
 
-setTimeout(stopPoint, 2000);
-function stopPoint() {
-    var stop = document.querySelector(".stop");
-    stop.style.display = "block";
+    var ring = document.querySelector(".spin");
+    ring.style.display = "block";
+
+    function frames (){
+        a = a + 1;
+        if (a == 101) {
+            var counter = document.querySelector(".counter");
+            counter.textContent = "";
+            clearInterval(run);
+        }
+        else {
+            var counter = document.querySelector(".counter");
+            counter.style.display = "block";
+            counter.textContent = a + "%";
+        }
+    }
+
+    setTimeout(stopPoint, 1999);
+    function stopPoint() {
+        var stop = document.querySelector(".stop");
+        stop.style.display = "block";
+    }
 }
