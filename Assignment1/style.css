@@ -142,7 +142,6 @@ body {
     box-shadow: 0 0 20px 9px #01168f1f;
     font-weight: bold;
     font-style: italic;
-<<<<<<< HEAD
 }
 
 #loader {
@@ -176,6 +175,3 @@ body {
   100% {transform: rotate(1800deg);}
 }
 >>>>>>> Stashed changes
-=======
-}
->>>>>>> parent of f77f8ac (Update style.css)
