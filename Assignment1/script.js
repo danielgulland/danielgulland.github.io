@@ -34,13 +34,16 @@ function displayImage() {
     let extensions = ["image/jpeg", "image/jpg", "image/png"];
     if (extensions.includes(fileType)) {
         progressRing();
-        let fileReader = new FileReader();
-        fileReader.onload = () => {
-            let ulr = fileReader.result;
-            let tag = `<img src="${ulr}" alt="">`; 
-            dropBox.innerHTML = tag;
-        }
-        fileReader.readAsDataURL(file);
+
+        setTimeout( () => {
+          let fileReader = new FileReader();
+          fileReader.onload = () => {
+              let ulr = fileReader.result;
+              let tag = `<img src="${ulr}" alt="">`; 
+              dropBox.innerHTML = tag;
+          }
+          fileReader.readAsDataURL(file);
+        }, 2000);
     }
     else {
         alert("The uploaded file is not an image");
@@ -60,7 +63,7 @@ function progressRing() {
         a = a + 1;
         if (a == 101) {
             var counter = document.querySelector(".counter");
-            counter.textContent = "";
+            counter.style.display = "none";
             clearInterval(run);
         }
         else {
