@@ -84,9 +84,63 @@ body{
     color:teal;
 }
 
+.progress {
+    align-items: center; 
+    position: absolute;
+    justify-content: center;
+    
+}
+.progress svg{
+    margin-left: 220px;
+    margin-top: 16px;
+    height: 220px;
+    width: 220px;
+    left: 50%;
+    transform:  translate(-50%, -50%) rotate(90deg);
+
+}
+
+.progress svg circle{
+    fill: transparent;
+    stroke:teal;
+    stroke-width: 12;
+    stroke-linecap: round;
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate{
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+.progress .stop {
+    height: 187px;
+    width: 187px;
+    background: transparent;
+    border-radius: 50%;
+    border: 12px solid teal;
+    position: absolute;
+    top: 6.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.progress .counter{
+    position: absolute;
+    left: 50%;
+    top: 8%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: 800;
+}
+
 .input-group{
     position: relative;
-    margin: 50px;
+    margin: 70px;
     width: 280px;
 }
 
@@ -102,3 +156,4 @@ body{
     background: transparent;
     font-size: 16px;
 }
+

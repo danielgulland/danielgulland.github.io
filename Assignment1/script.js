@@ -45,3 +45,22 @@ function displayImage() {
         dropBox.classList.remove("active");
     }
 }
+
+var a = 0;
+var run = setInterval(frames, 20);
+function frames (){
+    a = a + 1;
+    if (a == 101) {
+        clearInterval(run);
+    }
+    else {
+        var counter = document.querySelector(".counter");
+        counter.textContent = a + "%";
+    }
+}
+
+setTimeout(stopPoint, 2000);
+function stopPoint() {
+    var stop = document.querySelector(".stop");
+    stop.style.display = "block";
+}

@@ -14,16 +14,22 @@
                 <div class="icon"><img src="photo-icon.webp"></div>
                 <header>Drop Your Photo Here</header>
                 <span>OR</span>
-                <button>Click to Upload</button>
+                <button afterclick = "run()">Click to Upload</button>
                 <input type="file" hidden>
+            </div>
+
+            <div class="progress">
+                <svg>
+                    <circle cx="110" cy="110" r="100"></circle>
+                </svg>
+                    <div class="counter">0</div>
+                    <div class="stop"></div>
                 
             </div>
-            
+        
             <form id="register" class="input-group">
-                
                 <input type="text" class="input-field" placeholder="User Id" required>
                 <input type="password" class="input-field" placeholder="Enter Password" required>
-
             </form>
 
 
