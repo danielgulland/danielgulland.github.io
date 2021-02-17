@@ -182,7 +182,10 @@ body {
   position: relative;
   z-index: 10;
   font-size: 1em;
+<<<<<<< Updated upstream
   border-top: 1px solid #999;
+=======
+>>>>>>> Stashed changes
 }
 
 #subtext {
@@ -190,4 +193,8 @@ body {
   display: block;
   text-align: center;
   font-size: 75%;
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
