@@ -66,6 +66,12 @@ window.addEventListener("DOMContentLoaded", function () {
     // status.classList.add("error");
     status.innerHTML = "Oops! There was a problem.";
   }
+<<<<<<< Updated upstream
+=======
+  function myFunction() {
+    myVar = setTimeout(showPage, 40000);
+  }
+>>>>>>> Stashed changes
 
   // handle the form submission event
   form.addEventListener("submit", function (ev) {
