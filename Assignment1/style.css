@@ -154,8 +154,6 @@ body {
   75% { border-top-color: gray; border-bottom-color: gray; }
   100% { transform: rotate(1800deg); }
 }
-<<<<<<< Updated upstream
-=======
 
 .search_categories .select{
   width: 100%;
@@ -193,4 +191,3 @@ body {
   text-align: center;
   font-size: 75%;
 }
->>>>>>> Stashed changes
