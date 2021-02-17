@@ -27,8 +27,9 @@
             </div>
         
             <form id="register" class="input-group">
-                <input type="text" class="input-field" placeholder="Full Name *" required>
-                <input type="text" class="input-field" placeholder="User ID *" required>
+                <input type="text" class="input-field" placeholder="Full Name *" required autocomplete="on" >
+                <input type="email" class="input-field" placeholder="Email *" required autocomplete="on" />
+                <input type="text" class="input-field" placeholder="User ID *" required autocomplete="on" >
 
                 <input name="password" class ="input-field" required="required" type="password" placeholder="Password *" id="password" />
                 <input name="password_confirm" class ="input-field" required="required" type="password" placeholder="Confirm Password *" id="password_confirm" oninput="check(this)" />
