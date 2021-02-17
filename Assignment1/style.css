@@ -133,7 +133,14 @@ body{
     transform: translate(-50%, -50%);
     font-size: 20px;
     font-style: italic;
-    color:rgb(75, 125, 158);
+    font-weight: bold;
+    color:rgb(35, 109, 158);
+    background-color: rgba(176, 196, 222, 0.938);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 18%;
     display: none;
 }
 
