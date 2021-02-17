@@ -18,14 +18,13 @@ body{
     padding: 5px;
     border-radius: 10px;
     overflow: hidden;
-    justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
 }
   
 .upload-box{
-    position: relative;
+    position: absolute;
     margin-top: 30px;
     padding: 3px;
     border-radius:100%;
@@ -85,14 +84,12 @@ body{
 }
 
 .progress {
-    align-items: center; 
     position: absolute;
-    justify-content: center;
-    
+    margin-top: 139px;
 }
+
 .progress svg{
     margin-left: 220px;
-    margin-bottom: 38px;
     height: 220px;
     width: 220px;
     transform:  translate(-50%, -50%) rotate(-90deg);
@@ -102,7 +99,7 @@ body{
 
 .progress svg circle{
     fill: transparent;
-    stroke:teal;
+    stroke:rgb(75, 125, 158);
     stroke-width: 6;
     stroke-linecap: round;
     stroke-dasharray: 600;
@@ -120,8 +117,8 @@ body{
     height: 198px;
     width: 200px;
     background: transparent;
-    border-radius: 50%;
-    border: 8px solid rgb(0, 128, 128);
+    border-radius: 100%;
+    border: 8px solid rgb(75, 125, 158);
     position: absolute;
     left: 50%;
     top: 0%;
@@ -132,11 +129,11 @@ body{
 .progress .counter{
     position: absolute;
     left: 50%;
-    top: 47%;
+    top: 0%;
     transform: translate(-50%, -50%);
     font-size: 20px;
-    font-weight: 800;
-    color:darkslategray;
+    font-style: italic;
+    color:rgb(75, 125, 158);
     display: none;
 }
 
@@ -144,11 +141,14 @@ body{
     position: relative;
     margin: 70px;
     width: 280px;
+    margin-top: 270px;
 }
 
 .input-field{
     width: 100%;
     padding: 10px 0;
+    padding-bottom: 5px;
+    padding-top: 20px;
     border-left: 0;
     border-right: 0;
     border-top: 0;
@@ -156,6 +156,22 @@ body{
     outline: none;
     background: transparent;
     font-size: 16px;
+    color: rgb(0, 88, 146);
+}
+
+.search-categories{
+    margin-top: 20px;
+}
+
+.form-control {
+    font-size: 16px;
+    width: 50%;
+    border-radius: 5px;
+    background-color: transparent;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    color: rgb(0, 88, 146);
 }
 
 .submit-btn {
@@ -173,19 +189,19 @@ body{
     color: lightgray;
     font-size: 18px;
     font-weight: lighter;
-  }
+}
   
-  .submit-btn:hover {
-    color:burlywood;
+.submit-btn:hover {
+    color:rgb(218, 165, 97);
     font-weight: bold;
     box-shadow: 0 0 20px 9px #01168f1f;
-  }
+}
   
-  #register-btn.submit {
-      color:brown;
-      background:lightgrey;
-      pointer-events: none;
-      box-shadow: 0 0 20px 9px #01168f1f;
-      font-weight: bold;
-      font-style: italic;
-  }
+#register-btn.submit {
+    color:rgb(59, 117, 155);
+    background:lightgrey;
+    pointer-events: none;
+    box-shadow: 0 0 20px 9px #01168f1f;
+    font-weight: bold;
+    font-style: italic;
+}
