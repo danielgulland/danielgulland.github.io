@@ -126,7 +126,7 @@ window.addEventListener("DOMContentLoaded", function () {
     form.reset();
     button.classList.add("submit");
     status.classList.add("success");
-    status.innerHTML = "Submitted!";
+    status.innerHTML = "Submitted";
   }
 
   function error() {
