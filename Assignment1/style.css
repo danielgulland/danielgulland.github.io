@@ -178,7 +178,7 @@ body{
   border-left: 0;
   border-right: 0;
   border-top: 0;
-  color: rgb(0, 88, 146);
+  color:black;
 }
 
 .submit-btn {
@@ -224,8 +224,8 @@ body{
   z-index: 1;
   margin: 40px 30px 40px 30px;
   border: 16px solid gray;
-  border-top: 16px solid darkblue;
-  border-bottom: 16px solid darkblue;
+  border-top: 16px darkblue;
+  border-bottom: 16px darkblue;
   border-radius: 50%;
   width: 150px;
   height: 150px;
