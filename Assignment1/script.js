@@ -177,9 +177,10 @@ window.addEventListener("DOMContentLoaded", function () {
   var form = document.getElementById("register");
   var button = document.getElementById("register-btn");
   var status = document.getElementById("register-btn");
+  var progressBar = document.getElementById("progressBar");
+  var subtext = document.getElementById("subtext");
 
   // Success and Error functions for after the form is submitted
-
   function success() {
     form.reset();
     button.classList.add("submit");
@@ -192,10 +193,23 @@ window.addEventListener("DOMContentLoaded", function () {
     status.innerHTML = "Oops! There was a problem.";
   }
 
+  function showProgressBar() {
+    button.style.display = "none";
+    subtext.style.display = "none";
+    progressBar.classList.add("loader");
+    setTimeout(() => {
+      progressBar.style.display = "none";
+      button.style.display = "block";
+      progressBar.classList.remove("loader");
+    }, 2000)
+  }
+
   // handle the form submission event
   form.addEventListener("submit", function (ev) {
     ev.preventDefault();
     var data = new FormData(form);
+    showProgressBar();
+    dropBox.style.display = "none";
     ajax(form.method, form.action, data, success, error);
   });
 
