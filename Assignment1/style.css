@@ -6,15 +6,16 @@
 
 body{
   background-color:lightslategrey;
+  background-image: url("skyline2.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .form-box {
-  width: 700px;
+  width: 600px;
   position: relative;
   margin: 6% auto;
-  background:lightsteelblue;
+  background-image: linear-gradient(to bottom right, rgba(176, 196, 222, 0.945), rgba(203, 233, 200, 0.945));
   padding: 5px;
   border-radius: 10px;
   overflow: hidden;
@@ -271,4 +272,5 @@ body{
   display: block;
   text-align: center;
   font-size: 75%;
+  color:sienna;
 }
