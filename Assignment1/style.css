@@ -144,12 +144,12 @@ body{
     font-style: italic;
     font-weight: bold;
     color:rgb(35, 109, 158);
-    background-color: rgba(176, 196, 222, 0.938);
+    background-color: #d4ebdaec;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     text-align: center;
-    padding: 18%;
+    padding: 18.5%;
     display: none;
 }
 
@@ -451,7 +451,7 @@ RESET STYLES
   
     margin-left: auto;
     margin-right: auto;
-    border: 16px solid rgb(75, 125, 158);
+    border: 16px solid #3ab759;
     border-top: 16px darkblue;
     border-bottom: 16px darkblue;
     border-radius: 50%;
