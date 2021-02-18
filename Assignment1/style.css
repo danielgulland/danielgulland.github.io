@@ -455,13 +455,33 @@ RESET STYLES
     margin-top: 15px;
   }
   
+  .errorAnimation {
+    background: #ff6666;
+    border: 0;
+    font-size: 20px;
+    padding: 10px 20px;
+    position: relative;
+    animation-name: shake;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+  }
+
+  @keyframes shake {
+    0% {left:0}
+    10% {left:-3px}
+    30% {left: 5px}
+    47.5% {left: -8px}
+    60% {left: 8px}
+    75% {left: -5px}
+    90% {left: 3px}
+    100% {left: 0}
+  }
   .loader {
     position: relative;
     top: auto;
     z-index: 1;
-    /* margin: 40px 30px 40px 30px; */
     margin-top: 2rem;
-  
     margin-left: auto;
     margin-right: auto;
     border: 16px solid #3ab759;
