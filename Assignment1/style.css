@@ -252,10 +252,13 @@ body{
     font-style: italic;
 }
 
+
+
 .search_categories{
   width: 100%;
   padding: 10px 0;
-  margin: 5px 0px;
+  padding-bottom: 5px;
+  padding-top: 20px;
   border-left: 0;
   border-right: 0;
   border-top: 0;
@@ -432,3 +435,41 @@ RESET STYLES
     --fieldBorderColor: #c4e9cd;
     --fieldBorderColorActive: #3ab759;
   }
+
+
+  #state-menu {
+    position: relative;
+    margin-top: 15px;
+  }
+  
+  .loader {
+    position: relative;
+    top: auto;
+    z-index: 1;
+    /* margin: 40px 30px 40px 30px; */
+    margin-top: 2rem;
+  
+    margin-left: auto;
+    margin-right: auto;
+    border: 16px solid rgb(75, 125, 158);
+    border-top: 16px darkblue;
+    border-bottom: 16px darkblue;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spinner 2s ease-in-out infinite;
+  }
+  
+  @keyframes spinner {
+    0% { transform: rotate(0deg); }
+    75% { border-top-color: gray; border-bottom-color: gray; }
+    100% { transform: rotate(1800deg); }
+  }
+  
+  #subtext {
+  margin-top: 5px;
+  display: block;
+  text-align: center;
+  font-size: 75%;
+  color:sienna;
+
