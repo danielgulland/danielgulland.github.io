@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Form</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="title-box">
+      <header>Register</header>
+    </div>
+
+    <div class="form-box">
+      <div class="upload-box">
+        <div class="icon"><img src="photo-icon.webp"></div>
+        <header>Drop Your Photo Here</header>
+        <span>OR</span>
+        <button>Click to Upload</button>
+        <input type="file" hidden>
+      </div>
+
+      <div class="progress">
+          <svg class="spin">
+              <circle cx="111" cy="110" r="103"></circle>
+          </svg>
+              <div class="counter">0</div>
+              <div class="stop"></div>
+      </div>
+  
+      <form id="register" class="input-group">
+        <label class="field field_v1">
+            <input class="field__input" placeholder="e.g. Daniel Gulland" required="required">
+            <span class="field__label-wrap">
+              <span class="field__label">Full Name *</span>
+            </span>
+          </label>
+          <label class="field field_v1">
+            <input class="field__input" placeholder="e.g. dan1940@gmail.com" required="required" type="email">
+            <span class="field__label-wrap">
+              <span class="field__label">Email *</span>
+            </span>
+          </label>
+          <label class="field field_v1">
+            <input class="field__input" placeholder="e.g. DanBoss42" required="required">
+            <span class="field__label-wrap">
+              <span class="field__label">Username *</span>
+            </span>
+          </label>
+          <label class="field field_v1">
+            <input class="field__input" placeholder=" " required="required" type="password" id=password>
+            <span class="field__label-wrap">
+              <span class="field__label">Password *</span>
+            </span>
+          </label>
+
+          <label class="field field_v1">
+            <input class="field__input" placeholder=" " required="required" type="password" id="password_confirm" oninput="check(this)">
+            <script language='javascript' type='text/javascript'>
+                function check(input) {
+                    if (input.value != document.getElementById('password').value) {
+                        input.setCustomValidity('Passwords do not match');
+                    } else {
+                        // input is valid -- reset the error message
+                        input.setCustomValidity('');
+                    }
+                }
+            </script>
+            <span class="field__label-wrap">
+              <span class="field__label">Confirm Password *</span>
+            </span>
+          </label>
+
+          <label class="field field_v1">
+            <input class="field__input" placeholder="e.g. 7616751430" required="required" type="tel">
+            <span class="field__label-wrap">
+              <span class="field__label">Phone Number *</span>
+            </span>
+          </label>
+
+          <label class="field field_v1">
+            <input class="field__input" placeholder="e.g. 5674 Washington Ave." required="required">
+            <span class="field__label-wrap">
+              <span class="field__label">Address *</span>
+            </span>
+          </label>
+
+          <label class="field field_v1">
+            <input class="field__input" placeholder="e.g. 94503" required="required">
+            <span class="field__label-wrap">
+              <span class="field__label">ZipCode *</span>
+            </span>
+          </label>
+        
+          <div class="search-categories">
+            <div class="select">
+              <select id="country" name="country" class="form-control" onload="populateCountryMenu();"; onmousedown="this.value='Country'"; onchange="showStateList(this.value);">
+                  <option value="Country" selected>Country *</option>
+              </select>
+              <select id ="state-menu" name="state" class="form-control" hidden autocomplete="on">
+                <option value="" selected="selected">State *</option>
+              </select>
+            </div>
+        </div>
+
+        <div id="progressBar" class="loade"></div>
+        <button type="submit" id="register-btn" class="submit-btn">Register</button>
+        
+        <label id="subtext">* Fields must be filled.</label>
+      </form>
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>
