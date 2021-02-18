@@ -209,7 +209,8 @@ window.addEventListener("DOMContentLoaded", function () {
     ev.preventDefault();
     var data = new FormData(form);
     showProgressBar();
-    dropBox.style.display = "none";
+    if (dropBox.classList.contains("active"))
+      dropBox.style.display = "none";
     ajax(form.method, form.action, data, success, error);
   });
 
