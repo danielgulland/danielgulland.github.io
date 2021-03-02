@@ -205,3 +205,93 @@ section:before
     font-size: 8em;
 }
 
+#projects 
+{
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items:center;
+}
+
+header {text-align: center;}
+
+/************************** EXPANDING CARDS ***************************************/
+@keyframes slideDown {
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .wrapper {
+    max-width: 425px;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: auto;
+  }
+  
+  .cards .card {
+    width: calc(50% - 13px);
+    height: 150px;
+    background-color: rgba(241, 241, 241, 0.966);
+    color: teal;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+    border: none;
+    box-shadow:  0 9px #4c0505a1 ;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+
+  }
+
+  .card:hover {
+      transition: 0.25s;
+      border: 3px solid chocolate;
+      color: chocolate;
+  }
+  
+  .cards .card h2 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  .card-content {
+    padding: 100px 25px 25px;
+    overflow: auto;
+    height: 100%;
+    cursor: default;
+  }
+  
+  .card-content > * {
+    transform: translateY(-35px);
+    opacity: 0;
+  }
+
+  .card-content h2 {
+    font-size: 16px;
+    margin-bottom: 35px !important;
+    animation: slideDown 0.5s ease-out forwards;
+    color: teal;
+  }
+
+  .card-content img {
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 10px;
+    animation: slideDown 0.5s ease-out 0.2s forwards;
+  }
+  
+  .card-content p {
+    color: rgb(107, 107, 107);
+    animation: slideDown 0.5s ease-out 0.4s forwards;
+    font-size: 1.75rem;
+  }
+
