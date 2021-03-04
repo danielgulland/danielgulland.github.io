@@ -55,26 +55,82 @@ const fadeContent = (element, opacity, duration = 275) => {
 };
 
 const getCardContent = (title, type) => {
-  return `
+  if (title == "\n" + "                Project1" + "\n" + "            ") {
+    return `
           <div class="card-content">
               <h2>${title}</h2>
               <img src="./assets/${type}.png" alt="${title}">
               <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eum ipsa molestiae nesciunt nostrum porro
-                  reprehenderit? Animi corporis deleniti dolore laborum, nemo pariatur temporibus voluptatem.
-              </p>
-              <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eligendi fuga ullam? Aperiam blanditiis
-                  cupiditate dicta eius exercitationem explicabo fugit, impedit iure libero nam nihil nisi perferendis
-                  provident quaerat repellendus vitae voluptate? Aliquid amet architecto asperiores aut consequuntur
-                  corporis debitis ea eveniet in maiores, nam placeat quae, ratione rerum ullam?
-              </p>
-              <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eum ipsa molestiae nesciunt nostrum porro
-                  reprehenderit? Animi corporis deleniti dolore laborum, nemo pariatur temporibus voluptatem.
+                  PROJECT 1 CONTENT
               </p>
           </div>
       `;
+  } else if (
+    title ==
+    "\n" + "                Project2" + "\n" + "            "
+  ) {
+    return `
+          <div class="card-content">
+              <h2>${title}</h2>
+              <img src="./assets/${type}.png" alt="${title}">
+              <p>
+                  PROJECT 2 CONTENT
+              </p>
+          </div>
+      `;
+  } else if (
+    title ==
+    "\n" + "                Project3" + "\n" + "            "
+  ) {
+    return `
+          <div class="card-content">
+              <h2>${title}</h2>
+              <img src="./assets/${type}.png" alt="${title}">
+              <p>
+                  PROJECT 3 CONTENT
+              </p>
+          </div>
+      `;
+  } else if (
+    title ==
+    "\n" + "                Project4" + "\n" + "            "
+  ) {
+    return `
+          <div class="card-content">
+              <h2>${title}</h2>
+              <img src="./assets/${type}.png" alt="${title}">
+              <p>
+                  PROJECT 4 CONTENT
+              </p>
+          </div>
+      `;
+  } else if (
+    title ==
+    "\n" + "                Project5" + "\n" + "            "
+  ) {
+    return `
+          <div class="card-content">
+              <h2>${title}</h2>
+              <img src="./assets/${type}.png" alt="${title}">
+              <p>
+                  PROJECT 5 CONTENT
+              </p>
+          </div>
+      `;
+  } else if (
+    title ==
+    "\n" + "                Project6" + "\n" + "            "
+  ) {
+    return `
+          <div class="card-content">
+              <h2>${title}</h2>
+              <img src="./assets/${type}.png" alt="${title}">
+              <p>
+                  PROJECT 6 CONTENT
+              </p>
+          </div>
+      `;
+  }
 };
 
 const onCardClick = async (e) => {
