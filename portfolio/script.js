@@ -57,14 +57,17 @@ const fadeContent = (element, opacity, duration = 275) => {
 const getCardContent = (title, type) => {
   if (
     title ==
-    "\n" + "                Cyberdyne Systemes CPU" + "\n" + "            "
+    "\n" + "                Cyberdyne Systems CPU" + "\n" + "            "
   ) {
     return `
           <div class="card-content">
               <h2>${title}</h2>
-              <img src="./assets/${type}.png" alt="${title}">
+                <img src="./assets/${type}.jpg" alt="${title}">
               <p>
-              CPUs for factory hardware to ensure automation and production is steady and accurate.
+              &ensp; Originally Cyberdyne CPUs were only deployed in factory hardware, to keep production strong and steady, but our innovations through the late 80s and 90s have paved the way for the future of the world as we know it, now we are focusing our efforts on a greater goal, world peace. 
+              </p>
+              <p>
+              &ensp; CPUs for factory hardware to ensure automation and production is steady and accurate.
               </p>
           </div>
       `;
