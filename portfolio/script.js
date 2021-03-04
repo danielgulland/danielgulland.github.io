@@ -55,13 +55,16 @@ const fadeContent = (element, opacity, duration = 275) => {
 };
 
 const getCardContent = (title, type) => {
-  if (title == "\n" + "                Project1" + "\n" + "            ") {
+  if (
+    title ==
+    "\n" + "                Cyberdyne Systemes CPU" + "\n" + "            "
+  ) {
     return `
           <div class="card-content">
               <h2>${title}</h2>
               <img src="./assets/${type}.png" alt="${title}">
               <p>
-                  PROJECT 1 CONTENT
+              CPUs for factory hardware to ensure automation and production is steady and accurate.
               </p>
           </div>
       `;
