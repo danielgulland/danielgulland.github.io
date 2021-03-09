@@ -290,6 +290,7 @@ header {text-align: center;}
   }
   
   .card-content p {
+    margin-top: 1.5rem;
     color: rgb(107, 107, 107);
     animation: slideDown 0.5s ease-out 0.4s forwards;
     font-size: 1.75rem;
