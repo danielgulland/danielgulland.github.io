@@ -55,26 +55,91 @@ const fadeContent = (element, opacity, duration = 275) => {
 };
 
 const getCardContent = (title, type) => {
-  return `
+  if (
+    title ==
+    "\n" + "                Cyberdyne Systems CPU" + "\n" + "            "
+  ) {
+    return `
+          <div class="card-content">
+              <h2>${title}</h2>
+                <img src="./assets/${type}.jpg" alt="${title}">
+              <p>
+              &ensp; Originally Cyberdyne CPUs were only deployed in factory hardware, to keep production strong and steady, but our innovations through the late 80s and 90s have paved the way for the future of the world as we know it, now we are focusing our efforts on a greater goal, world peace. 
+              </p>
+              <p>
+              &ensp; Skynet's CPUs are used for factory hardware to ensure automation and production is steady and accurate.
+              </p>
+          </div>
+      `;
+  } else if (
+    title ==
+    "\n" +
+      "                Tactical Drone Support Units" +
+      "\n" +
+      "            "
+  ) {
+    return `
           <div class="card-content">
               <h2>${title}</h2>
               <img src="./assets/${type}.png" alt="${title}">
               <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eum ipsa molestiae nesciunt nostrum porro
-                  reprehenderit? Animi corporis deleniti dolore laborum, nemo pariatur temporibus voluptatem.
-              </p>
-              <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eligendi fuga ullam? Aperiam blanditiis
-                  cupiditate dicta eius exercitationem explicabo fugit, impedit iure libero nam nihil nisi perferendis
-                  provident quaerat repellendus vitae voluptate? Aliquid amet architecto asperiores aut consequuntur
-                  corporis debitis ea eveniet in maiores, nam placeat quae, ratione rerum ullam?
-              </p>
-              <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eum ipsa molestiae nesciunt nostrum porro
-                  reprehenderit? Animi corporis deleniti dolore laborum, nemo pariatur temporibus voluptatem.
+                Innovative tactical drone support units
               </p>
           </div>
       `;
+  } else if (
+    title ==
+    "\n" + "                Project3" + "\n" + "            "
+  ) {
+    return `
+          <div class="card-content">
+              <h2>${title}</h2>
+              <img src="./assets/${type}.png" alt="${title}">
+              <p>
+                  PROJECT 3 CONTENT
+              </p>
+          </div>
+      `;
+  } else if (
+    title ==
+    "\n" + "                Project4" + "\n" + "            "
+  ) {
+    return `
+          <div class="card-content">
+              <h2>${title}</h2>
+              <img src="./assets/${type}.png" alt="${title}">
+              <p>
+                  PROJECT 4 CONTENT
+              </p>
+          </div>
+      `;
+  } else if (
+    title ==
+    "\n" + "                Project5" + "\n" + "            "
+  ) {
+    return `
+          <div class="card-content">
+              <h2>${title}</h2>
+              <img src="./assets/${type}.png" alt="${title}">
+              <p>
+                  PROJECT 5 CONTENT
+              </p>
+          </div>
+      `;
+  } else if (
+    title ==
+    "\n" + "                Project6" + "\n" + "            "
+  ) {
+    return `
+          <div class="card-content">
+              <h2>${title}</h2>
+              <img src="./assets/${type}.png" alt="${title}">
+              <p>
+                  PROJECT 6 CONTENT
+              </p>
+          </div>
+      `;
+  }
 };
 
 const onCardClick = async (e) => {
