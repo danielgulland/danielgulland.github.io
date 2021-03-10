@@ -96,10 +96,16 @@ const getCardContent = (title, type) => {
               <h2>${title}</h2>
               <img src="./assets/${type}.png" alt="${title}">
               <p>
+<<<<<<< Updated upstream
               &ensp;One of the first fully functional A.I. Systems! Currently we are in the process of deploying our system to aid Strategic Air Command-North American Aerospace Defense Command(SAC-NORAD) in identifying, and neutralizing, threats more rapidly than ever before.
               </p>
               <p>
               &ensp;This system is purely defensive, and will allow for connection between all computer operated systems containing a Cyberdyne CPU, meaning response times will be much faster than ever before. 
+=======
+                  One of the first fully functional A.I. units was developed in house, at Cyberdyne.
+                  This A.I. was able to pass as human when questioned behind a curtain, leading to our eventual 
+                  crowning achievement, and upcoming project release, SKYNET.
+>>>>>>> Stashed changes
               </p>
           </div>
       `;
