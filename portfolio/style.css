@@ -394,3 +394,7 @@ header {text-align: center;}
 .address h3{
     margin-top: 15px;
 }
+.achievement-text {
+    width: 70%;
+    margin: auto;
+}
