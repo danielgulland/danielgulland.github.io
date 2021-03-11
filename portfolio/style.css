@@ -391,3 +391,6 @@ header {text-align: center;}
     transition: opacity 1s ease-in;
 }
 
+.address h3{
+    margin-top: 15px;
+}
