@@ -29,11 +29,11 @@ html
 body 
 {
   background-image: url("./assets/br.jpg");
+  overflow-x: hidden;
 }
 
 nav{
     display: flex;
-    justify-content: space-around;
     align-items: center;
     min-height: 7vh;
     width: 100%;
@@ -44,8 +44,11 @@ nav{
 .logo
 {
     color:bisque;
-    letter-spacing: 5px;
-    font-size: 20px;
+    letter-spacing: 0.7vw;
+    font-size: 3vh;
+    width: 30%;
+    margin-left: 2vw;
+    float: left;
 }
 
 .tabs
@@ -53,18 +56,19 @@ nav{
     list-style: none;
     justify-content: space-around;
     display: flex;
-    width: 50%;
+    width: 70%;
+    float: right;
 }
 
 .tab
 {
     color: gainsboro;
     text-decoration: none;
-    font-size: 15px;
-    letter-spacing: 1px;
+    font-size: 2vh;
+    letter-spacing: 0.12vw;
     border-bottom: 2px dashed gray;
     padding: 5px 2px;
-    margin: 10px;
+    margin-right: 0.5vw;
     overflow: hidden;
     transition: 0.5s all ease;
     transform: translate(-50%, -50%);
@@ -101,21 +105,9 @@ nav{
     transition: all 0.5s ease;
 }
 
-@media screen and (max-width: 1024px)
-{
-    .tabs
-    {
-        width: 50%;
-    }
-}
 
 @media screen and (max-width: 768px)
 {
-    body
-    {
-        overflow-x: hidden;
-    }
-
     .tabs
     {
         position: absolute;
@@ -138,6 +130,7 @@ nav{
     .nav-icon
     {
         display: block;
+        margin-left: 50vw;
     }
 }
 
@@ -191,21 +184,21 @@ section:nth-child(even)
 {
     background: rgba(255, 255, 255, 0.774);
     color: rgb(1, 114, 114);
-    font-size: 50px;
+    font-size: 5vh;
 } 
 
 section:nth-child(odd) 
 {
     background: rgba(101, 119, 85, 0.671);
     color: white;
-    font-size: 50px;
+    font-size: 5vh;
 } 
 
 section:before 
 {
     content: attr(data-text);
     color: #262626;
-    font-size: 8em;
+    font-size: 5vh;
 }
 
 #projects 
@@ -242,10 +235,10 @@ header {text-align: center;}
   
   .cards .card {
     /* width: calc(50% - 13px); */
-    height: 200px;
+    height: 30vh;
+    width: 45vw;
     background-color: rgba(241, 241, 241, 0.966);
     color: #fff;
-    margin-bottom: 20px;
     border-radius: 5px;
     cursor: pointer;
     display: flex;
@@ -254,8 +247,8 @@ header {text-align: center;}
     padding: 10px;
     border: none;
     box-shadow: 0 9px #4c0505a1;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
+    margin-bottom: 2vh;
+    margin-right: 1vw;
     /* width: 100%; */
     /* min-width: 220px; */
   }
@@ -267,11 +260,8 @@ header {text-align: center;}
         rgba(56, 56, 56, 0.7)
       ),
       url("./assets/cpu.jpg");
-    width: 100%;
     background-size: cover;
   }
-  
-  
   
   .cards .drone {
     background-image: linear-gradient(
@@ -280,7 +270,6 @@ header {text-align: center;}
         rgba(56, 56, 56, 0.5)
       ),
       url("./assets/drone.png");
-    width: 100%;
     background-size: cover;
   }
   
@@ -291,7 +280,6 @@ header {text-align: center;}
         rgba(56, 56, 56, 0.5)
       ),
       url("./assets/AI.png");
-    width: 100%;
     background-size: cover;
   }
   
@@ -302,7 +290,6 @@ header {text-align: center;}
           rgba(56, 56, 56, 0.5)
         ),
         url("./assets/satellite.jpg");
-      width: 100%;
       background-size: cover;
     }
   
@@ -317,6 +304,7 @@ header {text-align: center;}
     margin: auto auto;
     font-size: 2rem;
     padding: 0 4rem;
+    overflow: hidden;
   }
   
   .card-content {
@@ -359,6 +347,7 @@ header {text-align: center;}
     display: flex;
     width: 95vw;
     margin-top: 5vh;
+    margin-right: 2vw;
 }
 
 .panel{
@@ -371,8 +360,8 @@ header {text-align: center;}
     transition: flex 0.5s ease-in;
     color: whitesmoke;
     cursor: pointer;
-    margin: 5px;
-    
+    margin: 0.5vw;
+    overflow: hidden;
 }
 
 .panel h3{
