@@ -8,10 +8,28 @@ tabs.forEach(tab => {
   })
 })
 
-function removeActiveTabs(){
+function removeActiveTabs() {
   tabs.forEach(tab => {
     tab.classList.remove('active');
   })
+}
+
+function addActiveTab(tab) {
+  tab.classList.add('active');
+}
+
+/************************** UPDATE ACTIVE TAB WHEN SCROLLING ***************************************/
+
+const sections = Array.from(document.querySelectorAll('a'));
+
+document.addEventListener("scroll", onScroll);
+
+function onScroll() {
+  var scrollTop = document.documentElement.scrollTop;
+  var pageHeight = window.innerHeight;
+
+  removeActiveTabs();
+  addActiveTab(sections[Math.trunc(scrollTop / pageHeight) + 1]);
 }
 
 /************************** NAVIGATION SLIDE ***************************************/
@@ -29,7 +47,7 @@ const navSlide = () => {
       } else {
         link.style.animation = `tabsFade 0.5s ease forwards ${
           index / 7 + 0.3
-        }s`;
+          }s`;
       }
     });
 
@@ -91,9 +109,9 @@ const getCardContent = (title, type) => {
   } else if (
     title ==
     "\n" +
-      "                Tactical Drone Support Units" +
-      "\n" +
-      "            "
+    "                Tactical Drone Support Units" +
+    "\n" +
+    "            "
   ) {
     return `
           <div class="card-content">
@@ -126,9 +144,9 @@ const getCardContent = (title, type) => {
   } else if (
     title ==
     "\n" +
-      "                Military Communication Satellite System" +
-      "\n" +
-      "            "
+    "                Military Communication Satellite System" +
+    "\n" +
+    "            "
   ) {
     return `
           <div class="card-content">
@@ -263,7 +281,7 @@ panels.forEach(panel => {
   })
 })
 
-function removeActiveClasses(){
+function removeActiveClasses() {
   panels.forEach(panel => {
     panel.classList.remove('active');
   })
