@@ -108,14 +108,17 @@ const getCardContent = (title, type) => {
       `;
   } else if (
     title ==
-    "\n" + "                Project4" + "\n" + "            "
+    "\n" +
+      "                Military Communication Satellite System" +
+      "\n" +
+      "            "
   ) {
     return `
           <div class="card-content">
               <h2>${title}</h2>
-              <img src="./assets/${type}.png" alt="${title}">
+              <img src="./assets/${type}.jpg" alt="${title}">
               <p>
-                  PROJECT 4 CONTENT
+              &ensp;We were able to build a military communication satellite to provide tactical communication services and deployment to SAC-NORAD.
               </p>
           </div>
       `;
