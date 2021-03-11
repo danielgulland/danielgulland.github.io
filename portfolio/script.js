@@ -1,3 +1,19 @@
+/************************** ACTIVE TAB ***************************************/
+const tabs = document.querySelectorAll('a');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    removeActiveTabs();
+    tab.classList.add('active');
+  })
+})
+
+function removeActiveTabs(){
+  tabs.forEach(tab => {
+    tab.classList.remove('active');
+  })
+}
+
 /************************** NAVIGATION SLIDE ***************************************/
 const navSlide = () => {
   const nav_icon = document.querySelector(".nav-icon");

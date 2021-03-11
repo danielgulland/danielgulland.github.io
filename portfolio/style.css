@@ -56,7 +56,7 @@ nav{
     width: 50%;
 }
 
-.tabs a 
+.tab
 {
     color: gainsboro;
     text-decoration: none;
@@ -71,17 +71,19 @@ nav{
     z-index: -1;
 }
 
-.tabs a:hover 
+.tab:hover 
+{
+    color: black;
+    border-bottom: 2px solid black; 
+    font-weight: bold;
+}
+
+.tab.active
 {
     color: greenyellow;
     text-transform: uppercase;
     border-bottom: 2px solid black; 
     font-weight: bold;
-}
-
-.tabs a:active 
-{
-    color: black;
 }
 
 .nav-icon
@@ -330,8 +332,6 @@ header {text-align: center;}
 
 .panel.active{
     flex: 5;
-    border: 2px solid whitesmoke;
-
 }
 .panel.active h3{
     opacity: 1;
