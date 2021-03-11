@@ -395,6 +395,7 @@ header {text-align: center;}
     margin-top: 15px;
 }
 .achievement-text {
+    text-align: left;
     width: 70%;
     margin: auto;
 }
