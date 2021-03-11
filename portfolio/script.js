@@ -239,7 +239,7 @@ const onCardClick = async (e) => {
 
 cards.forEach((card) => card.addEventListener("click", onCardClick));
 
-/************************** ACHIEVEMENTS ***************************************/
+/************************** GALLERY ***************************************/
 
 const panels = document.querySelectorAll('.panel');
 
