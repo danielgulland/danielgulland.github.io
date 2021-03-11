@@ -1,3 +1,20 @@
+/************************** ACTIVE TAB ***************************************/
+const tabs = document.querySelectorAll('a');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    removeActiveTabs();
+    tab.classList.add('active');
+  })
+})
+
+function removeActiveTabs(){
+  tabs.forEach(tab => {
+    tab.classList.remove('active');
+  })
+}
+
+/************************** NAVIGATION SLIDE ***************************************/
 const navSlide = () => {
   const nav_icon = document.querySelector(".nav-icon");
   const nav = document.querySelector(".tabs");
@@ -22,7 +39,7 @@ const navSlide = () => {
 
 navSlide();
 
-/************************** EXPANDING CARDS ***************************************/
+/************************** PROJECTS ***************************************/
 const cards = document.querySelectorAll(".card");
 
 const toggleExpansion = (element, to, duration = 275) => {
@@ -230,3 +247,24 @@ const onCardClick = async (e) => {
 };
 
 cards.forEach((card) => card.addEventListener("click", onCardClick));
+
+/************************** GALLERY ***************************************/
+
+const panels = document.querySelectorAll('.panel');
+
+panels.forEach(panel => {
+  panel.addEventListener('click', () => {
+    removeActiveClasses();
+    panel.classList.add('active');
+  })
+  panel.addEventListener('mouseenter', () => {
+    removeActiveClasses();
+    panel.classList.add('active');
+  })
+})
+
+function removeActiveClasses(){
+  panels.forEach(panel => {
+    panel.classList.remove('active');
+  })
+}
