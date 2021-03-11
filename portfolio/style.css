@@ -236,11 +236,13 @@ header {text-align: center;}
     grid-template-columns: 1fr 1fr;
     /* overflow: auto; */
     gap: 0.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
   
   .cards .card {
     /* width: calc(50% - 13px); */
-    height: 150px;
+    height: 200px;
     background-color: rgba(241, 241, 241, 0.966);
     color: #fff;
     margin-bottom: 20px;
@@ -251,13 +253,13 @@ header {text-align: center;}
     /* justify-content: flex-end; */
     padding: 10px;
     border: none;
-    box-shadow:  0 9px #4c0505a1 ;
+    box-shadow: 0 9px #4c0505a1;
     margin-right: 0.5rem;
     margin-left: 0.5rem;
     /* width: 100%; */
     /* min-width: 220px; */
   }
-
+  
   .cards .cpu {
     background-image: linear-gradient(
         115deg,
@@ -265,37 +267,50 @@ header {text-align: center;}
         rgba(56, 56, 56, 0.7)
       ),
       url("./assets/cpu.jpg");
-      width: 100%;
-      background-size: cover;
+    width: 100%;
+    background-size: cover;
   }
-
+  
+  
+  
   .cards .drone {
     background-image: linear-gradient(
         115deg,
-        rgba(182, 177, 177, 0.8),
-        rgba(56, 56, 56, 0.7)
+        rgba(206, 190, 190, 0.7),
+        rgba(56, 56, 56, 0.5)
       ),
       url("./assets/drone.png");
-      width: 100%;
-      background-size: cover;
+    width: 100%;
+    background-size: cover;
   }
-
+  
   .cards .ai {
     background-image: linear-gradient(
         115deg,
-        rgba(182, 177, 177, 0.8),
+        rgba(204, 199, 199, 0.8),
         rgba(56, 56, 56, 0.5)
       ),
       url("./assets/AI.png");
+    width: 100%;
+    background-size: cover;
+  }
+  
+  .cards .sat {
+      background-image: linear-gradient(
+          115deg,
+          rgba(204, 199, 199, 0.8),
+          rgba(56, 56, 56, 0.5)
+        ),
+        url("./assets/satellite.jpg");
       width: 100%;
       background-size: cover;
-
-  }
-
+    }
+  
   .card:hover {
-      transition: 0.25s ease-in;
-      border: 3px solid chocolate;
-      color: chocolate;
+    transition: 0.25s ease-in;
+    /* border: 3px solid chocolate; */
+    /* color: greenyellow; */
+    color: bisque;
   }
   
   .cards .card h2 {
@@ -316,14 +331,14 @@ header {text-align: center;}
     transform: translateY(-35px);
     opacity: 0;
   }
-
+  
   .card-content h2 {
     font-size: 16px;
     margin-bottom: 35px !important;
     animation: slideDown 0.5s ease-out forwards;
-    color:#fff;
+    color: #fff;
   }
-
+  
   .card-content img {
     width: 40%;
     background-color: #fff;
