@@ -1,17 +1,17 @@
 /************************** ACTIVE TAB ***************************************/
-const tabs = document.querySelectorAll('a');
+const tabs = document.querySelectorAll("a");
 
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
     removeActiveTabs();
-    tab.classList.add('active');
-  })
-})
+    tab.classList.add("active");
+  });
+});
 
-function removeActiveTabs(){
-  tabs.forEach(tab => {
-    tab.classList.remove('active');
-  })
+function removeActiveTabs() {
+  tabs.forEach((tab) => {
+    tab.classList.remove("active");
+  });
 }
 
 /************************** NAVIGATION SLIDE ***************************************/
@@ -100,10 +100,7 @@ const getCardContent = (title, type) => {
               <h2>${title}</h2>
               <img src="./assets/${type}.png" alt="${title}">
               <p>
-                With our innovative drones, tactical support is ensured, and without the delay
-                of human response across the ocean. A tactical leader is assigned a drone and is able to 
-                give verbal or manual commands for the drones to take out. Lovingly referred to as HKs, these 
-                drones have been hearalded as the next greatest soldier defense mechanism to date. 
+                &ensp; With our innovative drones, tactical support is ensured, and without the delay of human response across the ocean. A tactical leader is assigned a drone and is able to give verbal or manual commands for the drones to take out. Lovingly referred to as HKs, these drones have been hearalded as the next greatest soldier defense mechanism to date. 
               </p>
           </div>
       `;
@@ -125,10 +122,7 @@ const getCardContent = (title, type) => {
       `;
   } else if (
     title ==
-    "\n" +
-      "                Military Communication Satellite System" +
-      "\n" +
-      "            "
+    "\n" + "                Military Satellite System" + "\n" + "            "
   ) {
     return `
           <div class="card-content">
@@ -190,8 +184,8 @@ const onCardClick = async (e) => {
   closeButton.style = `
           position: fixed;
           z-index: 10000;
-          top: 12vh;
-          right: 8vw;
+          top: 10vh;
+          right: 6vw;
           width: 35px;
           height: 35px;
           border-radius: 50%;
@@ -232,10 +226,10 @@ const onCardClick = async (e) => {
   });
   // expand the clone card
   await toggleExpansion(cardClone, {
-    top: "10vh",
+    top: "8vh",
     left: "2.5vw",
     width: "93vw",
-    height: "85vh",
+    height: "90vh",
   });
   const content = getCardContent(card.textContent, card.dataset.type);
   // set the display block so the content will follow the normal flow in case the original card is not display block
@@ -250,21 +244,21 @@ cards.forEach((card) => card.addEventListener("click", onCardClick));
 
 /************************** GALLERY ***************************************/
 
-const panels = document.querySelectorAll('.panel');
+const panels = document.querySelectorAll(".panel");
 
-panels.forEach(panel => {
-  panel.addEventListener('click', () => {
+panels.forEach((panel) => {
+  panel.addEventListener("click", () => {
     removeActiveClasses();
-    panel.classList.add('active');
-  })
-  panel.addEventListener('mouseenter', () => {
+    panel.classList.add("active");
+  });
+  panel.addEventListener("mouseenter", () => {
     removeActiveClasses();
-    panel.classList.add('active');
-  })
-})
+    panel.classList.add("active");
+  });
+});
 
-function removeActiveClasses(){
-  panels.forEach(panel => {
-    panel.classList.remove('active');
-  })
+function removeActiveClasses() {
+  panels.forEach((panel) => {
+    panel.classList.remove("active");
+  });
 }
