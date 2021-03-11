@@ -28,7 +28,7 @@ html
 
 body 
 {
-  background-image: url("br.jpg");
+  background-image: url("./assets/br.jpg");
 }
 
 nav{
@@ -179,6 +179,7 @@ nav{
 section 
 {
     height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items:center;
@@ -215,7 +216,7 @@ section:before
 
 header {text-align: center;}
 
-/************************** EXPANDING CARDS ***************************************/
+/************************** PROJECTS ***************************************/
 @keyframes slideDown {
     100% {
       transform: translateY(0);
@@ -297,3 +298,42 @@ header {text-align: center;}
     text-align: initial;
   }
 
+/************************** ACHIEVEMENTS ***************************************/
+
+.container{
+    display: flex;
+    width: 95vw;
+    margin-top: 5vh;
+}
+
+.panel{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 85vh;
+    border-radius: 50px;
+    flex: 0.5;
+    transition: flex 0.5s ease-in;
+    color: whitesmoke;
+    cursor: pointer;
+    margin: 5px;
+    
+}
+
+.panel h3{
+    position: relative;
+    top: 2%;
+    left: 5%;
+    font-size: 20px;
+    opacity: 0;
+}
+
+.panel.active{
+    flex: 5;
+    border: 2px solid whitesmoke;
+
+}
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
