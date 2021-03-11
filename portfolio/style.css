@@ -43,12 +43,24 @@ nav{
 
 .logo
 {
-    color:bisque;
-    letter-spacing: 0.7vw;
-    font-size: 3vh;
     width: 30%;
     margin-left: 2vw;
     float: left;
+    cursor: pointer;
+}
+
+.logo a
+{
+  text-decoration: none;
+  transition: 0.5s all ease;
+  color:bisque;
+  letter-spacing: 0.7vw;
+  font-size: 4.5vh;
+}
+
+.logo a:hover, .logo a:active
+{
+  color:chocolate;
 }
 
 .tabs
@@ -191,14 +203,14 @@ section:nth-child(odd)
 {
     background: rgba(101, 119, 85, 0.671);
     color: white;
-    font-size: 5vh;
+    font-size: 5vw;
 } 
 
 section:before 
 {
     content: attr(data-text);
     color: #262626;
-    font-size: 5vh;
+    font-size: 6vw;
 }
 
 #projects 
@@ -229,8 +241,8 @@ header {text-align: center;}
     grid-template-columns: 1fr 1fr;
     /* overflow: auto; */
     gap: 0.5rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 1vw;
+    margin-right: 2vw;
   }
   
   .cards .card {
@@ -244,9 +256,9 @@ header {text-align: center;}
     display: flex;
     flex-direction: column;
     /* justify-content: flex-end; */
-    padding: 10px;
+    padding: 0.5vh;
     border: none;
-    box-shadow: 0 9px #4c0505a1;
+    box-shadow: 0 1vh #303030a1;
     margin-bottom: 2vh;
     margin-right: 1vw;
     /* width: 100%; */
@@ -272,86 +284,26 @@ header {text-align: center;}
       url("./assets/drone.png");
     background-size: cover;
   }
-
-}
-.wrapper {
-  /* max-width: 425px; */
-  width: 100%;
-}
-
-.cards {
-  display: grid;
-  /* justify-content: space-between; */
-  grid-template-columns: 1fr 1fr;
-  /* overflow: auto; */
-  gap: 0.5rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-
-.cards .card {
-  /* width: calc(50% - 13px); */
-  height: 200px;
-  background-color: rgba(241, 241, 241, 0.966);
-  color: #fff;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: flex-end; */
-  padding: 10px;
-  border: none;
-  box-shadow: 0 9px #4c0505a1;
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
-  /* width: 100%; */
-  /* min-width: 220px; */
-}
-
-.cards .cpu {
+  
+  .cards .ai {
     background-image: linear-gradient(
         115deg,
-        rgba(63, 61, 61, 0.8),
-        rgba(105, 131, 117, 0.7)
+        rgba(204, 199, 199, 0.8),
+        rgba(56, 56, 56, 0.5)
       ),
-    url("./assets/cpu.jpg");
-  width: 100%;
-  background-size: cover;
-}
-
-
-.cards .drone {
-    background-image: linear-gradient(
-        115deg,
-        rgba(63, 61, 61, 0.8),
-        rgba(105, 131, 117, 0.7)
-      ),
-    url("./assets/drone.png");
-  width: 100%;
-  background-size: cover;
-}
-
-.cards .ai {
-    background-image: linear-gradient(
-        115deg,
-        rgba(63, 61, 61, 0.8),
-        rgba(105, 131, 117, 0.7)
-      ),
-    url("./assets/AI.png");
-  width: 100%;
-  background-size: cover;
-}
-
-.cards .sat {
-  background-image: linear-gradient(
-    115deg,
-    rgba(204, 199, 199, 0.8),
-    rgba(56, 56, 56, 0.5)
-    ),
-    url("./assets/satellite.jpg");
-  background-size: cover;
-}
+      url("./assets/AI.png");
+    background-size: cover;
+  }
+  
+  .cards .sat {
+      background-image: linear-gradient(
+          115deg,
+          rgba(204, 199, 199, 0.8),
+          rgba(56, 56, 56, 0.5)
+        ),
+        url("./assets/satellite.jpg");
+      background-size: cover;
+    }
   
   .card:hover {
     transition: 0.25s ease-in;
@@ -362,13 +314,13 @@ header {text-align: center;}
   
   .cards .card h2 {
     margin: auto auto;
-    font-size: 2rem;
+    font-size: 3vh;
     padding: 0 4rem;
     overflow: hidden;
   }
   
   .card-content {
-    padding: 100px 25px 25px;
+    padding: 5vh 4vw;
     overflow: auto;
     height: 100%;
     cursor: default;
@@ -381,10 +333,9 @@ header {text-align: center;}
   }
   
   .card-content h2 {
-    font-size: 16px;
-    margin-bottom: 35px !important;
+    margin-bottom: 5vh !important;
     animation: slideDown 0.5s ease-out forwards;
-    color: #fff;
+    color: bisque;
   }
   
   .card-content img {
@@ -397,7 +348,7 @@ header {text-align: center;}
     margin-top: 1.5rem;
     color: #fff;
     animation: slideDown 0.5s ease-out 0.4s forwards;
-    font-size: 1.75rem;
+    font-size: 3vh;
     text-align: initial;
   }
 
