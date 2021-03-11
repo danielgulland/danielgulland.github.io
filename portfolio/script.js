@@ -1,17 +1,17 @@
 /************************** ACTIVE TAB ***************************************/
-const tabs = document.querySelectorAll("a");
+const tabs = document.querySelectorAll('a');
 
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
     removeActiveTabs();
-    tab.classList.add("active");
-  });
-});
+    tab.classList.add('active');
+  })
+})
 
-function removeActiveTabs() {
-  tabs.forEach((tab) => {
-    tab.classList.remove("active");
-  });
+function removeActiveTabs(){
+  tabs.forEach(tab => {
+    tab.classList.remove('active');
+  })
 }
 
 /************************** NAVIGATION SLIDE ***************************************/
@@ -100,8 +100,10 @@ const getCardContent = (title, type) => {
               <h2>${title}</h2>
               <img src="./assets/${type}.png" alt="${title}">
               <p>
-              &ensp; With our innovative drones, tactical support is ensured, and without the delay of human response across the ocean. A tactical leader is assigned a drone and is able to give verbal or manual commands for the drones to take out. Lovingly referred to as HKs, these 
-              drones have been hearalded as the next greatest soldier defense mechanism to date. 
+                With our innovative drones, tactical support is ensured, and without the delay
+                of human response across the ocean. A tactical leader is assigned a drone and is able to 
+                give verbal or manual commands for the drones to take out. Lovingly referred to as HKs, these 
+                drones have been hearalded as the next greatest soldier defense mechanism to date. 
               </p>
           </div>
       `;
@@ -248,21 +250,21 @@ cards.forEach((card) => card.addEventListener("click", onCardClick));
 
 /************************** GALLERY ***************************************/
 
-const panels = document.querySelectorAll(".panel");
+const panels = document.querySelectorAll('.panel');
 
-panels.forEach((panel) => {
-  panel.addEventListener("click", () => {
+panels.forEach(panel => {
+  panel.addEventListener('click', () => {
     removeActiveClasses();
-    panel.classList.add("active");
-  });
-  panel.addEventListener("mouseenter", () => {
+    panel.classList.add('active');
+  })
+  panel.addEventListener('mouseenter', () => {
     removeActiveClasses();
-    panel.classList.add("active");
-  });
-});
+    panel.classList.add('active');
+  })
+})
 
-function removeActiveClasses() {
-  panels.forEach((panel) => {
-    panel.classList.remove("active");
-  });
+function removeActiveClasses(){
+  panels.forEach(panel => {
+    panel.classList.remove('active');
+  })
 }
