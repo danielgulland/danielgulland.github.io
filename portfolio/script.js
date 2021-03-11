@@ -233,8 +233,8 @@ const onCardClick = async (e) => {
   // expand the clone card
   await toggleExpansion(cardClone, {
     top: "10vh",
-    left: "3vh",
-    width: "90vw",
+    left: "2.5vw",
+    width: "93vw",
     height: "85vh",
   });
   const content = getCardContent(card.textContent, card.dataset.type);

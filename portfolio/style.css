@@ -191,14 +191,14 @@ section:nth-child(odd)
 {
     background: rgba(101, 119, 85, 0.671);
     color: white;
-    font-size: 5vh;
+    font-size: 5vw;
 } 
 
 section:before 
 {
     content: attr(data-text);
     color: #262626;
-    font-size: 5vh;
+    font-size: 6vw;
 }
 
 #projects 
@@ -229,8 +229,8 @@ header {text-align: center;}
     grid-template-columns: 1fr 1fr;
     /* overflow: auto; */
     gap: 0.5rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 1vw;
+    margin-right: 2vw;
   }
   
   .cards .card {
@@ -244,9 +244,9 @@ header {text-align: center;}
     display: flex;
     flex-direction: column;
     /* justify-content: flex-end; */
-    padding: 10px;
+    padding: 0.5vh;
     border: none;
-    box-shadow: 0 9px #4c0505a1;
+    box-shadow: 0 1vh #303030a1;
     margin-bottom: 2vh;
     margin-right: 1vw;
     /* width: 100%; */
@@ -302,13 +302,13 @@ header {text-align: center;}
   
   .cards .card h2 {
     margin: auto auto;
-    font-size: 2rem;
+    font-size: 3vh;
     padding: 0 4rem;
     overflow: hidden;
   }
   
   .card-content {
-    padding: 100px 25px 25px;
+    padding: 5vh 4vw;
     overflow: auto;
     height: 100%;
     cursor: default;
@@ -321,10 +321,9 @@ header {text-align: center;}
   }
   
   .card-content h2 {
-    font-size: 16px;
-    margin-bottom: 35px !important;
+    margin-bottom: 5vh !important;
     animation: slideDown 0.5s ease-out forwards;
-    color: #fff;
+    color: bisque;
   }
   
   .card-content img {
@@ -337,7 +336,7 @@ header {text-align: center;}
     margin-top: 1.5rem;
     color: #fff;
     animation: slideDown 0.5s ease-out 0.4s forwards;
-    font-size: 1.75rem;
+    font-size: 3vh;
     text-align: initial;
   }
 
