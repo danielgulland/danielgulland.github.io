@@ -106,14 +106,17 @@ const getCardContent = (title, type) => {
       `;
   } else if (
     title ==
-    "\n" + "                Project3" + "\n" + "            "
+    "\n" + "                Fully Functional A.I System" + "\n" + "            "
   ) {
     return `
           <div class="card-content">
               <h2>${title}</h2>
               <img src="./assets/${type}.png" alt="${title}">
               <p>
-                  PROJECT 3 CONTENT
+              &ensp;One of the first fully functional A.I. Systems! Currently we are in the process of deploying our system to aid Strategic Air Command-North American Aerospace Defense Command(SAC-NORAD) in identifying, and neutralizing, threats more rapidly than ever before.
+              </p>
+              <p>
+              &ensp;This system is purely defensive, and will allow for connection between all computer operated systems containing a Cyberdyne CPU, meaning response times will be much faster than ever before. 
               </p>
           </div>
       `;
