@@ -58,7 +58,7 @@ nav{
   font-size: 4.5vh;
 }
 
-.logo a:hover, .logo a:active
+.logo a:hover
 {
   color:chocolate;
 }
