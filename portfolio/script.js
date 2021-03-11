@@ -100,7 +100,7 @@ const getCardContent = (title, type) => {
               <h2>${title}</h2>
               <img src="./assets/${type}.png" alt="${title}">
               <p>
-                &ensp;With our innovative drones, tactical support is ensured, and without the delay
+                With our innovative drones, tactical support is ensured, and without the delay
                 of human response across the ocean. A tactical leader is assigned a drone and is able to 
                 give verbal or manual commands for the drones to take out. Lovingly referred to as HKs, these 
                 drones have been hearalded as the next greatest soldier defense mechanism to date. 
@@ -233,8 +233,8 @@ const onCardClick = async (e) => {
   // expand the clone card
   await toggleExpansion(cardClone, {
     top: "10vh",
-    left: "3vh",
-    width: "90vw",
+    left: "2.5vw",
+    width: "93vw",
     height: "85vh",
   });
   const content = getCardContent(card.textContent, card.dataset.type);
