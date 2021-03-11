@@ -43,12 +43,24 @@ nav{
 
 .logo
 {
-    color:bisque;
-    letter-spacing: 0.7vw;
-    font-size: 3vh;
     width: 30%;
     margin-left: 2vw;
     float: left;
+    cursor: pointer;
+}
+
+.logo a
+{
+  text-decoration: none;
+  transition: 0.5s all ease;
+  color:bisque;
+  letter-spacing: 0.7vw;
+  font-size: 4.5vh;
+}
+
+.logo a:hover, .logo a:active
+{
+  color:chocolate;
 }
 
 .tabs
