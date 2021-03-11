@@ -83,7 +83,10 @@ const getCardContent = (title, type) => {
               <h2>${title}</h2>
               <img src="./assets/${type}.png" alt="${title}">
               <p>
-                Innovative tactical drone support units
+                With our innovative drones, tactical support is ensured, and without the delay
+                of human response across the ocean. A tactical leader is assigned a drone and is able to 
+                give verbal or manual commands for the drones to take out. Lovingly referred to as HKs, these 
+                drones have been hearalded as the next greatest soldier defense mechanism to date. 
               </p>
           </div>
       `;
@@ -96,7 +99,7 @@ const getCardContent = (title, type) => {
               <h2>${title}</h2>
               <img src="./assets/${type}.png" alt="${title}">
               <p>
-              &ensp;One of the first fully functional A.I. Systems! Currently we are in the process of deploying our system to aid Strategic Air Command-North American Aerospace Defense Command(SAC-NORAD) in identifying, and neutralizing, threats more rapidly than ever before.
+              &ensp;One of the first fully functional A.I. Systems! Currently we are in the process of deploying our system to aid Strategic Air Command-North American Aerospace Defense Command(SAC-NORAD) for quick identification, and neutralization, of threats to America, and it's northern brethren.
               </p>
               <p>
               &ensp;This system is purely defensive, and will allow for connection between all computer operated systems containing a Cyberdyne CPU, meaning response times will be much faster than ever before. 
@@ -105,14 +108,17 @@ const getCardContent = (title, type) => {
       `;
   } else if (
     title ==
-    "\n" + "                Project4" + "\n" + "            "
+    "\n" +
+      "                Military Communication Satellite System" +
+      "\n" +
+      "            "
   ) {
     return `
           <div class="card-content">
               <h2>${title}</h2>
-              <img src="./assets/${type}.png" alt="${title}">
+              <img src="./assets/${type}.jpg" alt="${title}">
               <p>
-                  PROJECT 4 CONTENT
+              &ensp;We were able to build a military communication satellite to provide tactical communication services and deployment to SAC-NORAD.
               </p>
           </div>
       `;
