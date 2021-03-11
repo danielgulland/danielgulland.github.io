@@ -83,7 +83,7 @@ const getCardContent = (title, type) => {
               <h2>${title}</h2>
               <img src="./assets/${type}.png" alt="${title}">
               <p>
-                With our innovative drones, tactical support is ensured, and without the delay
+                &ensp;With our innovative drones, tactical support is ensured, and without the delay
                 of human response across the ocean. A tactical leader is assigned a drone and is able to 
                 give verbal or manual commands for the drones to take out. Lovingly referred to as HKs, these 
                 drones have been hearalded as the next greatest soldier defense mechanism to date. 
