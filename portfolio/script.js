@@ -9,9 +9,9 @@ tabs.forEach((tab) => {
 });
 
 function removeActiveTabs() {
-  tabs.forEach((tab) => {
-    tab.classList.remove("active");
-  });
+  tabs.forEach(tab => {
+    tab.classList.remove('active');
+  })
 }
 
 function addActiveTab(tab) {
@@ -146,8 +146,14 @@ const getCardContent = (title, type) => {
     "\n" +
     "                Military Communication Satellite System" +
     "\n" +
+<<<<<<< HEAD
     "            "
 >>>>>>> 996109d... scrolling updates active bar
+=======
+    "                Military Communication Satellite System" +
+    "\n" +
+    "            "
+>>>>>>> 996109d3740ba387f5e338d9b208372dd5390439
   ) {
     return `
           <div class="card-content">
@@ -284,13 +290,16 @@ panels.forEach((panel) => {
 
 function removeActiveClasses() {
 <<<<<<< HEAD
+<<<<<<< HEAD
   panels.forEach((panel) => {
     panel.classList.remove("active");
   });
 }
 =======
-  panels.forEach(panel => {
-    panel.classList.remove('active');
-  })
+=======
+>>>>>>> 996109d3740ba387f5e338d9b208372dd5390439
+panels.forEach(panel => {
+  panel.classList.remove('active');
+})
 }
 >>>>>>> 996109d... scrolling updates active bar
