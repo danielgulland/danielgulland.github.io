@@ -14,6 +14,10 @@ function removeActiveTabs() {
   });
 }
 
+function addActiveTab(tab) {
+  tab.classList.add('active');
+}
+
 /************************** UPDATE ACTIVE TAB WHEN SCROLLING ***************************************/
 
 const sections = Array.from(document.querySelectorAll('a'));
