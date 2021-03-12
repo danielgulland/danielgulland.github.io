@@ -218,7 +218,7 @@ section:nth-child(odd)
 
 section:nth-child(even) 
 {
-    background: rgba(56, 73, 50, 0.726);
+    background: rgba(101, 119, 85, 0.67);
     color: white;
 } 
 
