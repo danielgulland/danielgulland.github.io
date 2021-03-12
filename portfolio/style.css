@@ -202,6 +202,14 @@ section
   }
 }
 
+@media screen and (max-height: 400px)
+{
+  section
+  {
+    font-size: 5vh;
+  }
+}
+
 section:nth-child(even) 
 {
     background: rgba(255, 255, 255, 0.774);
