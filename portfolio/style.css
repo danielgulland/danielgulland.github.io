@@ -429,3 +429,9 @@ header {text-align: center;}
     width: 70%;
     margin: auto;
 }
+
+.about-text {
+  text-align: left;
+  width: 70%;
+  margin: auto;
+}
