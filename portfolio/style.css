@@ -216,13 +216,13 @@ section h2
   }
 }
 
-section:nth-child(odd) 
+section:nth-child(even) 
 {
     background: rgba(255, 255, 255, 0.774);
     color: rgb(1, 114, 114);
 } 
 
-section:nth-child(even) 
+section:nth-child(odd) 
 {
     background: rgba(101, 119, 85, 0.67);
     color: white;
