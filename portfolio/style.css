@@ -144,11 +144,6 @@ nav{
         display: block;
         margin-left: 50vw;
     }
-
-    section
-    {
-      font-size: 2vh;
-    }
 }
 
 .nav-active
@@ -197,6 +192,14 @@ section
     align-items:center;
     font-size: 30px;
     overflow: hidden;
+}
+
+@media screen and (max-width: 768px)
+{
+  section
+  {
+    font-size: 3.5vh;
+  }
 }
 
 section:nth-child(even) 
@@ -319,7 +322,7 @@ header {text-align: center;}
   
   .cards .card h2 {
     margin: auto auto;
-    font-size: 4vw;
+    font-size: 30px;
     padding: 0 4rem;
     overflow: hidden;
   }
@@ -359,7 +362,7 @@ header {text-align: center;}
   }
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
   .cards .card h2 {
     margin: auto 0;
     font-size: 2.5vh;
@@ -368,21 +371,6 @@ header {text-align: center;}
 
   .cards {
     margin-right: 3vw;
-    margin-left: 3vw;
-  }
-}
-
-@media only screen and (max-width: 375px) {
-  .cards .card h2 {
-    margin: auto 0;
-    font-size: 2vh;
-    text-align: center;
-    padding: 0;
-  }
-
-  .cards {
-    margin-left: 5vw;
-    margin-right: 5vw;
   }
 }
 
