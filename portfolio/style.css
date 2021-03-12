@@ -55,7 +55,7 @@ nav{
   transition: 0.5s all ease;
   color:bisque;
   letter-spacing: 0.7vw;
-  font-size: 4.5vh;
+  font-size: 30px;
 }
 
 .logo a:hover
@@ -76,7 +76,7 @@ nav{
 {
     color: gainsboro;
     text-decoration: none;
-    font-size: 2vh;
+    font-size: 15px;
     letter-spacing: 0.12vw;
     border-bottom: 2px dashed gray;
     padding: 5px 2px;
@@ -144,6 +144,11 @@ nav{
         display: block;
         margin-left: 50vw;
     }
+
+    section
+    {
+      font-size: 2vh;
+    }
 }
 
 .nav-active
@@ -190,20 +195,20 @@ section
     display: flex;
     justify-content: center;
     align-items:center;
+    font-size: 30px;
+    overflow: hidden;
 }
 
 section:nth-child(even) 
 {
     background: rgba(255, 255, 255, 0.774);
     color: rgb(1, 114, 114);
-    font-size: 5vh;
 } 
 
 section:nth-child(odd) 
 {
     background: rgba(101, 119, 85, 0.671);
     color: white;
-    font-size: 5vw;
 } 
 
 section:before 
