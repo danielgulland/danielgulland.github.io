@@ -1,0 +1,78 @@
+body {
+  background: rgba(206, 54, 130, 0.582);
+  font-family:sans-serif;
+}
+
+.tabs {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:80vw;
+  height:80vh;
+  background:white;
+  padding:20px;
+  overflow: hidden;
+  border-radius:20px;
+  box-shadow:5px 5px 5px rgba(207, 86, 147, 0.911);
+}
+
+.tabs .header {
+  height:60px;
+  display:flex;
+  align-items:center;
+  background-color: rgba(255, 192, 203, 0.712);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.tabs .header div {
+  width:calc(100% / 5);
+  text-align:center;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  font-size:14px;
+  text-transform:uppercase;
+  outline:none;
+}
+
+.tabs .header div.active {
+  color: hotpink;
+}
+
+.tabs .underline {
+  position:relative;
+  width:calc(100% / 5);
+  height:5px;
+  background: hotpink;
+  left:0px;
+  border-radius:5px;
+  transition:all 500ms ease-in-out;
+}
+
+.tabs .cards {
+  position:relative;
+  height:calc(100% - 85px);
+  margin-top: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.tabs .cards div {
+  position:absolute;
+  top:-200%;
+  opacity:0;
+  transform:scale(0.9);
+  transition:opacity 500ms ease-in-out 0ms, transform 500ms ease-in-out 0ms;
+}
+
+.tabs .cards div.active {
+  top:0px;
+  opacity:1;
+  transform:scale(1);
+}
+
+img {
+  width: 80vw;
+}
