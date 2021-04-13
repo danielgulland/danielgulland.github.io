@@ -55,7 +55,7 @@ nav{
   transition: 0.5s all ease;
   color:bisque;
   letter-spacing: 0.7vw;
-  font-size: 4.5vh;
+  font-size: 30px;
 }
 
 .logo a:hover
@@ -76,7 +76,7 @@ nav{
 {
     color: gainsboro;
     text-decoration: none;
-    font-size: 2vh;
+    font-size: 15px;
     letter-spacing: 0.12vw;
     border-bottom: 2px dashed gray;
     padding: 5px 2px;
@@ -190,20 +190,42 @@ section
     display: flex;
     justify-content: center;
     align-items:center;
+    font-size: 30px;
+    overflow: hidden;
+}
+
+section h2
+{
+  margin-bottom: 5vh;
+  margin-top: 3vh;
+}
+
+@media screen and (max-width: 768px)
+{
+  section
+  {
+    font-size: 3.5vh;
+  }
+}
+
+@media screen and (max-height: 400px)
+{
+  section
+  {
+    font-size: 5vh;
+  }
 }
 
 section:nth-child(even) 
 {
     background: rgba(255, 255, 255, 0.774);
     color: rgb(1, 114, 114);
-    font-size: 5vh;
 } 
 
 section:nth-child(odd) 
 {
-    background: rgba(101, 119, 85, 0.671);
+    background: rgba(101, 119, 85, 0.67);
     color: white;
-    font-size: 5vw;
 } 
 
 section:before 
@@ -268,8 +290,8 @@ header {text-align: center;}
   .cards .cpu {
     background-image: linear-gradient(
         115deg,
-        rgba(182, 177, 177, 0.8),
-        rgba(56, 56, 56, 0.7)
+        rgba(63, 61, 61, 0.8),
+        rgba(105, 131, 117, 0.7)
       ),
       url("./assets/cpu.jpg");
     background-size: cover;
@@ -278,8 +300,8 @@ header {text-align: center;}
   .cards .drone {
     background-image: linear-gradient(
         115deg,
-        rgba(206, 190, 190, 0.7),
-        rgba(56, 56, 56, 0.5)
+        rgba(63, 61, 61, 0.8),
+        rgba(105, 131, 117, 0.7)
       ),
       url("./assets/drone.png");
     background-size: cover;
@@ -288,8 +310,8 @@ header {text-align: center;}
   .cards .ai {
     background-image: linear-gradient(
         115deg,
-        rgba(204, 199, 199, 0.8),
-        rgba(56, 56, 56, 0.5)
+        rgba(63, 61, 61, 0.8),
+        rgba(105, 131, 117, 0.7)
       ),
       url("./assets/AI.png");
     background-size: cover;
@@ -298,8 +320,8 @@ header {text-align: center;}
   .cards .sat {
       background-image: linear-gradient(
           115deg,
-          rgba(204, 199, 199, 0.8),
-          rgba(56, 56, 56, 0.5)
+          rgba(63, 61, 61, 0.8),
+          rgba(105, 131, 117, 0.7)
         ),
         url("./assets/satellite.jpg");
       background-size: cover;
@@ -314,7 +336,7 @@ header {text-align: center;}
   
   .cards .card h2 {
     margin: auto auto;
-    font-size: 3vh;
+    font-size: 30px;
     padding: 0 4rem;
     overflow: hidden;
   }
@@ -345,17 +367,16 @@ header {text-align: center;}
   }
   
   .card-content p {
-    margin-top: 1.5rem;
+    margin-top: 4rem;
+    line-height: 1.25;
     color: #fff;
     animation: slideDown 0.5s ease-out 0.4s forwards;
-    font-size: 3vh;
+    font-size: 2.5vh;
     text-align: initial;
   }
 
-<<<<<<< Updated upstream
-=======
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
   .cards .card h2 {
     margin: auto 0;
     font-size: 2.5vh;
@@ -364,29 +385,9 @@ header {text-align: center;}
 
   .cards {
     margin-right: 3vw;
-    margin-left: 3vw;
-  }
-
-  #contacts {
-    font-size: 6vw;
   }
 }
 
-@media only screen and (max-width: 375px) {
-  .cards .card h2 {
-    margin: auto 0;
-    font-size: 2vh;
-    text-align: center;
-    padding: 0;
-  }
-
-  .cards {
-    margin-left: 5vw;
-    margin-right: 5vw;
-  }
-}
-
->>>>>>> Stashed changes
 /************************** GALLERY ***************************************/
 
 .container{
@@ -426,9 +427,6 @@ header {text-align: center;}
     transition: opacity 1s ease-in;
 }
 
-.address {
-  font-size: 6vw;
-}
 .address h3{
     margin-top: 15px;
 }
@@ -438,17 +436,8 @@ header {text-align: center;}
     margin: auto;
 }
 
-@media screen and (min-width:450px){
-  #contacts h2 {
-    font-size: 36px;
-  }
-  #contacts .address{
-    font-size: 26px;
-  }
-}
-
-@media screen and (max-width:600px){
-  #achievements{
-    font-size: 5vw;
-  }
+.about-text {
+  text-align: left;
+  width: 70%;
+  margin: auto;
 }
