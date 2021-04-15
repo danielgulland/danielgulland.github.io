@@ -2,7 +2,7 @@ import React from "react";
 
 const Collections = () => {
   return (
-    <main style={{ paddingTop: "150px" }}>
+    <main>
       <h1>Collections</h1>
     </main>
   );

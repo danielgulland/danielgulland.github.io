@@ -9,6 +9,10 @@ const Header = styled.header`
   border-bottom-color: #dc4d8c;
   /* background-color: #de3163; */
   background-color: #d72483;
+
+  @media only screen and (min-width: 750px) {
+    padding: 0px;
+  }
 `;
 
 const GridContainer = styled.div`
@@ -82,7 +86,6 @@ const NavMenu = styled.ul`
   position: static;
   padding: 0;
   text-align: center;
-  margin: 25px 0;
 `;
 
 const NavMenuItem = styled.li`

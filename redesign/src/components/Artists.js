@@ -2,7 +2,7 @@ import React from "react";
 
 const Artists = () => {
   return (
-    <main style={{ paddingTop: "150px" }}>
+    <main>
       <h1>Artists</h1>
     </main>
   );

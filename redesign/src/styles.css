@@ -7,7 +7,7 @@
 }
 
 body, input, textarea, button, select {
-    font-size: 16px;
+    font-size: 18px;
     font-family: "Roboto Slab", serif;
     font-style: normal;
     font-weight: 400;
@@ -39,6 +39,10 @@ button {
     border-style: outset;
     border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
     border-image: initial;
+}
+
+main {
+    padding-top: 70px;
 }
 
 @media only screen and (max-width: 989px) {

@@ -2,7 +2,7 @@ import React from "react";
 
 const Account = () => {
   return (
-    <main style={{ paddingTop: "150px" }}>
+    <main>
       <h1>Account</h1>
     </main>
   );

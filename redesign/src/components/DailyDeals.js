@@ -2,7 +2,7 @@ import React from "react";
 
 const DailyDeals = () => {
   return (
-    <main style={{ paddingTop: "150px" }}>
+    <main>
       <h1>Daily Deals</h1>
     </main>
   );
