@@ -20,13 +20,13 @@ function App() {
         <Route path="/daily_deals">
           <DailyDeals />
         </Route>
-        <Route path="/collections">
+        <Route exact path="/collections">
           <Collections />
         </Route>
         <Route path="/artists">
           <Artists />
         </Route>
-        <Route path="/collections/last-chance-tees">
+        <Route exact path="/collections/last-chance-tees">
           <LastChanceTees />
         </Route>
         <Route path="/account/login">
