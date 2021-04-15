@@ -14,6 +14,24 @@ function removeActiveTabs() {
   });
 }
 
+function addActiveTab(tab) {
+  tab.classList.add('active');
+}
+
+/************************** UPDATE ACTIVE TAB WHEN SCROLLING ***************************************/
+
+const sections = Array.from(document.querySelectorAll('a'));
+
+document.addEventListener("scroll", onScroll);
+
+function onScroll() {
+  var scrollTop = document.documentElement.scrollTop;
+  var pageHeight = window.innerHeight;
+
+  removeActiveTabs();
+  addActiveTab(sections[Math.trunc(scrollTop / pageHeight) + 1]);
+}
+
 /************************** NAVIGATION SLIDE ***************************************/
 const navSlide = () => {
   const nav_icon = document.querySelector(".nav-icon");
