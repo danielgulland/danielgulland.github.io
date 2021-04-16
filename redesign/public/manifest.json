@@ -1,7 +1,14 @@
 {
-  "short_name": "React App",
+  "short_name": "The World's Favorite Shirt Shop | Shirt Punch",
   "name": "Shirt Punch",
   "start_url": ".",
+  "icons": [
+    {
+      "src": "favicon-32x32_32x32.png",
+      "sizes": "32x32 32x32",
+      "type": "image/x-icon"
+    }
+  ],
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
