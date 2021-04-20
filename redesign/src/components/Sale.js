@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FlipClock } from "./FlipClock";
 import pinkbr from "./assets/pinkbr.png";
+import { Button, Card, Image } from 'semantic-ui-react';
 
 const ClockCounter = styled.div`
   height: auto;
@@ -33,6 +34,16 @@ const Sale = () => {
         <div> 
         <FlipClock value={"5"}/>
         </div>
+
+        <Card.Group>
+          <Card>
+            <Card.Content>
+              
+            </Card.Content>
+          </Card>
+
+        </Card.Group>
+
       </ClockCounter>
 
       <h2>List of deals</h2>
