@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import "../styles.css";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -76,7 +77,7 @@ const Navbar = styled.nav`
   padding-left: 0;
 
   @media only screen and (min-width: 750px) {
-    width: 50%;
+    width: 100%;
   }
 `;
 
@@ -95,6 +96,7 @@ const NavMenuItem = styled.li`
   margin-bottom: 0;
   vertical-align: middle;
   color: #000;
+  position: relative;
 `;
 
 const NavLink = styled(Link)`
@@ -115,11 +117,202 @@ const NavLink = styled(Link)`
   }
 `;
 
+const NavMenuItem_HasDropDown = styled.li`
+  position: static;
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+  padding: 17px 0;
+`;
+
+const DropDownNavLink = styled(Link)`
+  color: #ffff;
+  padding: 3px 10px;
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+  position: static;
+
+  text-decoration: none;
+  touch-action: manipulation;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 600;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.1s;
+  white-space: nowrap;
+
+  /* &:not([disabled]):hover,
+  &:focus {
+    color: white;
+  } */
+`;
+
+const NavLinkButton = styled.button`
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+  padding: 3px 10px;
+  display: block;
+  white-space: nowrap;
+  cursor: pointer;
+  font: inherit;
+  margin: 0;
+  font-weight: 600;
+
+  @media only screen and (max-width: 989px) {
+    font-size: 18px;
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom-color: transparent;
+  }
+`;
+
+const NavLabel = styled.span`
+  border-bottom: 1px solid transparent;
+  &:hover {
+    text-decoration: underline;
+    border-bottom-color: #fff;
+    border-bottom: 1px solid transparent;
+  }
+`;
+
 const NavText = styled.span`
   &:hover {
     text-decoration: underline;
     border-bottom-color: #fff;
     border-bottom: 1px solid transparent;
+  }
+`;
+
+const IconDown = styled.svg`
+  width: calc(8em / 16);
+  height: calc(8em / 16);
+  margin-left: 0.5rem;
+
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+`;
+
+const SiteNavDropDownMenu = styled.div`
+  left: 0;
+  right: 0;
+  padding: 0;
+  top: 70px;
+  width: 90%;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0 5px 10px 0 rgb(0 0 0 / 50%);
+  position: absolute;
+  margin: auto;
+  z-index: 7;
+  text-align: left;
+  background: white;
+  display: none;
+
+  @media only screen and (max-width: 990px) {
+    top: 70px;
+  }
+`;
+
+const Collections = styled.div`
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+`;
+
+const CollectionsCategories = styled.li`
+  background-color: #eee;
+  padding: 10px 30px 30px 60px;
+  /* display: grid; */
+  float: left;
+  background-color: #eee;
+  width: 100%;
+  height: 100%;
+
+  @media only screen and (max-width: 749px) {
+    padding-left: 22px;
+  }
+`;
+
+const CollectionsList = styled.ul`
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+`;
+
+const Heading = styled.p`
+  font-weight: bold;
+  font-size: 18px;
+  padding: 20px 0 20px 0;
+  color: black;
+  background-color: #eee;
+  color: #df3882;
+`;
+
+const FeatureHeading = styled.p`
+  background-color: #fff;
+  padding: 30px 0 10px 0;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 20px 0 20px 0;
+  color: black;
+  color: #df3882;
+`;
+
+const Category = styled.p`
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  height: 27px;
+  display: block;
+  padding-right: 13px;
+  cursor: pointer;
+  color: black;
+  margin: 0 0 0.5rem 0;
+`;
+
+const CategoryLink = styled(Link)`
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 0;
+  text-decoration: none;
+
+  &:hover {
+    color: #df3882;
+  }
+`;
+
+const FeaturedCollections = styled.li`
+  padding: 10px 30px 30px 60px;
+  float: right;
+`;
+
+const FeaturedList = styled.ul`
+  display: grid;
+  padding: 0;
+  margin: 0;
+  display: grid;
+
+  @media only screen and (min-width: 990px) {
+    width: 100%;
+  }
+`;
+
+const ArtistDropDownMenu = styled.li`
+  &:hover,
+  &:focus {
+    display: block;
   }
 `;
 
@@ -159,6 +352,10 @@ const SearchButton = styled.button`
   color: black;
   text-align: left;
   cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
 `;
 
 const SearchIcon = styled.svg`
@@ -216,7 +413,7 @@ const CartIcon = styled.svg`
 `;
 
 const CartCount = styled.div`
-  right: 0.1em;
+  right: 0;
   top: 0.2rem;
   background-color: #000;
   height: calc(19em / 16);
@@ -278,11 +475,101 @@ const Nav = () => {
               </NavLink>
             </NavMenuItem>
 
-            <NavMenuItem>
-              <NavLink to="/collections">
-                <NavText>Collections</NavText>
-              </NavLink>
-            </NavMenuItem>
+            <NavMenuItem_HasDropDown className="site-nav--has-dropdown">
+              <NavLinkButton className="site-nav--has-dropdown">
+                <Link
+                  className="site-nav--has-dropdown"
+                  to="/collections"
+                  style={{
+                    textDecoration: "none",
+                    color: "#fff",
+                  }}>
+                  <NavLabel>Collections</NavLabel>
+                </Link>
+
+                <IconDown
+                  aria-hidden="true"
+                  focusable="false"
+                  role="presentation"
+                  class="icon icon-chevron-down"
+                  viewBox="0 0 9 9">
+                  <path
+                    d="M8.542 2.558a.625.625 0 0 1 0 .884l-3.6 3.6a.626.626 0 0 1-.884 0l-3.6-3.6a.625.625 0 1 1 .884-.884L4.5 5.716l3.158-3.158a.625.625 0 0 1 .884 0z"
+                    fill="#fff"></path>
+                </IconDown>
+              </NavLinkButton>
+              <SiteNavDropDownMenu className="site-nav__dropdown">
+                <Collections>
+                  <CollectionsCategories>
+                    <Heading>Shop by Collections</Heading>
+                    <CollectionsList>
+                      <Category class="category" id="all-collections">
+                        <CategoryLink to="/collections">
+                          Shop All Collections
+                        </CategoryLink>
+                      </Category>
+                      <Category class="category" id="cult-movies">
+                        <CategoryLink to="">Cult Movies</CategoryLink>
+                      </Category>
+                      <Category class="category" id="animated-films">
+                        <CategoryLink href="#">Animated Films</CategoryLink>
+                      </Category>
+                      <Category class="category" id="anime">
+                        <CategoryLink href="#">Anime</CategoryLink>
+                      </Category>
+                      <Category class="category" id="sci-fi">
+                        <CategoryLink href="#">Sci Fi</CategoryLink>
+                      </Category>
+                      <Category class="category" id="comic-books">
+                        <CategoryLink href="#">Comic Books</CategoryLink>
+                      </Category>
+                      <Category class="category" id="videogames">
+                        <CategoryLink href="#">Videogames</CategoryLink>
+                      </Category>
+                      <Category class="category" id="horror">
+                        <CategoryLink href="#">Horror</CategoryLink>
+                      </Category>
+                      <Category class="category" id="tv">
+                        <CategoryLink href="#">TV</CategoryLink>
+                      </Category>
+                      <Category class="category" id="cartoons">
+                        <CategoryLink href="#">Cartoons</CategoryLink>
+                      </Category>
+                      <Category class="category" id="magic-and-fantasy">
+                        <CategoryLink href="#">Magic And Fantasy</CategoryLink>
+                      </Category>
+                      <Category class="category" id="themes">
+                        <CategoryLink href="#">Themes</CategoryLink>
+                      </Category>
+                    </CollectionsList>
+                  </CollectionsCategories>
+                  <FeaturedCollections>
+                    <FeatureHeading>Featured Collections</FeatureHeading>
+                    <FeaturedList>
+                      <Category class="category" id="cult-90s-classics">
+                        <CategoryLink to="">Cult 90s Classics</CategoryLink>
+                      </Category>
+                      <Category class="category" id="neo-tokyo">
+                        <CategoryLink href="#">Neo Tokyo</CategoryLink>
+                      </Category>
+                      <Category class="category" id="crystal-lake">
+                        <CategoryLink href="#">Crystal Lake</CategoryLink>
+                      </Category>
+                      <Category class="category" id="80s-sci-fi">
+                        <CategoryLink href="#">80s Sci-Fi</CategoryLink>
+                      </Category>
+                      <Category class="category" id="dark-knight">
+                        <CategoryLink href="#">Dark Knight</CategoryLink>
+                      </Category>
+                      <Category class="category" id="pc-gaming">
+                        <CategoryLink href="#">PC Gaming</CategoryLink>
+                      </Category>
+                    </FeaturedList>
+                  </FeaturedCollections>
+                </Collections>
+              </SiteNavDropDownMenu>
+              <ArtistDropDownMenu></ArtistDropDownMenu>
+            </NavMenuItem_HasDropDown>
 
             <NavMenuItem>
               <NavLink to="/artists">
