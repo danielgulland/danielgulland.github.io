@@ -76,7 +76,7 @@ const Home = () => {
     <main>
 
       <ClockCounter>
-        <Deals  to="/daily_deals">
+        <Deals  to="/sale">
           DON'T WAIT!
           <br></br>
           BEST DEALS end in

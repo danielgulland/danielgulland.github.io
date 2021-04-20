@@ -21,7 +21,7 @@ const Deals = styled.h3`
   font-weight: 900;
 `;
 
-const DailyDeals = () => {
+const Sale = () => {
   return (
     <main>
       <ClockCounter>
@@ -40,4 +40,4 @@ const DailyDeals = () => {
   );
 };
 
-export default DailyDeals;
+export default Sale;

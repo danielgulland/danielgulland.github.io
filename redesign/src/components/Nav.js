@@ -470,8 +470,8 @@ const Nav = () => {
         <Navbar id="AccessibleNav" role="navigation">
           <NavMenu id="SiteNav">
             <NavMenuItem>
-              <NavLink to="/daily_deals">
-                <NavText>Daily Deals</NavText>
+              <NavLink to="/all-tees">
+                <NavText>Shop</NavText>
               </NavLink>
             </NavMenuItem>
 
@@ -578,8 +578,8 @@ const Nav = () => {
             </NavMenuItem>
 
             <NavMenuItem>
-              <NavLink to="/collections/last-chance-tees">
-                <NavText>Last Chance Tees</NavText>
+              <NavLink to="/sale">
+                <NavText>Sale</NavText>
               </NavLink>
             </NavMenuItem>
           </NavMenu>

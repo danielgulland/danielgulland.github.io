@@ -2,10 +2,10 @@ import "./styles.css";
 import Nav from "./components/Nav";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
-import DailyDeals from "./components/DailyDeals";
+import Sale from "./components/Sale";
 import Collections from "./components/Collections";
 import Artists from "./components/Artists";
-import LastChanceTees from "./components/LastChanceTees";
+import AllTees from "./components/AllTees";
 import Account from "./components/Account";
 import Cart from "./components/Cart";
 
@@ -17,8 +17,8 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/daily_deals">
-          <DailyDeals />
+        <Route path="/sale">
+          <Sale />
         </Route>
         <Route exact path="/collections">
           <Collections />
@@ -26,8 +26,8 @@ function App() {
         <Route path="/artists">
           <Artists />
         </Route>
-        <Route exact path="/collections/last-chance-tees">
-          <LastChanceTees />
+        <Route exact path="/collections/all-tees">
+          <AllTees />
         </Route>
         <Route path="/account/login">
           <Account />

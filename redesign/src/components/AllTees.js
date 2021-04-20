@@ -1,6 +1,6 @@
 import React from "react";
 
-const LastChanceTees = () => {
+const AllTees = () => {
   return (
     <main>
       <h1>Last Chance Tees</h1>
@@ -8,4 +8,4 @@ const LastChanceTees = () => {
   );
 };
 
-export default LastChanceTees;
+export default AllTees;
