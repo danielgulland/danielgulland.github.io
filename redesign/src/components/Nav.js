@@ -25,7 +25,7 @@ const GridContainer = styled.div`
   position: relative;
   background-color: transparent;
 
-  display: table;
+  display: flex;
   table-layout: fixed;
   width: 100%;
   margin-left: 0;
@@ -35,6 +35,10 @@ const GridContainer = styled.div`
     display: table;
     clear: both;
   }
+
+  @media (max-width: 804px) {
+    height: 60px;
+  }
 `;
 
 const LogoGridItem = styled.div`
@@ -42,8 +46,10 @@ const LogoGridItem = styled.div`
   float: none;
   display: table-cell;
   vertical-align: middle;
+  width: 100%;
+  margin: auto 0;
 
-  @media only screen and (min-width: 750px) {
+  @media only screen and (min-width: 804px) {
     width: 25%;
   }
 `;
@@ -57,10 +63,16 @@ const Site_Header_Logo = styled.h1`
   @media only screen and (min-width: 750px) {
     padding: 8px 0 8px 55px;
   }
+
+  @media only screen and (max-width: 749px) {
+    padding-left: 22px;
+    text-align: left;
+  }
 `;
 
 const HomeLink = styled(Link)`
   margin: 0 auto;
+  display: block;
 `;
 
 const Logo = styled.img`
@@ -68,6 +80,11 @@ const Logo = styled.img`
   width: 100%;
   height: auto;
   border: none;
+  display: block;
+
+  @media (max-width: 804px) {
+    max-width: 100px !important;
+  }
 `;
 
 const Navbar = styled.nav`
@@ -75,6 +92,11 @@ const Navbar = styled.nav`
   display: table-cell;
   vertical-align: middle;
   padding-left: 0;
+
+  @media only screen and (max-width: 804px) {
+    width: 100%;
+    display: none !important;
+  }
 
   @media only screen and (min-width: 750px) {
     width: 100%;
@@ -123,29 +145,6 @@ const NavMenuItem_HasDropDown = styled.li`
   margin-bottom: 0;
   vertical-align: middle;
   padding: 17px 0;
-`;
-
-const DropDownNavLink = styled(Link)`
-  color: #ffff;
-  padding: 3px 10px;
-  display: inline-block;
-  margin-bottom: 0;
-  vertical-align: middle;
-  position: static;
-
-  text-decoration: none;
-  touch-action: manipulation;
-  background-color: transparent;
-  font-size: 18px;
-  font-weight: 600;
-  -webkit-transition: all ease 0.4s;
-  transition: all ease 0.1s;
-  white-space: nowrap;
-
-  /* &:not([disabled]):hover,
-  &:focus {
-    color: white;
-  } */
 `;
 
 const NavLinkButton = styled.button`
@@ -202,7 +201,7 @@ const SiteNavDropDownMenu = styled.div`
   left: 0;
   right: 0;
   padding: 0;
-  top: 70px;
+  top: 80px;
   width: 90%;
   border: none;
   background-color: #fff;
@@ -214,8 +213,16 @@ const SiteNavDropDownMenu = styled.div`
   background: white;
   display: none;
 
+  @media only screen and (max-width: 2000px) {
+    top: 67px;
+  }
+
+  @media only screen and (max-width: 1440px) {
+    top: 67px;
+  }
+
   @media only screen and (max-width: 990px) {
-    top: 70px;
+    top: 67px;
   }
 `;
 
@@ -324,9 +331,15 @@ const HeaderIcons = styled.div`
   position: relative;
   white-space: nowrap;
   text-align: right !important;
+  margin: auto 0;
 
   @media only screen and (min-width: 750px) {
     width: 25%;
+  }
+
+  @media (max-width: 804px) {
+    padding-right: 5px;
+    width: auto;
   }
 `;
 
@@ -348,13 +361,18 @@ const SearchButton = styled.button`
   transition: all 0.35s cubic-bezier(0.29, 0.63, 0.44, 1);
   background-color: transparent;
   border: 0;
-  margin: 0;
+  margin: 0 auto;
   color: black;
   text-align: left;
   cursor: pointer;
+  position: relative;
 
   &:focus {
     outline: none;
+  }
+
+  @media only screen and (min-width: 750px) {
+    padding: 9px 11px 10px 11px;
   }
 `;
 
@@ -378,7 +396,7 @@ const AccountLink = styled(Link)`
   color: #fff;
   transition: all 0.35s cubic-bezier(0.29, 0.63, 0.44, 1);
 
-  @media only screen and (min-width: 750px) {
+  @media only screen and (min-width: 400px) {
     padding: 10px 11px;
   }
 `;
@@ -398,8 +416,14 @@ const CartLink = styled(Link)`
   color: #fff;
   transition: all 0.35s cubic-bezier(0.29, 0.63, 0.44, 1);
 
-  @media only screen and (min-width: 750px) {
+  @media only screen and (min-width: 400px) {
     padding: 10px 11px;
+  }
+
+  @media only screen and (max-width: 749px) {
+    display: inline-block;
+    padding: 10px 11px;
+    margin: 0;
   }
 `;
 
@@ -425,6 +449,10 @@ const CartCount = styled.div`
   justify-content: center;
   position: absolute;
   text-align: center;
+
+  @media only screen and (max-width: 749px) {
+    font-size: 1em;
+  }
 `;
 
 const Count = styled.span`
@@ -440,14 +468,42 @@ const MobileNavToggle = styled.button`
   background-color: transparent;
   border: 0;
   margin: 0;
-  color: black;
+  color: white;
   text-align: left;
   cursor: pointer;
+
+  @media only screen and (max-width: 804px) {
+    display: inline-block;
+    padding: 10px 11px 10px 20px;
+    margin: 0;
+  }
+`;
+
+const Hamburger = styled.svg`
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  vertical-align: middle;
+`;
+
+const Close = styled.svg`
+  display: none;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  fill: currentColor;
 `;
 
 const MobileNav = styled.nav``;
 
 const Nav = () => {
+  const [isActive, setActive] = useState(false);
+
+  const toggleClass = () => {
+    setActive(!isActive);
+  };
+
   return (
     <Header role="banner">
       <GridContainer>
@@ -478,7 +534,6 @@ const Nav = () => {
             <NavMenuItem_HasDropDown className="site-nav--has-dropdown">
               <NavLinkButton className="site-nav--has-dropdown">
                 <Link
-                  className="site-nav--has-dropdown"
                   to="/collections"
                   style={{
                     textDecoration: "none",
@@ -678,17 +733,26 @@ const Nav = () => {
               </CartCount>
             </CartLink>
 
-            <MobileNavToggle type="button">
-              <svg
+            <MobileNavToggle
+              type="button"
+              aria-expanded="false"
+              aria-label="Menu"
+              className={
+                isActive
+                  ? "btn--link site-header__icon site-header__menu js-mobile-nav-toggle mobile-nav--open mobile-nav--close"
+                  : "btn--link site-header__icon site-header__menu js-mobile-nav-toggle mobile-nav--open"
+              }
+              onClick={toggleClass}>
+              <Hamburger
                 aria-hidden="true"
                 focusable="false"
                 role="presentation"
                 class="icon icon-hamburger"
                 viewBox="0 0 37 40">
                 <path d="M33.5 25h-30c-1.1 0-2-.9-2-2s.9-2 2-2h30c1.1 0 2 .9 2 2s-.9 2-2 2zm0-11.5h-30c-1.1 0-2-.9-2-2s.9-2 2-2h30c1.1 0 2 .9 2 2s-.9 2-2 2zm0 23h-30c-1.1 0-2-.9-2-2s.9-2 2-2h30c1.1 0 2 .9 2 2s-.9 2-2 2z"></path>
-              </svg>
+              </Hamburger>
 
-              <svg
+              <Close
                 aria-hidden="true"
                 focusable="false"
                 role="presentation"
@@ -697,13 +761,13 @@ const Nav = () => {
                 <path
                   d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z"
                   class="layer"></path>
-              </svg>
+              </Close>
             </MobileNavToggle>
           </HeaderIconsWrapper>
         </HeaderIcons>
       </GridContainer>
 
-      <MobileNav></MobileNav>
+      <MobileNav class="mobile-nav-wrapper medium-up--hide is-transitioning"></MobileNav>
     </Header>
   );
 };
