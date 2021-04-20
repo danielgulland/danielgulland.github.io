@@ -63,7 +63,6 @@ button {
   background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
   box-sizing: border-box;
   margin: 0em;
-  font: 400 13.3333px Arial;
   padding: 10px 11px 10px 11px;
   border-width: 2px;
   border-style: outset;
@@ -109,4 +108,10 @@ svg:not(:root) {
 .site-nav--has-dropdown:hover .site-nav__dropdown,
 .site-nav--has-dropdown:focus .site-nav__dropdown {
   display: block;
+}
+
+.site-header__icon:focus,
+.search-bar__submit:focus,
+.search-bar__close:focus {
+  outline: none;
 }
