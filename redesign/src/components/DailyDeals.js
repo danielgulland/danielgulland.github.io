@@ -1,36 +1,46 @@
 import React from "react";
-import Tick from '@pqina/flip';
+import styled from "styled-components";
+import { FlipClock } from "./FlipClock";
+import pinkbr from "./assets/pinkbr.png";
 
-console.log(Tick);
+const ClockCounter = styled.div`
+  height: 100px;
+  padding-left: 45vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-image: url(${pinkbr});
+  margin: 20px 15px;
+`;
 
-function setupFlip(tick) {
- 
-  Tick.helper.interval(function() {
+const Deals = styled.h2`
+  color: brown; 
+  font-style: Italic;
+  font-weight: 500;
+`;
 
-      tick.value++;
 
-      // Set `aria-label` attribute which screenreaders will read instead of HTML content
-      tick.root.setAttribute('aria-label', tick.value);
-
-  }, 1000);
-}
+const Clock = styled.div`
+  padding-left: 30px;
+  float: none;
+  display: table-cell;
+  vertical-align: middle;
+`;
 
 const DailyDeals = () => {
   return (
     <main>
-      <h1>Daily Deals</h1>
-      <div class="clock-counter">
-        <p>
-          These deals are 
+      <ClockCounter>
+        <Deals>
+          THESE DEALS ARE
           <br></br>
-          gone forever in
-        </p>
-        <div class= "tick"  data-value="1234" data-did-init="setupFlip">
-          <div data-repeat="true" aria-hidden="true">
-            <span data-view="flip"></span>
-          </div>
-        </div>
-      </div>
+          GONE FOREVER IN
+        </Deals>
+        <Clock> 
+        <FlipClock value={"11"}/>
+        </Clock>
+      </ClockCounter>
+
       <h2>List of deals</h2>
     </main>
   );

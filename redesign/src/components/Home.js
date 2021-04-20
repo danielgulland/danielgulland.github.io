@@ -1,27 +1,122 @@
 import React from "react";
+import styled from "styled-components";
+import { FlipClock } from "./FlipClock";
+import Carousel from "react-elastic-carousel";
+import pinkbr from "./assets/pinkbr.png";
+import col1 from "./assets/col1.jpeg";
+import col2 from "./assets/col2.jpeg";
+import col3 from "./assets/col3.gif";
+import col4 from "./assets/col4.png";
+import col5 from "./assets/col5.jpeg";
+import { Link } from "react-router-dom";
+
+const Deals = styled(Link)`
+  color: brown; 
+  font-style: Italic;
+  font-weight: 500;
+  font-size: 27px;
+`;
+
+const Clock = styled.div`
+  padding-left: 30px;
+  float: none;
+  display: table-cell;
+  vertical-align: middle;
+`;
+
+const ClockCounter = styled.div`
+  height: 100px;
+  padding-left: 45vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-image: url(${pinkbr});
+  margin: 20px 15px;
+`;
+
+const Heading = styled.h1`
+  color: #5597AB;
+  text-decoration: underline;
+  padding: 10px 30px;
+`;
+
+const breakPoints = [
+  { width: 1, itemsToShow: 1 },
+  { width: 550, itemsToShow: 2 },
+  { width: 768, itemsToShow: 3 },
+  { width: 1200, itemsToShow: 4 },
+];
+
+const Item = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 100%;
+  color: #fff;
+  margin: 0 15px;
+  font-size: 4em;
+  overflow: hidden;
+  opacity: 1;
+  &:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+`;
+
+const Collection = styled.h3`
+  position: absolute;
+  font-size: 30px;
+  color: #fff;
+  background-color: brown;
+  &:hover {
+    text-decoration: underline;
+    border-bottom-color: #fff;
+  }
+`;
+
 
 const Home = () => {
   return (
     <main>
 
-      <div class="clock-counter">
-        <p>
-          LATEST DEALS
-          <br></br>
+      <ClockCounter>
+        <Deals  to="/daily_deals">
           DON'T WAIT!
-        </p>
-        <div class= "tick"  data-value="1234" data-did-init="setupFlip">
-          <div data-repeat="true" aria-hidden="true">
-            <span data-view="flip"></span>
-          </div>
-        </div>
+          <br></br>
+          BEST DEALS end in
+        </Deals>
+        <Clock> 
+        <FlipClock value={"11"}/>
+        </Clock>
+      </ClockCounter>
+
+      <div className="list">
+        <Carousel breakPoints={breakPoints}>
+          <Item>
+            <img src ={col1}  alt="Col1" />
+            <Collection> Cult 90s Classics </Collection>
+          </Item>
+          <Item>
+            <img src ={col2}  alt="Col2" />
+            <Collection> Anime </Collection>
+          </Item>
+          <Item>
+            <img src ={col3}  alt="Col3" />
+            <Collection> Horror </Collection>
+          </Item>
+          <Item>
+            <img src ={col4}  alt="Col4" />
+            <Collection> Animated Films </Collection>
+          </Item>
+          <Item>
+            <img src ={col5}  alt="Col5" />
+            <Collection> 80s Videogames </Collection>
+          </Item>
+        </Carousel>
       </div>
 
-      <h1>Trending right now</h1>
-      <p>expanding cards for popular collections</p>
-
-      <h1>Best Selling Shirts</h1>
-
+      <Heading>» Trending Right Now</Heading>
     </main>
   );
 };
