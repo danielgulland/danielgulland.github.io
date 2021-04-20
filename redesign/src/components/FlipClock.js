@@ -6,6 +6,14 @@
 import React, { useRef, useEffect, useState } from "react";
 import Tick from "@pqina/flip";
 import "@pqina/flip/dist/flip.min.css";
+import "../styles.css";
+import styled from "styled-components";
+
+const Txt = styled.p`
+  color: #5597AB;
+  font-size: 13px;
+  font-style: Italic;
+`;
 
 export const FlipClock = ({ value }) => {
   const divRef = useRef();
@@ -61,6 +69,7 @@ export const FlipClock = ({ value }) => {
       <div data-repeat="true">
         <span data-view="flip" />
       </div>
+      <Txt>&nbsp;hrs&nbsp; mins&nbsp; secs</Txt>
     </div>
   );
 };

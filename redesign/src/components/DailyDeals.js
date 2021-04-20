@@ -4,7 +4,7 @@ import { FlipClock } from "./FlipClock";
 import pinkbr from "./assets/pinkbr.png";
 
 const ClockCounter = styled.div`
-  height: 100px;
+  height: 70px;
   padding-left: 45vw;
   position: relative;
   display: flex;
@@ -13,18 +13,11 @@ const ClockCounter = styled.div`
   margin: 20px 15px;
 `;
 
-const Deals = styled.h2`
+const Deals = styled.h3`
   color: brown; 
   font-style: Italic;
   font-weight: 500;
-`;
-
-
-const Clock = styled.div`
-  padding-left: 30px;
-  float: none;
-  display: table-cell;
-  vertical-align: middle;
+  padding-right: 30px;
 `;
 
 const DailyDeals = () => {
@@ -36,9 +29,9 @@ const DailyDeals = () => {
           <br></br>
           GONE FOREVER IN
         </Deals>
-        <Clock> 
+        <div> 
         <FlipClock value={"11"}/>
-        </Clock>
+        </div>
       </ClockCounter>
 
       <h2>List of deals</h2>

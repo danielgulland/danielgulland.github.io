@@ -14,18 +14,12 @@ const Deals = styled(Link)`
   color: brown; 
   font-style: Italic;
   font-weight: 500;
-  font-size: 27px;
-`;
-
-const Clock = styled.div`
-  padding-left: 30px;
-  float: none;
-  display: table-cell;
-  vertical-align: middle;
+  font-size: 20px;
+  padding-right: 30px;
 `;
 
 const ClockCounter = styled.div`
-  height: 100px;
+  height: 70px;
   padding-left: 45vw;
   position: relative;
   display: flex;
@@ -64,15 +58,16 @@ const Item = styled.div`
   }
 `;
 
-const Collection = styled.h3`
+const Collection = styled.div`
   position: absolute;
-  font-size: 30px;
+  font-size: 28px;
   color: #fff;
   background-color: brown;
   &:hover {
     text-decoration: underline;
     border-bottom-color: #fff;
   }
+  padding: 0px 5px;
 `;
 
 
@@ -86,9 +81,9 @@ const Home = () => {
           <br></br>
           BEST DEALS end in
         </Deals>
-        <Clock> 
+        <div> 
         <FlipClock value={"11"}/>
-        </Clock>
+        </div>
       </ClockCounter>
 
       <div className="list">
