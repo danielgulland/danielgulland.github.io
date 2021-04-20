@@ -26,7 +26,7 @@ function App() {
         <Route path="/artists">
           <Artists />
         </Route>
-        <Route exact path="/collections/all-tees">
+        <Route exact path="/all-tees">
           <AllTees />
         </Route>
         <Route path="/account/login">
