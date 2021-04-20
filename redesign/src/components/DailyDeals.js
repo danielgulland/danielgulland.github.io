@@ -4,8 +4,8 @@ import { FlipClock } from "./FlipClock";
 import pinkbr from "./assets/pinkbr.png";
 
 const ClockCounter = styled.div`
-  height: 100px;
-  padding-left: 45vw;
+  height: auto;
+  justify-content: center;
   position: relative;
   display: flex;
   align-items: center;
@@ -15,9 +15,10 @@ const ClockCounter = styled.div`
 
 const Deals = styled.h3`
   color: brown; 
-  font-style: Italic;
   font-weight: 500;
   padding-right: 30px;
+  font-size: 30px;
+  font-weight: 900;
 `;
 
 const DailyDeals = () => {
