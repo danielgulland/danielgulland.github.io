@@ -4,7 +4,7 @@ import { FlipClock } from "./FlipClock";
 import pinkbr from "./assets/pinkbr.png";
 
 const ClockCounter = styled.div`
-  height: 70px;
+  height: 100px;
   padding-left: 45vw;
   position: relative;
   display: flex;
@@ -30,7 +30,7 @@ const DailyDeals = () => {
           GONE FOREVER IN
         </Deals>
         <div> 
-        <FlipClock value={"11"}/>
+        <FlipClock value={"5"}/>
         </div>
       </ClockCounter>
 

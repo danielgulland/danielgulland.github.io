@@ -19,7 +19,7 @@ const Deals = styled(Link)`
 `;
 
 const ClockCounter = styled.div`
-  height: 70px;
+  height: 100px;
   padding-left: 45vw;
   position: relative;
   display: flex;
@@ -82,7 +82,7 @@ const Home = () => {
           BEST DEALS end in
         </Deals>
         <div> 
-        <FlipClock value={"11"}/>
+        <FlipClock value={"5"}/>
         </div>
       </ClockCounter>
 

@@ -6,12 +6,12 @@
 import React, { useRef, useEffect, useState } from "react";
 import Tick from "@pqina/flip";
 import "@pqina/flip/dist/flip.min.css";
-import "../styles.css";
 import styled from "styled-components";
+import "../styles.css";
 
-const Txt = styled.p`
-  color: #5597AB;
-  font-size: 13px;
+const Txt = styled.pre`
+  color: gray;
+  font-size: 15px;
   font-style: Italic;
 `;
 
@@ -37,7 +37,7 @@ export const FlipClock = ({ value }) => {
 
   useEffect(() => {
     const offset = new Date();
-    const timeDuration = Tick.helper.duration(11.33, "hours");
+    const timeDuration = Tick.helper.duration(5.33, "hours");
 
     // add 24 hours to get final deadline
     const deadline = new Date(
@@ -66,10 +66,10 @@ export const FlipClock = ({ value }) => {
 
   return (
     <div ref={divRef} className="tick">
-      <div data-repeat="true">
+      <div data-repeat="true" data-layout="horizontal">
         <span data-view="flip" />
       </div>
-      <Txt>&nbsp;hrs&nbsp; mins&nbsp; secs</Txt>
+      <Txt>  hrs    mins    secs</Txt>
     </div>
   );
 };
