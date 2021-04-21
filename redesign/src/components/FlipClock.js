@@ -13,6 +13,7 @@ const Txt = styled.pre`
   color: gray;
   font-size: 15px;
   font-style: Italic;
+  margin-inline-start: 2px;
 `;
 
 export const FlipClock = ({ value }) => {
@@ -69,7 +70,7 @@ export const FlipClock = ({ value }) => {
       <div data-repeat="true" data-layout="horizontal">
         <span data-view="flip" />
       </div>
-      <Txt>  hrs    mins    secs</Txt>
+      <Txt> hrs   mins  secs</Txt>
     </div>
   );
 };

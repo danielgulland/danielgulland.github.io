@@ -25,7 +25,7 @@ const ClockCounter = styled.div`
   display: flex;
   align-items: center;
   background-image: url(${pinkbr});
-  margin: 20px 15px;
+  margin: 15px 15px;
 `;
 
 const Heading = styled.h1`
