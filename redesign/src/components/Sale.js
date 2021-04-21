@@ -9,6 +9,7 @@ import daily1 from "./assets/daily1.png";
 import daily2 from "./assets/daily2.png";
 import daily3 from "./assets/daily3.webp";
 import daily4 from "./assets/daily4.png";
+import last0 from "./assets/last0.jpeg";
 import last1 from "./assets/last1.webp";
 import last2 from "./assets/last2.jpeg";
 import last3 from "./assets/last3.jpeg";
@@ -256,6 +257,18 @@ const Sale = () => {
       <LCGroup>
       <Carousel breakPoints={breakPoints}>
           <Card centered='true' raised='true' href='/tee/details'>
+            <Image src ={last0}/>
+            <Card.Content textAlign='center'>
+              <Card.Header>100% Trash</Card.Header>
+              <Card.Meta>
+                <span className = 'design'>
+                  For when you need to show people<br></br>
+                  what they're in for?
+                </span>
+              </Card.Meta>
+            </Card.Content>
+          </Card>
+          <Card centered='true' raised='true' href='/tee/details'>
             <Image src ={last1}/>
             <Card.Content textAlign='center'>
               <Card.Header>See You Space Coyote</Card.Header>
@@ -266,7 +279,7 @@ const Sale = () => {
                 </span>
               </Card.Meta>
             </Card.Content>
-          </Card>
+            </Card>
           <Card centered='true' raised='true' href='/tee/details'>
             <Image src ={last2}/>
             <Card.Content textAlign='center'>
