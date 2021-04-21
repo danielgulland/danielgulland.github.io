@@ -69,6 +69,11 @@ const sizeOptions = [
   { key: 3, text: 'Large', value: 3 },
 ]
 
+const formOptions = [
+  { key: 1, text: 'Unisex', value: 1 },
+  { key: 2, text: 'Men', value: 2 },
+  { key: 3, text: 'Women', value: 3 },
+]
 
 const Sale = () => {
   return (
@@ -93,6 +98,16 @@ const Sale = () => {
               <Card.Meta>
                 <span className = 'price'>$13.00</span>
               </Card.Meta>
+              <br></br>
+              <Dropdown 
+                  clearable 
+                  fluid
+                  placeholder='Select Form' 
+                  options={formOptions} 
+                  defaultValue={formOptions[0].value}
+                  selection 
+               />
+               <br></br>
               <Dropdown 
                   clearable 
                   fluid
@@ -100,7 +115,7 @@ const Sale = () => {
                   options={sizeOptions} 
                   defaultValue={sizeOptions[0].value}
                   selection 
-                />
+               />
             </Card.Content>
             <Card.Content extra>
               <div className='ui two buttons'>
@@ -122,6 +137,16 @@ const Sale = () => {
               <Card.Meta>
                 <span className = 'price'>$13.00</span>
               </Card.Meta>
+              <br></br>
+              <Dropdown 
+                  clearable 
+                  fluid
+                  placeholder='Select Form' 
+                  options={formOptions} 
+                  defaultValue={formOptions[0].value}
+                  selection 
+               />
+               <br></br>
               <Dropdown 
                   clearable 
                   fluid
@@ -151,6 +176,16 @@ const Sale = () => {
               <Card.Meta>
                 <span className = 'price'>$13.00</span>
               </Card.Meta>
+              <br></br>
+              <Dropdown 
+                  clearable 
+                  fluid
+                  placeholder='Select Form' 
+                  options={formOptions} 
+                  defaultValue={formOptions[0].value}
+                  selection 
+               />
+               <br></br>
               <Dropdown 
                   clearable 
                   fluid
@@ -180,6 +215,16 @@ const Sale = () => {
               <Card.Meta>
                 <span className = 'price'>$13.00</span>
               </Card.Meta>
+              <br></br>
+              <Dropdown 
+                  clearable 
+                  fluid
+                  placeholder='Select Form' 
+                  options={formOptions} 
+                  defaultValue={formOptions[0].value}
+                  selection 
+               />
+               <br></br>
               <Dropdown 
                   clearable 
                   fluid
