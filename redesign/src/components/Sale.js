@@ -59,7 +59,8 @@ const Sale = () => {
                 <span className = 'price'>$13.00</span>
               </Card.Meta>
               <Card.Description>
-
+                "Hey how am I driving, man?" <br></br>
+                "I think we're parked."
               </Card.Description>
             </Card.Content>
             <Card.Content extra>
@@ -78,7 +79,8 @@ const Sale = () => {
                 <span className = 'price'>$13.00</span>
               </Card.Meta>
               <Card.Description>
-
+                "So, how long you've been in Mexico?"<br></br>
+                "A weekday."
               </Card.Description>
             </Card.Content>
             <Card.Content extra>
@@ -97,7 +99,7 @@ const Sale = () => {
                 <span className = 'price'>$13.00</span>
               </Card.Meta>
               <Card.Description>
-
+              As seen on TV!
               </Card.Description>
             </Card.Content>
             <Card.Content extra>
@@ -116,7 +118,7 @@ const Sale = () => {
                 <span className = 'price'>$13.00</span>
               </Card.Meta>
               <Card.Description>
-
+              Ace Ventura : Like a glove!
               </Card.Description>
             </Card.Content>
             <Card.Content extra>
