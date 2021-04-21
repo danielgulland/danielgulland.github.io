@@ -10,19 +10,29 @@ import col4 from "./assets/col4.png";
 import col5 from "./assets/col5.jpeg";
 import { Link } from "react-router-dom";
 import { Button, Card, Image, Icon, Dropdown } from 'semantic-ui-react';
+
 const Deals = styled(Link)`
   color: brown; 
   font-style: Italic;
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 25px;
   padding-right: 30px;
+  padding-bottom: 20px;
+  line-height: normal;
+  &:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    color: hotpink; 
+  }
 `;
 
 const ClockCounter = styled.div`
   height: auto;
-  padding-left: 45vw;
+  padding-left: 15vw;
+  padding-top: 10px;
   position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
   background-image: url(${pinkbr});
   margin: 15px 15px;
@@ -87,8 +97,6 @@ const Home = () => {
           DON'T WAIT!
           <br></br>
           BEST DEALS end in
-          <br></br>
-          <br></br>
         </Deals>
         <div> 
         <FlipClock value={"5"}/>
