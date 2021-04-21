@@ -9,7 +9,7 @@ import col3 from "./assets/col3.gif";
 import col4 from "./assets/col4.png";
 import col5 from "./assets/col5.jpeg";
 import { Link } from "react-router-dom";
-
+import { Button, Card, Image, Icon, Dropdown } from 'semantic-ui-react';
 const Deals = styled(Link)`
   color: brown; 
   font-style: Italic;
@@ -36,45 +36,52 @@ const Heading = styled.h1`
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
-  { width: 550, itemsToShow: 2 },
-  { width: 768, itemsToShow: 3 },
-  { width: 1200, itemsToShow: 4 },
+  { width: 580, itemsToShow: 2 },
+  { width: 860, itemsToShow: 3 },
+  { width: 1140, itemsToShow: 4 },
+  { width: 1420, itemsToShow: 5 }, 
 ];
 
-const Item = styled.div`
+const ColCard = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 300px;
   width: 100%;
   color: #fff;
-  margin: 0 15px;
   font-size: 4em;
   overflow: hidden;
-  opacity: 1;
+  padding: 0px 10px;
+  margin-top: 20px;
   &:hover {
-    opacity: 0.7;
     transform: scale(1.1);
   }
 `;
 
-const Collection = styled.h2`
+const ColName = styled.a`
   position: absolute;
   font-size: 28px;
+  font-weight: bold;
   color: #fff;
   background-color: brown;
   &:hover {
-    text-decoration: underline;
-    border-bottom-color: #fff;
+    color: brown;
+    background-color: white;
   }
-  padding: 0px 5px;
+  padding: 8px 5px;
 `;
 
+const ColImg = styled.div`
+  filter: grayscale(0%);
+  &:hover {
+    filter: grayscale(100%);
+    opacity: 0.5;
+  }
+`;
 
 const Home = () => {
   return (
     <main>
-
       <ClockCounter>
         <Deals  to="/sale">
           DON'T WAIT!
@@ -90,26 +97,36 @@ const Home = () => {
 
       <div className="list">
         <Carousel breakPoints={breakPoints}>
-          <Item>
-            <img src ={col1}  alt="Col1"  to='/tee/details'/>
-            <Collection  to='/tee/details'> Cult 90s Classics </Collection>
-          </Item>
-          <Item>
-            <img src ={col2}  alt="Col2" />
-            <Collection> Anime </Collection>
-          </Item>
-          <Item>
-            <img src ={col3}  alt="Col3" />
-            <Collection> Horror </Collection>
-          </Item>
-          <Item>
-            <img src ={col4}  alt="Col4" />
-            <Collection> Animated Films </Collection>
-          </Item>
-          <Item>
-            <img src ={col5}  alt="Col5" />
-            <Collection> 80s Videogames </Collection>
-          </Item>
+        <a href='/collection/details'>
+          <ColCard>
+            <ColImg><Image src ={col1} fluid/></ColImg>
+            <ColName> Cult 90s Classics </ColName>
+          </ColCard>
+          </a>
+          <a href='/collection/details'>
+          <ColCard>
+          <ColImg><Image src ={col2} fluid/></ColImg>
+            <ColName> Anime </ColName>
+          </ColCard>
+          </a>        
+          <a href='/collection/details'>
+          <ColCard>
+          <ColImg><Image src ={col3} fluid/></ColImg>
+            <ColName> Horror </ColName>
+          </ColCard>
+          </a>
+          <a href='/collection/details'>
+          <ColCard>
+          <ColImg><Image src ={col4} fluid/></ColImg>
+            <ColName> Animated Films </ColName>
+          </ColCard>
+          </a>
+          <a href='/collection/details'>
+          <ColCard>
+          <ColImg><Image src ={col5} fluid/></ColImg>
+            <ColName> 80s Videogames </ColName>
+          </ColCard>
+          </a>
         </Carousel>
       </div>
 

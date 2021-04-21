@@ -3,7 +3,7 @@ import React from "react";
 const CollectionDetails = () => {
   return (
     <main>
-      <h1>Individual Tee Details</h1>
+      <h1>Individual Collection Details</h1>
     </main>
   );
 };

@@ -56,12 +56,12 @@ const LCGroup = styled.div`
   padding: 20px 10px;
 `; 
 
-
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
-  { width: 550, itemsToShow: 2 },
-  { width: 768, itemsToShow: 3 },
+  { width: 600, itemsToShow: 2 },
+  { width: 900, itemsToShow: 3 },
   { width: 1200, itemsToShow: 4 },
+  { width: 1500, itemsToShow: 5 }, 
 ];
 
 const sizeOptions = [
