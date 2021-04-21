@@ -58,7 +58,7 @@ const Item = styled.div`
   }
 `;
 
-const Collection = styled.div`
+const Collection = styled.h2`
   position: absolute;
   font-size: 28px;
   color: #fff;
@@ -91,8 +91,8 @@ const Home = () => {
       <div className="list">
         <Carousel breakPoints={breakPoints}>
           <Item>
-            <img src ={col1}  alt="Col1" />
-            <Collection> Cult 90s Classics </Collection>
+            <img src ={col1}  alt="Col1"  to='/tee/details'/>
+            <Collection  to='/tee/details'> Cult 90s Classics </Collection>
           </Item>
           <Item>
             <img src ={col2}  alt="Col2" />

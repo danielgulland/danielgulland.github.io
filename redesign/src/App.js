@@ -8,6 +8,8 @@ import Artists from "./components/Artists";
 import AllTees from "./components/AllTees";
 import Account from "./components/Account";
 import Cart from "./components/Cart";
+import TeeDetails from "./components/TeeDetails";
+import CollectionDetails from "./components/CollectionDetails";
 
 function App() {
   return (
@@ -34,6 +36,12 @@ function App() {
         </Route>
         <Route path="/cart">
           <Cart />
+        </Route>
+        <Route path="/tee/details">
+          <TeeDetails />
+        </Route>
+        <Route path="/collection/details">
+          <CollectionDetails />
         </Route>
       </Switch>
     </Router>
