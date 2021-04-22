@@ -1,7 +1,7 @@
 import React from "react";
-import {ListGroupItem, ListGroup, CardDeck ,Card, Container, Row, Col, Image, Dropdown, DropdownButton, Form, Button, Modal} from "react-bootstrap"
+import "../styles.css";
+import {Carousel, ListGroupItem, ListGroup, CardDeck ,Card, Container, Row, Col, Image, Dropdown, DropdownButton, Form, Button, Modal} from "react-bootstrap"
 import styled from "styled-components";
-import bat041 from "./assets/bat041.png";
 import youth from "./assets/Size Charts/1_-_Youth.png";
 import unisex from "./assets/Size Charts/2_-_Unisex.png";
 import tall from "./assets/Size Charts/3_-_Tall.png";
@@ -13,6 +13,19 @@ import crewneck from "./assets/Size Charts/8_-_Crewneck.png";
 import pullover from "./assets/Size Charts/9_-_Pullover.png";
 import zipHoodie from "./assets/Size Charts/10_-_Zip_Hoodie.png";
 import artistImage from "./assets/artistImage.jpg";
+
+import Logo from "./assets/TeeDetails/Logo.jpg";
+import Manbat from "./assets/TeeDetails/Manbat.png";
+import kidbat from "./assets/TeeDetails/kidbat.png";
+import tallbat from "./assets/TeeDetails/tallbat.png";
+import womanbat from "./assets/TeeDetails/womanbat.png";
+import manbat2 from "./assets/TeeDetails/manbat2.png";
+import tattoobat from "./assets/TeeDetails/tattoobat.png";
+import womanbat2 from "./assets/TeeDetails/womanbat2.png";
+import manbatblonde from "./assets/TeeDetails/manbatblonde.png";
+import backbat from "./assets/TeeDetails/backbat.png";
+import backbat2 from "./assets/TeeDetails/backbat2.png";
+import stickerbat from "./assets/TeeDetails/stickerbar.jpg";
 
 
 function MyVerticallyCenteredModal(props) {
@@ -62,10 +75,83 @@ const TeeDetails = () => {
           </Row>
         <Row>
           <Col>
-            <Image src={bat041} thumbnail />
+          <Carousel>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={Logo}
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={Manbat}
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={kidbat}
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={tallbat}
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={womanbat}
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={manbat2}
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={tattoobat}
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={womanbat2}
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={manbatblonde}
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={backbat}
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={backbat2}
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={stickerbat}
+              />
+            </Carousel.Item>
+          </Carousel>
           </Col>
           <Col>
-          <Form.Label column="lg" lg={3}>Bat 041</Form.Label>
+          <Form.Label as="h1" column="lg" lg={3}>Bat 041</Form.Label>
           <br/>
           <Form.Label column="lg" id="shirt-price" value="13" lg={3}>$13.00</Form.Label><br/>
             <DropdownButton variant="Secondary" id="shirt-type" title="Shirt Type">
@@ -124,7 +210,7 @@ const TeeDetails = () => {
                   <Card.Text>
                   Engineer and beginning graphic designer from Mexico, I make t-shirts inspired by anime, science and pop culture
                   </Card.Text>
-                  <Button variant="primary" href="">Visit artist page</Button>
+                  <Button variant="primary" href="/artists">Visit artist page</Button>
                 </Card.Body>
               </Card>
               <Card style={{ width: '18rem' }}>
