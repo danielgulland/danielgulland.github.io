@@ -145,6 +145,11 @@ const NavMenuItem_HasDropDown = styled.li`
   margin-bottom: 0;
   vertical-align: middle;
   padding: 17px 0;
+  font-size: 18px;
+
+  @media only screen and (min-width: 1440px) {
+    padding: 21px 0;
+  }
 `;
 
 const NavLinkButton = styled.button`
@@ -159,10 +164,6 @@ const NavLinkButton = styled.button`
   font: inherit;
   margin: 0;
   font-weight: 600;
-
-  @media only screen and (max-width: 989px) {
-    font-size: 18px;
-  }
 
   &:focus {
     outline: none;
@@ -201,7 +202,7 @@ const SiteNavDropDownMenu = styled.div`
   left: 0;
   right: 0;
   padding: 0;
-  top: 80px;
+  top: 59.29px;
   width: 90%;
   border: none;
   background-color: #fff;
@@ -213,16 +214,12 @@ const SiteNavDropDownMenu = styled.div`
   background: white;
   display: none;
 
-  @media only screen and (max-width: 2000px) {
+  @media only screen and (min-width: 1440px) {
     top: 67px;
   }
 
-  @media only screen and (max-width: 1440px) {
-    top: 67px;
-  }
-
-  @media only screen and (max-width: 990px) {
-    top: 67px;
+  @media only screen and (max-width: 1024px) {
+    top: 60.29px;
   }
 `;
 
@@ -262,6 +259,7 @@ const Heading = styled.p`
   color: black;
   background-color: #eee;
   color: #df3882;
+  margin-bottom: 0;
 `;
 
 const FeatureHeading = styled.p`
@@ -272,6 +270,7 @@ const FeatureHeading = styled.p`
   padding: 20px 0 20px 0;
   color: black;
   color: #df3882;
+  margin-bottom: 0;
 `;
 
 const Category = styled.p`
@@ -514,6 +513,7 @@ const MobileNavList = styled.ul`
   display: block;
   transform: translate3d(0, 0, 0);
   transition: all 400ms cubic-bezier(0.29, 0.63, 0.44);
+  margin-bottom: 0;
 `;
 
 const MobileNavItem = styled.li`
@@ -597,6 +597,12 @@ const Nav = () => {
     setShow(!show);
   };
 
+  const closeNav = () => {
+    if (isActive) {
+      setActive(!isActive);
+    }
+  };
+
   return (
     <Header role="banner">
       <GridContainer>
@@ -604,6 +610,7 @@ const Nav = () => {
           <Site_Header_Logo>
             <HomeLink to="/">
               <Logo
+                onClick={closeNav}
                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
                 data-aspectratio="3.9682539682539684"
                 data-sizes="auto"
