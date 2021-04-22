@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { Image, Icon, Segment, Label, Card} from 'semantic-ui-react';
 import { FlipClock } from "./FlipClock";
 import Carousel from 'react-bootstrap/Carousel';
 import  Carousel2 from "react-elastic-carousel";
@@ -25,8 +27,12 @@ import new32 from "./assets/new32.png";
 import new33 from "./assets/new33.png";
 import new34 from "./assets/new34.png";
 import new35 from "./assets/new35.png";
-import { Link } from "react-router-dom";
-import { Image, Icon, Segment, Label} from 'semantic-ui-react';
+import last0 from "./assets/last0.jpeg";
+import last1 from "./assets/last1.webp";
+import last2 from "./assets/last2.jpeg";
+import last3 from "./assets/last3.jpeg";
+import last4 from "./assets/last4.jpeg";
+import last5 from "./assets/last5.webp";
 
 const Deals = styled(Link)`
   color: brown; 
@@ -70,7 +76,9 @@ const Banner = styled.div`
 
 const Heading = styled.h1`
   color: #5597AB;
+  color: hotpink;
   padding: 0px 50px;
+  text-shadow: 1px 1px gray;
 `;
 
 const breakPoints = [
@@ -138,7 +146,7 @@ const Home = () => {
         </Segment>
         <Segment.Group>
           <Segment>
-            <Carousel>
+            <Carousel fade>
                 <Carousel.Item>
                   <a href='/tee/details'>
                     &nbsp;&nbsp;&nbsp;&nbsp;
@@ -206,8 +214,78 @@ const Home = () => {
           </Segment>
           <Segment.Group>
             <Segment>
-
-            
+              <Card.Group centered='true' stackable='true' >
+                <Card centered='true' raised='true' href='/tee/details'>
+                  <Image src ={last0}/>
+                  <Card.Content textAlign='center'>
+                    <Card.Header>100% Trash</Card.Header>
+                    <Card.Meta>
+                      <span className = 'design'>
+                        For when you need to show people<br></br>
+                        what they're in for?
+                      </span>
+                    </Card.Meta>
+                  </Card.Content>
+                </Card>
+                <Card centered='true' raised='true' href='/tee/details'>
+                  <Image src ={last1}/>
+                  <Card.Content textAlign='center'>
+                    <Card.Header>See You Space Coyote</Card.Header>
+                    <Card.Meta>
+                      <span className = 'design'>
+                        Coyote : Find your soul mate, Spike<br></br>
+                        Spike : But where? Where?
+                      </span>
+                    </Card.Meta>
+                  </Card.Content>
+                  </Card>
+                <Card centered='true' raised='true' href='/tee/details'>
+                  <Image src ={last2}/>
+                  <Card.Content textAlign='center'>
+                    <Card.Header>Hanzo 300</Card.Header>
+                    <Card.Meta>
+                      <span className = 'design'>
+                        “I may not understand your words, <br></br>but I promise, I will kill you.”
+                      </span>
+                    </Card.Meta>
+                  </Card.Content>
+                </Card>
+                <Card centered='true' raised='true' href='/tee/details'>
+                  <Image src ={last5}/>
+                  <Card.Content textAlign='center'>
+                    <Card.Header>Coud Have Been An E-Mail</Card.Header>
+                    <Card.Meta>
+                      <span className = 'design'>
+                        Really?<br></br>
+                        You made me get dressed for this?
+                      </span>
+                    </Card.Meta>
+                  </Card.Content>
+                </Card>
+                <Card centered='true' raised='true' href='/tee/details'>
+                  <Image src ={last3}/>
+                  <Card.Content textAlign='center'>
+                    <Card.Header>Bat 041</Card.Header>
+                    <Card.Meta>
+                      <span className = 'design'>
+                        The Zubat cave is just <br></br>Mt. Moon
+                      </span>
+                    </Card.Meta>
+                  </Card.Content>
+                </Card> 
+                <Card centered='true' raised='true' href='/tee/details'>
+                  <Image src ={last4}/>
+                  <Card.Content textAlign='center'>
+                    <Card.Header>A Shot In The Dark</Card.Header>
+                    <Card.Meta>
+                      <span className = 'design'>
+                      "Hey how am I driving, man?" <br></br>
+                      "I think we're parked."
+                      </span>
+                    </Card.Meta>
+                  </Card.Content>
+                </Card>
+              </Card.Group>
             </Segment>
           </Segment.Group>
         </Segment.Group>
