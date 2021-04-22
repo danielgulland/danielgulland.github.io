@@ -2,12 +2,14 @@ import "./styles.css";
 import Nav from "./components/Nav";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
-import DailyDeals from "./components/DailyDeals";
+import Sale from "./components/Sale";
 import Collections from "./components/Collections";
 import Artists from "./components/Artists";
-import LastChanceTees from "./components/LastChanceTees";
+import AllTees from "./components/AllTees";
 import Account from "./components/Account";
 import Cart from "./components/Cart";
+import TeeDetails from "./components/TeeDetails";
+import CollectionDetails from "./components/CollectionDetails";
 
 function App() {
   return (
@@ -17,8 +19,8 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/daily_deals">
-          <DailyDeals />
+        <Route path="/sale">
+          <Sale />
         </Route>
         <Route exact path="/collections">
           <Collections />
@@ -26,14 +28,20 @@ function App() {
         <Route path="/artists">
           <Artists />
         </Route>
-        <Route exact path="/collections/last-chance-tees">
-          <LastChanceTees />
+        <Route exact path="/all-tees">
+          <AllTees />
         </Route>
         <Route path="/account/login">
           <Account />
         </Route>
         <Route path="/cart">
           <Cart />
+        </Route>
+        <Route path="/tee/details">
+          <TeeDetails />
+        </Route>
+        <Route path="/collection/details">
+          <CollectionDetails />
         </Route>
       </Switch>
     </Router>
