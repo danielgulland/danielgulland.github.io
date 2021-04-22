@@ -26,7 +26,7 @@ import new33 from "./assets/new33.png";
 import new34 from "./assets/new34.png";
 import new35 from "./assets/new35.png";
 import { Link } from "react-router-dom";
-import { Image, Card} from 'semantic-ui-react';
+import { Image, Icon, Segment, Label} from 'semantic-ui-react';
 
 const Deals = styled(Link)`
   color: brown; 
@@ -56,22 +56,21 @@ const ClockCounter = styled.div`
 `;
 
 const Banner = styled.div`
-  height: 250px;
+  height: 300px;
   overflow: hidden;
-  margin: 15px 0px;
-  position: relative;
+  margin: 0px 0px;
+  padding-bottom: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: space-evenly;
   background: rgb(255,255,255);
   background: linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(180,208,231,1) 40%, rgba(180,208,231,1) 57%, rgba(255,255,255,1) 94%);
-  `;
+`;
 
 const Heading = styled.h1`
   color: #5597AB;
   padding: 0px 50px;
-
 `;
 
 const breakPoints = [
@@ -133,96 +132,130 @@ const Home = () => {
         </div>
       </ClockCounter>
 
-      <Heading>NEW IN</Heading>
+      <Segment.Group>
+        <Segment>
+          <Heading><Icon name='angle double up'/> NEW IN</Heading>
+        </Segment>
+        <Segment.Group>
+          <Segment>
+            <Carousel>
+                <Carousel.Item>
+                  <a href='/tee/details'>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <Label as='a' pointing='left' basic color="teal" size="large">
+                    <Image avatar spaced='right' src ={new11} />
+                      "More Big, More Power!"
+                    </Label>
+                    <Banner>
+                      <Image src ={new14} height="150px"/>
+                      <Image src ={new13} height="170px"/>
+                      <Segment raised>
+                        <img src ={new11} alt="new11" width="200px"/> 
+                      </Segment> 
+                      <Image src ={new12} height="170px"/>
+                      <Image src ={new15} height="150px"/>
+                    </Banner>
+                  </a>
+                </Carousel.Item>
 
-      <Carousel>
-          <Carousel.Item>
-            <Banner>
-              <Image src ={new14} height="150px"/>
-              <Image src ={new13} height="170px"/>
-              <Card color='blue'>
-                <Card.Content>
-                  <Image src ={new11} floated='left' size='small'/>
-                  <Card.Header>More Big More Power</Card.Header>
-                  <Card.Meta>More weight more power!</Card.Meta>
-                </Card.Content>
-              </Card>
-              <Image src ={new12} height="170px"/>
-              <Image src ={new15} height="150px"/>
-            </Banner>
-          </Carousel.Item>
-          <Carousel.Item>
-          <Banner>
-              <Image src ={new24} height="150px"/>
-              <Image src ={new23} height="170px"/>
-              <Card color='blue'>
-                <Card.Content>
-                  <Image src ={new21} floated='left' size='small'/>
-                  <Card.Header>That's Fast Folks!</Card.Header>
-                  <Card.Meta>" No copy-write law in the universe is gonna stop me." - Sonic (really!)</Card.Meta>
-                </Card.Content>
-              </Card>
-              <Image src ={new22} height="170px"/>
-              <Image src ={new25} height="150px"/>
-            </Banner>
-          </Carousel.Item>
-          <Carousel.Item>
-          <Banner>
-              <Image src ={new34} height="150px"/>
-              <Image src ={new33} height="170px"/>
-              <Card color='blue'>
-                <Card.Content>
-                  <Image src ={new31} floated='left' size='small'/>
-                  <Card.Header>More Big More Power</Card.Header>
-                  <Card.Meta>More weight more power!</Card.Meta>
-                </Card.Content>
-              </Card>
-              <Image src ={new32} height="170px"/>
-              <Image src ={new35} height="150px"/>
-            </Banner>
-          </Carousel.Item>
-        </Carousel>
+                <Carousel.Item>
+                  <a href='/tee/details'>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <Label as='a' pointing='left' basic color="teal" size="large">
+                      <Image avatar spaced='right' src ={new21} />
+                        "That's Fast Folks!"
+                    </Label>
+                    <Banner>
+                      <Image src ={new24} height="150px"/>
+                      <Image src ={new23} height="170px"/>
+                      <Segment raised>
+                        <img src ={new21} alt="new21" width="200px"/> 
+                      </Segment> 
+                      <Image src ={new22} height="170px"/>
+                      <Image src ={new25} height="150px"/>
+                    </Banner>
+                  </a>
+                </Carousel.Item>
 
-      <Heading>What's HOT?</Heading>
+                <Carousel.Item>
+                <a href='/tee/details'>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <Label as='a' pointing='left' basic color="teal" size="large">
+                    <Image avatar spaced='right' src ={new31} />
+                      "The Good, The Bad, And The Bobby"
+                  </Label>
+                  <Banner>
+                      <Image src ={new34} height="150px"/>
+                      <Image src ={new33} height="170px"/>
+                      <Segment raised>
+                        <img src ={new31} alt="new31" width="200px"/> 
+                      </Segment> 
+                      <Image src ={new32} height="170px"/>
+                      <Image src ={new35} height="150px"/>
+                    </Banner>
+                  </a>
+                </Carousel.Item>
+              </Carousel>
+            </Segment>
+          </Segment.Group>
+        </Segment.Group>
 
-      <Heading>Featured Collections</Heading>
+        <Segment.Group>
+          <Segment>
+            <Heading><Icon name='hotjar'/> What's HOT?</Heading>
+          </Segment>
+          <Segment.Group>
+            <Segment>
 
-      <div className="list">
-        <Carousel2 breakPoints={breakPoints}>
-        <a href='/collection/details'>
-          <ColCard>
-            <ColImg><Image src ={col1} fluid/></ColImg>
-            <ColName> Cult 90s Classics </ColName>
-          </ColCard>
-          </a>
-          <a href='/collection/details'>
-          <ColCard>
-          <ColImg><Image src ={col2} fluid/></ColImg>
-            <ColName> Anime </ColName>
-          </ColCard>
-          </a>        
-          <a href='/collection/details'>
-          <ColCard>
-          <ColImg><Image src ={col3} fluid/></ColImg>
-            <ColName> Horror </ColName>
-          </ColCard>
-          </a>
-          <a href='/collection/details'>
-          <ColCard>
-          <ColImg><Image src ={col4} fluid/></ColImg>
-            <ColName> Animated Films </ColName>
-          </ColCard>
-          </a>
-          <a href='/collection/details'>
-          <ColCard>
-          <ColImg><Image src ={col5} fluid/></ColImg>
-            <ColName> 80s Videogames </ColName>
-          </ColCard>
-          </a>
-        </Carousel2>
-      </div>
+            
+            </Segment>
+          </Segment.Group>
+        </Segment.Group>
 
 
+        <Segment.Group>
+          <Segment>
+            <Heading><Icon name='star'/>Featured Collections</Heading>
+          </Segment>
+          <Segment.Group>
+            <Segment>     
+              <div className="list">
+                <Carousel2 breakPoints={breakPoints}>
+                <a href='/collection/details'>
+                  <ColCard>
+                    <ColImg><Image src ={col1} fluid/></ColImg>
+                    <ColName> Cult 90s Classics </ColName>
+                  </ColCard>
+                  </a>
+                  <a href='/collection/details'>
+                  <ColCard>
+                  <ColImg><Image src ={col2} fluid/></ColImg>
+                    <ColName> Anime </ColName>
+                  </ColCard>
+                  </a>        
+                  <a href='/collection/details'>
+                  <ColCard>
+                  <ColImg><Image src ={col3} fluid/></ColImg>
+                    <ColName> Horror </ColName>
+                  </ColCard>
+                  </a>
+                  <a href='/collection/details'>
+                  <ColCard>
+                  <ColImg><Image src ={col4} fluid/></ColImg>
+                    <ColName> Animated Films </ColName>
+                  </ColCard>
+                  </a>
+                  <a href='/collection/details'>
+                  <ColCard>
+                  <ColImg><Image src ={col5} fluid/></ColImg>
+                    <ColName> 80s Videogames </ColName>
+                  </ColCard>
+                  </a>
+                </Carousel2>
+              </div>
+            </Segment>
+          </Segment.Group>
+        </Segment.Group>
     </main>
   );
 };
