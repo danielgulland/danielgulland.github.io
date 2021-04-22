@@ -18,6 +18,17 @@ const Heading = styled.h2`
   color: #5597AB;
 `;
 
+const Display = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+`;
+
+const MenuArea = styled.div`
+  padding-top: 15px;
+  padding-right: 10px;
+`;
+
 export default class ArtistsMenu extends Component {
   state = { activeItem: 'ALEMAGLIA' }
 
@@ -27,9 +38,9 @@ export default class ArtistsMenu extends Component {
     const { activeItem } = this.state
 
     return (
-      <Grid>
-        <Grid.Column width={6}>
-          <Menu fluid vertical tabular color='teal'>
+      <Display>
+          <MenuArea>
+          <Menu vertical tabular fluid>
             <Menu.Item
               name='ALEMAGLIA'
               active={activeItem === 'ALEMAGLIA'}
@@ -80,16 +91,10 @@ export default class ArtistsMenu extends Component {
               active={activeItem === 'MINION_FACTORY'}
               onClick={this.handleItemClick}
             />
-            <Menu.Item
-              name='VPTRINIDAD'
-              active={activeItem === 'VPTRINIDAD'}
-              onClick={this.handleItemClick}
-            />
           </Menu>
-        </Grid.Column>
+          </MenuArea>
 
-        <Grid.Column stretched width={10}>
-          <Segment color='teal'>
+          <Segment>
             <Heading> <Icon name='user cicle'/> Alemaglia</Heading>
             Hey I'm Alessio Magliano aka Alemaglia, a designer and cartoonist from Italy. Lately I would call my style "A story in shadows". I love representing all the characters and events in even the smallest details of the design. MY inspiration comes from TV, Comics and animated films so "Be prepared" to find "A whole new world" "Under the sea" of my art!
 
@@ -115,8 +120,7 @@ export default class ArtistsMenu extends Component {
                 </Card>
             </Carousel>
           </Segment>
-        </Grid.Column>
-      </Grid>
+      </Display>
     )
   }
 }
