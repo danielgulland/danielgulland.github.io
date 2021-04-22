@@ -1,3 +1,6 @@
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
 import "./styles.css";
 import Nav from "./components/Nav";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -10,6 +13,7 @@ import Account from "./components/Account";
 import Cart from "./components/Cart";
 import TeeDetails from "./components/TeeDetails";
 import CollectionDetails from "./components/CollectionDetails";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -44,6 +48,7 @@ function App() {
           <CollectionDetails />
         </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 }
