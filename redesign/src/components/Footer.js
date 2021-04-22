@@ -18,7 +18,7 @@ const Footer = () => {
 
             <Form.Group controlId="formBasicPassword">
                 <h3 className="title">Join our Newsletter</h3>
-                <Form.Control type="password" placeholder="Email address" />
+                <Form.Control type="email" placeholder="Email address" />
                 <Button variant="success" type="submit">
                 SUBSCRIBE
                 </Button>
