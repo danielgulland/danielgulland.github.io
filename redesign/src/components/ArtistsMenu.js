@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { Card, Grid, Menu, Segment, Image } from 'semantic-ui-react';
+import styled from "styled-components";
+import { Card, Grid, Menu, Segment, Image, Icon } from 'semantic-ui-react';
 import Carousel from "react-elastic-carousel";
 import last1 from "./assets/last1.webp";
 import last2 from "./assets/last2.jpeg";
-import last3 from "./assets/last3.jpeg";
-import last4 from "./assets/last4.jpeg";
 import last5 from "./assets/last5.webp";
 
 const breakPoints = [
@@ -14,6 +13,10 @@ const breakPoints = [
   { width: 1200, itemsToShow: 4 },
   { width: 1500, itemsToShow: 5 }, 
 ];
+
+const Heading = styled.h2`
+  color: #5597AB;
+`;
 
 export default class ArtistsMenu extends Component {
   state = { activeItem: 'ALEMAGLIA' }
@@ -26,7 +29,7 @@ export default class ArtistsMenu extends Component {
     return (
       <Grid>
         <Grid.Column width={6}>
-          <Menu fluid vertical tabular color='pink'>
+          <Menu fluid vertical tabular color='teal'>
             <Menu.Item
               name='ALEMAGLIA'
               active={activeItem === 'ALEMAGLIA'}
@@ -86,11 +89,11 @@ export default class ArtistsMenu extends Component {
         </Grid.Column>
 
         <Grid.Column stretched width={10}>
-          <Segment color='pink'>
-            <h2>Alemaglia</h2>
+          <Segment color='teal'>
+            <Heading> <Icon name='user cicle'/> Alemaglia</Heading>
             Hey I'm Alessio Magliano aka Alemaglia, a designer and cartoonist from Italy. Lately I would call my style "A story in shadows". I love representing all the characters and events in even the smallest details of the design. MY inspiration comes from TV, Comics and animated films so "Be prepared" to find "A whole new world" "Under the sea" of my art!
 
-            <h2>Best Sellers</h2>
+            <Heading> <Icon name='fire'/> Best Sellers</Heading>
             <Carousel breakPoints={breakPoints}>
             <Card centered='true' raised='true' href='/tee/details'>
                   <Image src ={last1}/>
