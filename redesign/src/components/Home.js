@@ -58,7 +58,7 @@ const ClockCounter = styled.div`
   justify-content: center;
   align-items: center;
   background-image: url(${pinkbr});
-  margin: 15px 15px;
+  margin: 0px 15px;
 `;
 
 const Banner = styled.div`

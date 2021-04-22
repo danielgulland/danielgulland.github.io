@@ -22,7 +22,7 @@ const ClockCounter = styled.div`
   align-items: center;
   background-image: url(${pinkbr});
   margin: 0px 15px;
-  margin-top: 15px;
+  padding-top: 10px;
 `;
 
 const Deals = styled.h3`
@@ -47,6 +47,7 @@ const LastChance = styled.div`
   margin-bottom: 0px;
   padding: 20px 10px;
   color: #447989;
+  text-shadow: 1px 1px gray;
 `;
 
 const LCGroup = styled.div`
