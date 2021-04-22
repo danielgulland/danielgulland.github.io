@@ -1,15 +1,32 @@
 import React from "react";
 import styled from "styled-components";
 import { FlipClock } from "./FlipClock";
-import Carousel from "react-elastic-carousel";
+import Carousel from 'react-bootstrap/Carousel';
+import  Carousel2 from "react-elastic-carousel";
+import 'bootstrap/dist/css/bootstrap.min.css';   
 import pinkbr from "./assets/pinkbr.png";
 import col1 from "./assets/col1.jpeg";
 import col2 from "./assets/col2.jpeg";
 import col3 from "./assets/col3.gif";
 import col4 from "./assets/col4.png";
 import col5 from "./assets/col5.jpeg";
+import new11 from "./assets/new11.jpeg";
+import new12 from "./assets/new12.png";
+import new13 from "./assets/new13.png";
+import new14 from "./assets/new14.png";
+import new15 from "./assets/new15.png";
+import new21 from "./assets/new21.jpeg";
+import new22 from "./assets/new22.png";
+import new23 from "./assets/new23.png";
+import new24 from "./assets/new24.png";
+import new25 from "./assets/new25.png";
+import new31 from "./assets/new31.jpeg";
+import new32 from "./assets/new32.png";
+import new33 from "./assets/new33.png";
+import new34 from "./assets/new34.png";
+import new35 from "./assets/new35.png";
 import { Link } from "react-router-dom";
-import { Button, Card, Image, Icon, Dropdown } from 'semantic-ui-react';
+import { Image, Card} from 'semantic-ui-react';
 
 const Deals = styled(Link)`
   color: brown; 
@@ -38,10 +55,23 @@ const ClockCounter = styled.div`
   margin: 15px 15px;
 `;
 
+const Banner = styled.div`
+  height: 250px;
+  overflow: hidden;
+  margin: 15px 0px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  background: rgb(255,255,255);
+  background: linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(180,208,231,1) 40%, rgba(180,208,231,1) 57%, rgba(255,255,255,1) 94%);
+  `;
+
 const Heading = styled.h1`
   color: #5597AB;
-  text-decoration: underline;
-  padding: 10px 30px;
+  padding: 0px 50px;
+
 `;
 
 const breakPoints = [
@@ -103,8 +133,62 @@ const Home = () => {
         </div>
       </ClockCounter>
 
+      <Heading>NEW IN</Heading>
+
+      <Carousel>
+          <Carousel.Item>
+            <Banner>
+              <Image src ={new14} height="150px"/>
+              <Image src ={new13} height="170px"/>
+              <Card color='blue'>
+                <Card.Content>
+                  <Image src ={new11} floated='left' size='small'/>
+                  <Card.Header>More Big More Power</Card.Header>
+                  <Card.Meta>More weight more power!</Card.Meta>
+                </Card.Content>
+              </Card>
+              <Image src ={new12} height="170px"/>
+              <Image src ={new15} height="150px"/>
+            </Banner>
+          </Carousel.Item>
+          <Carousel.Item>
+          <Banner>
+              <Image src ={new24} height="150px"/>
+              <Image src ={new23} height="170px"/>
+              <Card color='blue'>
+                <Card.Content>
+                  <Image src ={new21} floated='left' size='small'/>
+                  <Card.Header>That's Fast Folks!</Card.Header>
+                  <Card.Meta>" No copy-write law in the universe is gonna stop me." - Sonic (really!)</Card.Meta>
+                </Card.Content>
+              </Card>
+              <Image src ={new22} height="170px"/>
+              <Image src ={new25} height="150px"/>
+            </Banner>
+          </Carousel.Item>
+          <Carousel.Item>
+          <Banner>
+              <Image src ={new34} height="150px"/>
+              <Image src ={new33} height="170px"/>
+              <Card color='blue'>
+                <Card.Content>
+                  <Image src ={new31} floated='left' size='small'/>
+                  <Card.Header>More Big More Power</Card.Header>
+                  <Card.Meta>More weight more power!</Card.Meta>
+                </Card.Content>
+              </Card>
+              <Image src ={new32} height="170px"/>
+              <Image src ={new35} height="150px"/>
+            </Banner>
+          </Carousel.Item>
+        </Carousel>
+
+      <Heading>What's HOT?</Heading>
+
+      <Heading>Featured Collections</Heading>
+
       <div className="list">
-        <Carousel breakPoints={breakPoints}>
+        <Carousel2 breakPoints={breakPoints}>
         <a href='/collection/details'>
           <ColCard>
             <ColImg><Image src ={col1} fluid/></ColImg>
@@ -135,10 +219,10 @@ const Home = () => {
             <ColName> 80s Videogames </ColName>
           </ColCard>
           </a>
-        </Carousel>
+        </Carousel2>
       </div>
 
-      <Heading>» Trending Right Now</Heading>
+
     </main>
   );
 };
