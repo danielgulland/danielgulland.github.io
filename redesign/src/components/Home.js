@@ -146,7 +146,7 @@ const Home = () => {
         </Segment>
         <Segment.Group>
           <Segment>
-            <Carousel fade>
+            <Carousel>
                 <Carousel.Item>
                   <a href='/tee/details'>
                     &nbsp;&nbsp;&nbsp;&nbsp;
