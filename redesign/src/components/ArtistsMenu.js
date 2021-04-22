@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
-import { Card, Grid, Menu, Segment, Image, Icon } from 'semantic-ui-react';
+import { Card, Menu, Segment, Image, Icon } from 'semantic-ui-react';
 import Carousel from "react-elastic-carousel";
 import last1 from "./assets/last1.webp";
 import last2 from "./assets/last2.jpeg";
