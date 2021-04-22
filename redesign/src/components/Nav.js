@@ -259,6 +259,7 @@ const Heading = styled.p`
   color: black;
   background-color: #eee;
   color: #df3882;
+  margin-bottom: 0;
 `;
 
 const FeatureHeading = styled.p`
@@ -269,6 +270,7 @@ const FeatureHeading = styled.p`
   padding: 20px 0 20px 0;
   color: black;
   color: #df3882;
+  margin-bottom: 0;
 `;
 
 const Category = styled.p`
