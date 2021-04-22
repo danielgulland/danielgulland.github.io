@@ -12,7 +12,7 @@ export default class ArtistsMenu extends Component {
     return (
       <Grid>
         <Grid.Column width={6}>
-          <Menu fluid vertical tabular>
+          <Menu fluid vertical tabular color='pink'>
             <Menu.Item
               name='ALEMAGLIA'
               active={activeItem === 'ALEMAGLIA'}
