@@ -5,9 +5,8 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import Tick from "@pqina/flip";
-import "@pqina/flip/dist/flip.min.css";
+import "../flip.min.css";
 import styled from "styled-components";
-import "../styles.css";
 
 const Txt = styled.pre`
   color: gray;
