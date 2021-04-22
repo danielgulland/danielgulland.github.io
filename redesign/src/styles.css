@@ -79,6 +79,12 @@ ol li {
   color: #000;
 }
 
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
 li {
   list-style: none;
   text-align: -webkit-match-parent;
@@ -104,7 +110,7 @@ svg:not(:root) {
   }
 }
 
-/********************* Dropdown menu **************************/
+/*** Dropdown menu ***/
 .site-nav--has-dropdown:hover .site-nav__dropdown,
 .site-nav--has-dropdown:focus .site-nav__dropdown {
   display: block;
@@ -126,4 +132,26 @@ svg:not(:root) {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+}
+/*** Mobile Nav ***/
+.mobile-nav--open .icon-close {
+  display: none;
+}
+
+.mobile-nav--close .icon-hamburger {
+  display: none;
+}
+
+.mobile-nav-wrapper .js-menu--is-open {
+  display: block;
+}
+
+.js-menu--is-open {
+  display: block;
+}
+
+body.mobile-menu-open .mobile-nav-wrapper {
+  max-height: 77vh !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
 }

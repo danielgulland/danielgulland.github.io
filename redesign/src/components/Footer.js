@@ -4,7 +4,7 @@ import {InputGroup, FormControl, Button, Form } from "react-bootstrap";
 
 const Footer = () => {
   return (
-    <MDBFooter color="blue" className="font-small pt-4 mt-4">
+    <MDBFooter color="unique-color" className="font-small pt-4 mt-4">
       <MDBContainer fluid className="text-center">
         <MDBRow>
           <MDBCol md="6">

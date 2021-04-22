@@ -23,7 +23,7 @@ const GridContainer = styled.div`
   padding: 0;
   z-index: 11;
   position: relative;
-  background-color: transparent;
+  background-color: #d72483;
 
   display: flex;
   table-layout: fixed;
@@ -145,6 +145,11 @@ const NavMenuItem_HasDropDown = styled.li`
   margin-bottom: 0;
   vertical-align: middle;
   padding: 17px 0;
+  font-size: 18px;
+
+  @media only screen and (min-width: 1440px) {
+    padding: 21px 0;
+  }
 `;
 
 const NavLinkButton = styled.button`
@@ -159,10 +164,6 @@ const NavLinkButton = styled.button`
   font: inherit;
   margin: 0;
   font-weight: 600;
-
-  @media only screen and (max-width: 989px) {
-    font-size: 18px;
-  }
 
   &:focus {
     outline: none;
@@ -201,7 +202,7 @@ const SiteNavDropDownMenu = styled.div`
   left: 0;
   right: 0;
   padding: 0;
-  top: 80px;
+  top: 59.29px;
   width: 90%;
   border: none;
   background-color: #fff;
@@ -213,16 +214,12 @@ const SiteNavDropDownMenu = styled.div`
   background: white;
   display: none;
 
-  @media only screen and (max-width: 2000px) {
+  @media only screen and (min-width: 1440px) {
     top: 67px;
   }
 
-  @media only screen and (max-width: 1440px) {
-    top: 67px;
-  }
-
-  @media only screen and (max-width: 990px) {
-    top: 67px;
+  @media only screen and (max-width: 1024px) {
+    top: 60.29px;
   }
 `;
 
@@ -262,6 +259,7 @@ const Heading = styled.p`
   color: black;
   background-color: #eee;
   color: #df3882;
+  margin-bottom: 0;
 `;
 
 const FeatureHeading = styled.p`
@@ -272,6 +270,7 @@ const FeatureHeading = styled.p`
   padding: 20px 0 20px 0;
   color: black;
   color: #df3882;
+  margin-bottom: 0;
 `;
 
 const Category = styled.p`
@@ -352,7 +351,7 @@ const HeaderIconsWrapper = styled.div`
   white-space: nowrap;
 
   @media only screen and (min-width: 750px) {
-    padding: 0 55px 0 0;
+    padding-right: 5px;
   }
 `;
 
@@ -464,7 +463,6 @@ const Count = styled.span`
 `;
 
 const MobileNavToggle = styled.button`
-  display: none;
   background-color: transparent;
   border: 0;
   margin: 0;
@@ -472,15 +470,12 @@ const MobileNavToggle = styled.button`
   text-align: left;
   cursor: pointer;
 
-  @media only screen and (max-width: 804px) {
-    display: inline-block;
-    padding: 10px 11px 10px 20px;
-    margin: 0;
+  @media only screen and (min-width: 804px) {
+    display: none;
   }
 `;
 
 const Hamburger = styled.svg`
-  display: inline-block;
   width: 20px;
   height: 20px;
   fill: currentColor;
@@ -488,20 +483,124 @@ const Hamburger = styled.svg`
 `;
 
 const Close = styled.svg`
-  display: none;
+  padding: 2px;
   width: 20px;
   height: 20px;
   vertical-align: middle;
   fill: currentColor;
 `;
 
-const MobileNav = styled.nav``;
+const MobileNav = styled.nav`
+  background-color: #eee;
+  box-shadow: 0 5px 10px 0 rgb(0 0 0 / 50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 400ms cubic-bezier(0.29, 0.63, 0.44, 1);
+  overflow: hidden;
+  width: 100%;
+  max-height: 77vh !important;
+  overflow-y: auto !important;
+
+  @media only screen and (min-width: 804px) {
+    display: none;
+  }
+`;
+
+const MobileNavList = styled.ul`
+  background-color: #eee;
+  box-shadow: 0 5px 10px 0 rgb(0 0 0 / 50%);
+  display: block;
+  transform: translate3d(0, 0, 0);
+  transition: all 400ms cubic-bezier(0.29, 0.63, 0.44);
+  margin-bottom: 0;
+`;
+
+const MobileNavItem = styled.li`
+  border-bottom: 1px solid #fff;
+  display: block;
+  width: 100%;
+`;
+
+const MobileNavLink = styled(Link)`
+  padding: 15px 25px;
+  position: relative;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  /* border-bottom-color: #000; */
+
+  &:hover {
+    color: #df3882;
+    text-decoration: underline;
+  }
+`;
+
+const CollectionsAccordion = styled.div`
+  padding: 15px 25px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+
+  &:hover {
+    color: #df3882;
+  }
+`;
+
+const Arrow = styled.span`
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin: -6px 0 0 -7px;
+  width: 30px;
+  color: #df3882;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  transform: translate(0, 0);
+`;
+
+const CollectionItemsList = styled.ul`
+  padding-left: 40px;
+`;
+
+const CollectionItem = styled.li`
+  padding-top: 2px;
+`;
+
+const CollectionLink = styled(MobileNavLink)`
+  padding: 0 0 8px 0;
+  font-size: 14px;
+
+  &:hover {
+    color: #df3882;
+    text-decoration: underline;
+  }
+`;
 
 const Nav = () => {
   const [isActive, setActive] = useState(false);
+  const [show, setShow] = useState(false);
 
   const toggleClass = () => {
     setActive(!isActive);
+  };
+
+  const toggleAccordion = () => {
+    setShow(!show);
+  };
+
+  const closeNav = () => {
+    if (isActive) {
+      setActive(!isActive);
+    }
   };
 
   return (
@@ -511,6 +610,7 @@ const Nav = () => {
           <Site_Header_Logo>
             <HomeLink to="/">
               <Logo
+                onClick={closeNav}
                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
                 data-aspectratio="3.9682539682539684"
                 data-sizes="auto"
@@ -559,42 +659,64 @@ const Nav = () => {
                     <Heading>Shop by Collections</Heading>
                     <CollectionsList>
                       <Category class="category" id="all-collections">
-                        <CategoryLink to="/collections">
+                        <CategoryLink to="/collections" onClick={toggleClass}>
                           Shop All Collections
                         </CategoryLink>
                       </Category>
                       <Category class="category" id="cult-movies">
-                        <CategoryLink to="">Cult Movies</CategoryLink>
+                        <CategoryLink to="" onClick={toggleClass}>
+                          Cult Movies
+                        </CategoryLink>
                       </Category>
                       <Category class="category" id="animated-films">
-                        <CategoryLink href="#">Animated Films</CategoryLink>
+                        <CategoryLink to="" onClick={toggleClass}>
+                          Animated Films
+                        </CategoryLink>
                       </Category>
                       <Category class="category" id="anime">
-                        <CategoryLink href="#">Anime</CategoryLink>
+                        <CategoryLink to="#" onClick={toggleClass}>
+                          Anime
+                        </CategoryLink>
                       </Category>
                       <Category class="category" id="sci-fi">
-                        <CategoryLink href="#">Sci Fi</CategoryLink>
+                        <CategoryLink to="" onClick={toggleClass}>
+                          Sci Fi
+                        </CategoryLink>
                       </Category>
                       <Category class="category" id="comic-books">
-                        <CategoryLink href="#">Comic Books</CategoryLink>
+                        <CategoryLink to="" onClick={toggleClass}>
+                          Comic Books
+                        </CategoryLink>
                       </Category>
                       <Category class="category" id="videogames">
-                        <CategoryLink href="#">Videogames</CategoryLink>
+                        <CategoryLink to="" onClick={toggleClass}>
+                          Videogames
+                        </CategoryLink>
                       </Category>
                       <Category class="category" id="horror">
-                        <CategoryLink href="#">Horror</CategoryLink>
+                        <CategoryLink to="" onClick={toggleClass}>
+                          Horror
+                        </CategoryLink>
                       </Category>
                       <Category class="category" id="tv">
-                        <CategoryLink href="#">TV</CategoryLink>
+                        <CategoryLink to="" onClick={toggleClass}>
+                          TV
+                        </CategoryLink>
                       </Category>
                       <Category class="category" id="cartoons">
-                        <CategoryLink href="#">Cartoons</CategoryLink>
+                        <CategoryLink to="" onClick={toggleClass}>
+                          Cartoons
+                        </CategoryLink>
                       </Category>
                       <Category class="category" id="magic-and-fantasy">
-                        <CategoryLink href="#">Magic And Fantasy</CategoryLink>
+                        <CategoryLink to="" onClick={toggleClass}>
+                          Magic And Fantasy
+                        </CategoryLink>
                       </Category>
                       <Category class="category" id="themes">
-                        <CategoryLink href="#">Themes</CategoryLink>
+                        <CategoryLink to="" onClick={toggleClass}>
+                          Themes
+                        </CategoryLink>
                       </Category>
                     </CollectionsList>
                   </CollectionsCategories>
@@ -602,22 +724,34 @@ const Nav = () => {
                     <FeatureHeading>Featured Collections</FeatureHeading>
                     <FeaturedList>
                       <Category class="category" id="cult-90s-classics">
-                        <CategoryLink to="">Cult 90s Classics</CategoryLink>
+                        <CategoryLink to="" onClick={toggleClass}>
+                          Cult 90s Classics
+                        </CategoryLink>
                       </Category>
                       <Category class="category" id="neo-tokyo">
-                        <CategoryLink href="#">Neo Tokyo</CategoryLink>
+                        <CategoryLink to="" onClick={toggleClass}>
+                          Neo Tokyo
+                        </CategoryLink>
                       </Category>
                       <Category class="category" id="crystal-lake">
-                        <CategoryLink href="#">Crystal Lake</CategoryLink>
+                        <CategoryLink to="" onClick={toggleClass}>
+                          Crystal Lake
+                        </CategoryLink>
                       </Category>
                       <Category class="category" id="80s-sci-fi">
-                        <CategoryLink href="#">80s Sci-Fi</CategoryLink>
+                        <CategoryLink to="" onClick={toggleClass}>
+                          80s Sci-Fi
+                        </CategoryLink>
                       </Category>
                       <Category class="category" id="dark-knight">
-                        <CategoryLink href="#">Dark Knight</CategoryLink>
+                        <CategoryLink to="" onClick={toggleClass}>
+                          Dark Knight
+                        </CategoryLink>
                       </Category>
                       <Category class="category" id="pc-gaming">
-                        <CategoryLink href="#">PC Gaming</CategoryLink>
+                        <CategoryLink to="" onClick={toggleClass}>
+                          PC Gaming
+                        </CategoryLink>
                       </Category>
                     </FeaturedList>
                   </FeaturedCollections>
@@ -735,39 +869,126 @@ const Nav = () => {
 
             <MobileNavToggle
               type="button"
-              aria-expanded="false"
+              className={isActive ? "mobile-nav--close" : "mobile-nav--open"}
+              aria-expanded={isActive ? "true" : "false"}
               aria-label="Menu"
-              className={
-                isActive
-                  ? "btn--link site-header__icon site-header__menu js-mobile-nav-toggle mobile-nav--open mobile-nav--close"
-                  : "btn--link site-header__icon site-header__menu js-mobile-nav-toggle mobile-nav--open"
-              }
               onClick={toggleClass}>
               <Hamburger
+                className="icon-hamburger"
                 aria-hidden="true"
                 focusable="false"
                 role="presentation"
-                class="icon icon-hamburger"
                 viewBox="0 0 37 40">
                 <path d="M33.5 25h-30c-1.1 0-2-.9-2-2s.9-2 2-2h30c1.1 0 2 .9 2 2s-.9 2-2 2zm0-11.5h-30c-1.1 0-2-.9-2-2s.9-2 2-2h30c1.1 0 2 .9 2 2s-.9 2-2 2zm0 23h-30c-1.1 0-2-.9-2-2s.9-2 2-2h30c1.1 0 2 .9 2 2s-.9 2-2 2z"></path>
               </Hamburger>
 
               <Close
+                className="icon-close"
                 aria-hidden="true"
                 focusable="false"
                 role="presentation"
-                class="icon icon-close"
                 viewBox="0 0 40 40">
-                <path
-                  d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z"
-                  class="layer"></path>
+                <path d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z"></path>
               </Close>
             </MobileNavToggle>
           </HeaderIconsWrapper>
         </HeaderIcons>
       </GridContainer>
 
-      <MobileNav class="mobile-nav-wrapper medium-up--hide is-transitioning"></MobileNav>
+      <MobileNav
+        className={
+          isActive
+            ? "mobile-nav-wrapper medium-up--hide js-menu--is-open"
+            : "mobile-nav-wrapper medium-up--hide is-transitioning"
+        }
+        role="navigation"
+        style={
+          isActive
+            ? { transform: "translateY(60px)" }
+            : { transform: "translateY(-100%)" }
+        }>
+        <MobileNavList>
+          <MobileNavItem onClick={toggleClass}>
+            <MobileNavLink to="/all-tees">Shop</MobileNavLink>
+          </MobileNavItem>
+          <MobileNavItem>
+            {/* <MobileNavLink to="/collections">Collections</MobileNavLink> */}
+            <CollectionsAccordion onClick={toggleAccordion}>
+              <Arrow
+                className={show ? "fa fa-caret-down" : "fa fa-caret-right"}
+              />
+              Collections
+            </CollectionsAccordion>
+            <CollectionItemsList
+              style={show ? { display: "block" } : { display: "none" }}>
+              <CollectionItem>
+                <CollectionLink to="/collections" onClick={toggleClass}>
+                  Shop All Collections
+                </CollectionLink>
+              </CollectionItem>
+              <CollectionItem>
+                <CollectionLink to="/animated-films" onClick={toggleClass}>
+                  Animated Films
+                </CollectionLink>
+              </CollectionItem>
+              <CollectionItem>
+                <CollectionLink to="/sci-fi" onClick={toggleClass}>
+                  Sci Fi
+                </CollectionLink>
+              </CollectionItem>
+              <CollectionItem>
+                <CollectionLink to="/video-games" onClick={toggleClass}>
+                  VideoGames
+                </CollectionLink>
+              </CollectionItem>
+              <CollectionItem>
+                <CollectionLink to="/tv" onClick={toggleClass}>
+                  TV
+                </CollectionLink>
+              </CollectionItem>
+              <CollectionItem>
+                <CollectionLink to="/magic-and-fantasy" onClick={toggleClass}>
+                  Magic And Fantasty
+                </CollectionLink>
+              </CollectionItem>
+              <CollectionItem>
+                <CollectionLink to="/cult-movies" onClick={toggleClass}>
+                  Cult Movies
+                </CollectionLink>
+              </CollectionItem>
+              <CollectionItem>
+                <CollectionLink to="/anime" onClick={toggleClass}>
+                  Anime
+                </CollectionLink>
+              </CollectionItem>
+              <CollectionItem>
+                <CollectionLink to="/comic-books" onClick={toggleClass}>
+                  Comic Books
+                </CollectionLink>
+                <CollectionLink to="/horror" onClick={toggleClass}>
+                  Horror
+                </CollectionLink>
+              </CollectionItem>
+              <CollectionItem>
+                <CollectionLink to="/cartoons" onClick={toggleClass}>
+                  Cartoons
+                </CollectionLink>
+              </CollectionItem>
+              <CollectionItem>
+                <CollectionLink to="/themes" onClick={toggleClass}>
+                  Themes
+                </CollectionLink>
+              </CollectionItem>
+            </CollectionItemsList>
+          </MobileNavItem>
+          <MobileNavItem onClick={toggleClass}>
+            <MobileNavLink to="/artists">Artists</MobileNavLink>
+          </MobileNavItem>
+          <MobileNavItem onClick={toggleClass}>
+            <MobileNavLink to="/sale">Sale</MobileNavLink>
+          </MobileNavItem>
+        </MobileNavList>
+      </MobileNav>
     </Header>
   );
 };
