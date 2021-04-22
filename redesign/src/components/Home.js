@@ -133,7 +133,7 @@ const Home = () => {
         <Deals  to="/sale">
           DON'T WAIT!
           <br></br>
-          BEST DEALS end in
+          DAILY DEALS end in
         </Deals>
         <div> 
         <FlipClock value={"5"}/>
