@@ -9,6 +9,7 @@ const Heading = styled.h1`
   color: hotpink;
   padding: 0px 50px;
   text-shadow: 1px 1px gray;
+  text-align:center;
 `;
 
 const Artists = () => {
@@ -16,7 +17,7 @@ const Artists = () => {
     <main>
       <Segment.Group>
           <Segment>
-            <Heading><Icon name='star'/>Artists</Heading>
+            <Heading> <Icon name='chevron right'/>  FEATURED ARTISTS  <Icon name='chevron left'/> </Heading>
           </Segment>
           <Segment.Group>
             <Segment>    
