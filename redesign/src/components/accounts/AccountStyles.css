@@ -1,0 +1,77 @@
+.page-width {
+    width: 100vw;
+}
+
+#LoginForm {
+    
+}
+
+#LoginHeading {
+    font: 18px;
+    padding-bottom: 42px;
+}
+
+.section-header{
+    align-content: center;
+}
+
+.grid {
+    padding: 0 0 0 36px;
+}
+
+.grid-item {
+    height: 682px;
+    width: 443px;
+}
+
+.login-box {
+
+}
+
+.eq {
+
+}
+
+.btn {
+    
+}
+
+.medium-up--one-half{
+    
+}
+
+#customer_register_link {
+
+}
+
+.SubTitle {
+    font-weight: bolder;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.BulletList {
+    list-style-type:circle;
+}
+
+li {
+    padding-left: 10px;
+    padding-bottom: 3px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#LogOut {
+    text-align: center;
+    text-underline-offset: 2px;
+}
+
+.NoteBox{
+    border: 1px solid lightgray;
+    text-align: center;
+    width: 70vw;
+    margin-top: 20px;
+    padding: 8px;
+}

@@ -9,11 +9,12 @@ import Sale from "./components/Sale";
 import Collections from "./components/Collections";
 import Artists from "./components/Artists";
 import AllTees from "./components/AllTees";
-import Account from "./components/Account";
-import Cart from "./components/Cart";
+import Account from "./components/accounts/Account";
+import Cart from "./components/checkout/Cart";
 import TeeDetails from "./components/TeeDetails";
 import CollectionDetails from "./components/CollectionDetails";
 import Footer from "./components/Footer";
+import Login from './components/accounts/Login';
 
 function App() {
   return (
@@ -36,7 +37,7 @@ function App() {
           <AllTees />
         </Route>
         <Route path="/account/login">
-          <Account />
+          <Login />
         </Route>
         <Route path="/cart">
           <Cart />
@@ -46,6 +47,9 @@ function App() {
         </Route>
         <Route path="/collection/details">
           <CollectionDetails />
+        </Route>
+        <Route path="/account">
+          <Account />
         </Route>
       </Switch>
       <Footer />
