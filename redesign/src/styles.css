@@ -155,3 +155,16 @@ body.mobile-menu-open .mobile-nav-wrapper {
   overflow-y: auto !important;
   -webkit-overflow-scrolling: touch;
 }
+
+.sidenav {
+  height: 100%;
+  width: 400px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  text-align: center;
+  overflow-x: hidden;
+  padding-top: 170px;
+  border-right: 0px solid black;
+}
