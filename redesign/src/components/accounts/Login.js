@@ -7,7 +7,6 @@ const Login = () => {
     <main>
       <Container>
         <Form.Group>
-          <Row>
             <CardDeck>
               <Card>
                 <Card.Body>
@@ -23,7 +22,7 @@ const Login = () => {
                       <li>- And much more!</li>
                     </ul>
                 </Card.Body>
-                <Button>
+                <Button href="/account/register">
                   Create A New Account
                 </Button>
               </Card>
@@ -47,7 +46,6 @@ const Login = () => {
                 </Button>
               </Card>
             </CardDeck>
-          </Row>
         </Form.Group>
       </Container>
     </main>

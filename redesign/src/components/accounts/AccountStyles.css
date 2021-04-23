@@ -68,6 +68,12 @@ h1 {
     text-underline-offset: 2px;
 }
 
+#requirementMessage{
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
 .NoteBox{
     border: 1px solid lightgray;
     text-align: center;
