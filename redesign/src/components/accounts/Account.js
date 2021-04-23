@@ -1,9 +1,78 @@
 import React from "react";
-import { Row, Container, Col} from "react-bootstrap";
+import { Row, Container, Col, Modal, Button, Card} from "react-bootstrap";
 import { Table } from "semantic-ui-react";
 import "./AccountStyles.css";
 
+function MyVerticallyCenteredModal(props) {
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Addresses
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+
+      <Card border="secondary">
+        <Card.Body>
+          <Card.Text>
+          1622 HUSANA DR
+          <br/>
+          San Luis Obispo CA 93405
+          <br/>
+          United States
+          </Card.Text>
+          <Card.Link className="pull-right" href="#">Delete</Card.Link>
+          <Card.Link className="pull-right" href="#">Edit &nbsp;</Card.Link>
+        </Card.Body>
+      </Card><br />
+
+      <Card border="secondary">
+        <Card.Body>
+          <Card.Text>
+          1622 HUSANA DR
+          <br/>
+          San Luis Obispo CA 93405
+          <br/>
+          United States
+          </Card.Text>
+          <Card.Link className="pull-right" href="#">Delete</Card.Link>
+          <Card.Link className="pull-right" href="#">Edit &nbsp;</Card.Link>
+        </Card.Body>
+      </Card><br/>
+
+      <Card border="secondary">
+        <Card.Body>
+          <Card.Text>
+          1622 HUSANA DR
+          <br/>
+          San Luis Obispo CA 93405
+          <br/>
+          United States
+          </Card.Text>
+          <Card.Link className="pull-right" href="#">Delete</Card.Link>
+          <Card.Link className="pull-right" href="#">Edit &nbsp;</Card.Link>
+        </Card.Body>
+      </Card>
+     
+      </Modal.Body>
+      <Modal.Footer>
+        <Button>Add Address</Button>
+        <Button variant="danger" onClick={props.onHide}>Close</Button>
+      </Modal.Footer>
+    </Modal>
+  );
+}
+
 const Account = () => {
+
+  const [modalShow, setModalShow] = React.useState(false);
+
   return (
     <main>
       <Container>
@@ -55,7 +124,8 @@ const Account = () => {
           <Col className="AccountDetails" sm={4}>
             <h3>Account Details</h3>
             <p>Nickolaus Marshall-Eminger<br/>1622 HUSANA DR<br/>San Luis Obispo CA 93405<br/>United States</p>
-            <p><a href="/account/addresses" class="">View Addresses (1)</a></p>
+            <Button variant="primary" onClick={() => setModalShow(true)}>View addresses</Button>
+                <MyVerticallyCenteredModal show={modalShow} onHide={() => setModalShow(false)}/>
           </Col>
         </Row>
         <div class="NoteBox">
