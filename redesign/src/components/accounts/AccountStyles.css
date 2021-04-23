@@ -1,0 +1,111 @@
+
+.page-width {
+    width: 100vw;
+}
+
+#LoginHeading {
+    font: 18px;
+    padding-bottom: 42px;
+}
+
+.section-header{
+    align-content: center;
+}
+
+.grid {
+    padding: 0 0 0 36px;
+}
+
+.grid-item {
+    height: 682px;
+    width: 443px;
+}
+
+.SubTitle {
+    font-weight: bolder;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.BulletList {
+    list-style-type:circle;
+
+}
+
+li {
+    padding-left: 10px;
+    padding-bottom: 3px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#LogOut {
+    text-align: center;
+    text-underline-offset: 2px;
+}
+
+#requirementMessage{
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+.NoteBox{
+    border: 1px solid lightgray;
+    text-align: center;
+    width: 70vw;
+    margin-top: 20px;
+    padding: 8px;
+}
+
+.note {
+    border: 1px solid black;
+}
+
+.checkLabel{
+    margin-left: 10px;
+    word-wrap:break-word;
+    overflow-wrap: break-word;
+}
+
+.subscribeCheck {
+    margin-bottom: 5px;
+}
+
+.tosCheck {
+    margin-bottom: 5px;
+}
+
+.loginWrapper {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+.regWrapper {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.formCard {
+    min-width: 443px;
+    max-width: 500px;
+}
+
+.viewAddressWrapper {
+    margin-top: 10px;
+}
+.logOutWrapper {
+    margin-top: 20px;
+}
+
+#trackLink {
+    color: blue;
+}
+
+#trackLink:hover {
+    text-decoration: underline;
+    color: red;
+}

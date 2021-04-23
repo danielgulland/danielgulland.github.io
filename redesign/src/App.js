@@ -9,20 +9,20 @@ import Sale from "./components/Sale";
 import Collections from "./components/Collections";
 import Artists from "./components/Artists";
 import AllTees from "./components/AllTees";
-import Account from "./components/Account";
-import Cart from "./components/Cart";
+import Account from "./components/accounts/Account";
+import Cart from "./components/checkout/Cart";
 import TeeDetails from "./components/TeeDetails";
 import CollectionDetails from "./components/CollectionDetails";
 import Footer from "./components/Footer";
+import Login from './components/accounts/Login';
+import { Row } from 'react-bootstrap';
+import Register from './components/accounts/Register';
 
 function App() {
   return (
     <Router>
       <Nav />
       <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
         <Route path="/sale">
           <Sale />
         </Route>
@@ -35,9 +35,6 @@ function App() {
         <Route exact path="/all-tees">
           <AllTees />
         </Route>
-        <Route path="/account/login">
-          <Account />
-        </Route>
         <Route path="/cart">
           <Cart />
         </Route>
@@ -46,6 +43,18 @@ function App() {
         </Route>
         <Route path="/collection/details">
           <CollectionDetails />
+        </Route>
+        <Route path="/account/register">
+          <Register />
+        </Route>
+        <Route path="/account/login">
+          <Login />
+        </Route>
+        <Route path="/account">
+          <Account />
+        </Route>
+        <Route exact path="/">
+          <Home />
         </Route>
       </Switch>
       <Footer />
