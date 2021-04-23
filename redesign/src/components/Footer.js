@@ -1,6 +1,6 @@
 import React from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBBtn, MDBIcon } from "mdbreact";
-import {InputGroup, FormControl, Button, Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 
 const Footer = () => {
   return (
