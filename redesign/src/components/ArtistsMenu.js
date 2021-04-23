@@ -94,7 +94,7 @@ export default class ArtistsMenu extends Component {
           </Menu>
           </MenuArea>
 
-          <Segment>
+          <Segment padded raised>
             <Heading> <Icon name='user cicle'/> Alemaglia</Heading>
             Hey I'm Alessio Magliano aka Alemaglia, a designer and cartoonist from Italy. Lately I would call my style "A story in shadows". I love representing all the characters and events in even the smallest details of the design. MY inspiration comes from TV, Comics and animated films so "Be prepared" to find "A whole new world" "Under the sea" of my art!
 

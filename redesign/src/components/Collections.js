@@ -12,8 +12,6 @@ const Heading = styled.h1`
   text-transform: uppercase;
 `;
 
-const CollectionsContainer = styled.div``;
-
 const Grid = styled.ul`
   margin-left: -15px;
   margin-bottom: -15px;
@@ -92,7 +90,7 @@ const Collections = () => {
             <Icon name="chevron left" />
           </Heading>
         </Segment>
-        <Segment.Group>
+        <Segment.Group padded raised>
           <Segment>
             <Grid>
               <GridItem>
@@ -223,7 +221,6 @@ const Collections = () => {
             </Grid>
           </Segment>
           <Segment>
-            <Segment.Group>
               <Pagination
                 defaultActivePage={5}
                 totalPages={10}
@@ -233,7 +230,6 @@ const Collections = () => {
                   margin: "0 auto",
                 }}
               />
-            </Segment.Group>
           </Segment>
         </Segment.Group>
       </Segment.Group>

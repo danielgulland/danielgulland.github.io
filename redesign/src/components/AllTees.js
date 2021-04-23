@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { Image } from 'semantic-ui-react'
-import { Card, Segment, Icon, Dropdown } from 'semantic-ui-react';
+import { Card, Segment, Icon, Dropdown, Label, Pagination } from 'semantic-ui-react';
 import Logo from "./assets/TeeDetails/Logo.jpg";
 
 const options = [
@@ -82,7 +82,7 @@ const AllTees = () => {
             <Segment>
               <Display>
                 <MenuArea>
-                    <h3 style={{textAlign:'right'}}>3588 shirts</h3>
+                  <Label basic color='pink' size='large'>3588 shirts</Label>
                   <h3>SORT BY</h3>
                   <DropdownMenu_Sort></DropdownMenu_Sort>
 
@@ -96,7 +96,7 @@ const AllTees = () => {
                     <DropdownMenu_Horror></DropdownMenu_Horror>
                 </MenuArea>
 
-                <Segment.Group >
+                <Segment floated='right' padded raised>
                     <Card.Group centered='true' stackable='true' >
                       <Card style={{maxWidth: '200px'}} centered='true' raised='true' href='/tee/details'>
                         <Image src ={Logo} href='/tee/details'/>
@@ -275,8 +275,17 @@ const AllTees = () => {
                         </Card.Content>
                       </Card>
                     </Card.Group> 
-                </Segment.Group>
+                </Segment>
               </Display> 
+              <Pagination
+                defaultActivePage={5}
+                totalPages={10}
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  marginTop: "20px",
+                }}
+              />
             </Segment>
           </Segment.Group>
       </Segment.Group>
