@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Icon, Segment } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+import { Pagination } from "semantic-ui-react";
 
 const Heading = styled.h1`
   color: hotpink;
@@ -20,7 +21,7 @@ const Grid = styled.ul`
   padding: 0 125px;
   margin: 0 auto;
   max-width: 1250px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   justify-content: center;
   justify-items: center;
 `;
@@ -48,8 +49,8 @@ const CollectionItem_Link = styled(Link)`
 `;
 
 const BackgroundImage = styled.img`
-  min-height: 320px;
-  min-width: 320px;
+  min-height: 250px;
+  min-width: 250px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
@@ -220,6 +221,19 @@ const Collections = () => {
                 </CollectionItem>
               </GridItem>
             </Grid>
+          </Segment>
+          <Segment>
+            <Segment.Group>
+              <Pagination
+                defaultActivePage={5}
+                totalPages={10}
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  margin: "0 auto",
+                }}
+              />
+            </Segment.Group>
           </Segment>
         </Segment.Group>
       </Segment.Group>

@@ -315,11 +315,8 @@ const Sale = () => {
               </Card.Meta>
             </Card.Content>
           </Card>
-      
         </Carousel>
-
       </LCGroup>
-      <div>---</div>
     </main>
   );
 };
