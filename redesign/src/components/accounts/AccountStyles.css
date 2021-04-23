@@ -2,10 +2,6 @@
     width: 100vw;
 }
 
-#LoginForm {
-    
-}
-
 #LoginHeading {
     font: 18px;
     padding-bottom: 42px;
@@ -24,26 +20,6 @@
     width: 443px;
 }
 
-.login-box {
-
-}
-
-.eq {
-
-}
-
-.btn {
-    
-}
-
-.medium-up--one-half{
-    
-}
-
-#customer_register_link {
-
-}
-
 .SubTitle {
     font-weight: bolder;
     padding-top: 5px;
@@ -52,6 +28,7 @@
 
 .BulletList {
     list-style-type:circle;
+
 }
 
 li {
@@ -80,4 +57,34 @@ h1 {
     width: 70vw;
     margin-top: 20px;
     padding: 8px;
+}
+
+.checkLabel{
+    margin-left: 10px;
+    word-wrap:break-word;
+    overflow-wrap: break-word;
+}
+
+.subscribeCheck {
+    margin-bottom: 5px;
+}
+
+.tosCheck {
+    margin-bottom: 5px;
+}
+
+.loginWrapper {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+.regWrapper {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.formCard {
+    min-width: 443px;
+    max-width: 500px;
 }

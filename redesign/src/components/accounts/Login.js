@@ -5,10 +5,10 @@ import "./AccountStyles.css";
 const Login = () => {
   return (
     <main>
-      <Container>
+      <Container className="loginWrapper">
         <Form.Group>
             <CardDeck>
-              <Card>
+              <Card className="formCard">
                 <Card.Body>
                   <Card.Title>Are You a New User?</Card.Title>
                   <Card.Subtitle className="SubTitle">
@@ -26,7 +26,7 @@ const Login = () => {
                   Create A New Account
                 </Button>
               </Card>
-              <Card>
+              <Card className="formCard">
                 <Card.Body>
                   <Card.Title>Log into your account</Card.Title>
                   <Form>
