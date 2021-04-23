@@ -289,10 +289,6 @@ const AllTees = () => {
             </Segment>
           </Segment.Group>
       </Segment.Group>
-
-
-      
-      
     </main>
   );
 };
