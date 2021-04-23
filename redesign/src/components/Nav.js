@@ -664,57 +664,57 @@ const Nav = () => {
                         </CategoryLink>
                       </Category>
                       <Category class="category" id="cult-movies">
-                        <CategoryLink to="" onClick={toggleClass}>
+                        <CategoryLink  to='/collection/details' onClick={toggleClass}>
                           Cult Movies
                         </CategoryLink>
                       </Category>
                       <Category class="category" id="animated-films">
-                        <CategoryLink to="" onClick={toggleClass}>
+                        <CategoryLink  to='/collection/details' onClick={toggleClass}>
                           Animated Films
                         </CategoryLink>
                       </Category>
                       <Category class="category" id="anime">
-                        <CategoryLink to="#" onClick={toggleClass}>
+                        <CategoryLink  to='/collection/details' onClick={toggleClass}>
                           Anime
                         </CategoryLink>
                       </Category>
                       <Category class="category" id="sci-fi">
-                        <CategoryLink to="" onClick={toggleClass}>
+                        <CategoryLink  to='/collection/details' onClick={toggleClass}>
                           Sci Fi
                         </CategoryLink>
                       </Category>
                       <Category class="category" id="comic-books">
-                        <CategoryLink to="" onClick={toggleClass}>
+                        <CategoryLink  to='/collection/details' onClick={toggleClass}>
                           Comic Books
                         </CategoryLink>
                       </Category>
                       <Category class="category" id="videogames">
-                        <CategoryLink to="" onClick={toggleClass}>
+                        <CategoryLink  to='/collection/details' onClick={toggleClass}>
                           Videogames
                         </CategoryLink>
                       </Category>
                       <Category class="category" id="horror">
-                        <CategoryLink to="" onClick={toggleClass}>
+                        <CategoryLink  to='/collection/details' onClick={toggleClass}>
                           Horror
                         </CategoryLink>
                       </Category>
                       <Category class="category" id="tv">
-                        <CategoryLink to="" onClick={toggleClass}>
+                        <CategoryLink  to='/collection/details' onClick={toggleClass}>
                           TV
                         </CategoryLink>
                       </Category>
                       <Category class="category" id="cartoons">
-                        <CategoryLink to="" onClick={toggleClass}>
+                        <CategoryLink  to='/collection/details' onClick={toggleClass}>
                           Cartoons
                         </CategoryLink>
                       </Category>
                       <Category class="category" id="magic-and-fantasy">
-                        <CategoryLink to="" onClick={toggleClass}>
+                        <CategoryLink  to='/collection/details' onClick={toggleClass}>
                           Magic And Fantasy
                         </CategoryLink>
                       </Category>
                       <Category class="category" id="themes">
-                        <CategoryLink to="" onClick={toggleClass}>
+                        <CategoryLink  to='/collection/details' onClick={toggleClass}>
                           Themes
                         </CategoryLink>
                       </Category>
@@ -724,32 +724,32 @@ const Nav = () => {
                     <FeatureHeading>Featured Collections</FeatureHeading>
                     <FeaturedList>
                       <Category class="category" id="cult-90s-classics">
-                        <CategoryLink to="" onClick={toggleClass}>
+                        <CategoryLink  to='/collection/details' onClick={toggleClass}>
                           Cult 90s Classics
                         </CategoryLink>
                       </Category>
                       <Category class="category" id="neo-tokyo">
-                        <CategoryLink to="" onClick={toggleClass}>
+                        <CategoryLink  to='/collection/details' onClick={toggleClass}>
                           Neo Tokyo
                         </CategoryLink>
                       </Category>
                       <Category class="category" id="crystal-lake">
-                        <CategoryLink to="" onClick={toggleClass}>
+                        <CategoryLink  to='/collection/details' onClick={toggleClass}>
                           Crystal Lake
                         </CategoryLink>
                       </Category>
                       <Category class="category" id="80s-sci-fi">
-                        <CategoryLink to="" onClick={toggleClass}>
+                        <CategoryLink  to='/collection/details' onClick={toggleClass}>
                           80s Sci-Fi
                         </CategoryLink>
                       </Category>
                       <Category class="category" id="dark-knight">
-                        <CategoryLink to="" onClick={toggleClass}>
+                        <CategoryLink  to='/collection/details' onClick={toggleClass}>
                           Dark Knight
                         </CategoryLink>
                       </Category>
                       <Category class="category" id="pc-gaming">
-                        <CategoryLink to="" onClick={toggleClass}>
+                        <CategoryLink  to='/collection/details' onClick={toggleClass}>
                           PC Gaming
                         </CategoryLink>
                       </Category>
@@ -927,55 +927,55 @@ const Nav = () => {
                 </CollectionLink>
               </CollectionItem>
               <CollectionItem>
-                <CollectionLink to="/animated-films" onClick={toggleClass}>
+                <CollectionLink  to='/collection/details' onClick={toggleClass}>
                   Animated Films
                 </CollectionLink>
               </CollectionItem>
               <CollectionItem>
-                <CollectionLink to="/sci-fi" onClick={toggleClass}>
+                <CollectionLink  to='/collection/details' onClick={toggleClass}>
                   Sci Fi
                 </CollectionLink>
               </CollectionItem>
               <CollectionItem>
-                <CollectionLink to="/video-games" onClick={toggleClass}>
+                <CollectionLink  to='/collection/details' onClick={toggleClass}>
                   VideoGames
                 </CollectionLink>
               </CollectionItem>
               <CollectionItem>
-                <CollectionLink to="/tv" onClick={toggleClass}>
+                <CollectionLink  to='/collection/details' onClick={toggleClass}>
                   TV
                 </CollectionLink>
               </CollectionItem>
               <CollectionItem>
-                <CollectionLink to="/magic-and-fantasy" onClick={toggleClass}>
+                <CollectionLink  to='/collection/details' onClick={toggleClass}>
                   Magic And Fantasty
                 </CollectionLink>
               </CollectionItem>
               <CollectionItem>
-                <CollectionLink to="/cult-movies" onClick={toggleClass}>
+                <CollectionLink  to='/collection/details' onClick={toggleClass}>
                   Cult Movies
                 </CollectionLink>
               </CollectionItem>
               <CollectionItem>
-                <CollectionLink to="/anime" onClick={toggleClass}>
+                <CollectionLink  to='/collection/details' onClick={toggleClass}>
                   Anime
                 </CollectionLink>
               </CollectionItem>
               <CollectionItem>
-                <CollectionLink to="/comic-books" onClick={toggleClass}>
+                <CollectionLink  to='/collection/details' onClick={toggleClass}>
                   Comic Books
                 </CollectionLink>
-                <CollectionLink to="/horror" onClick={toggleClass}>
+                <CollectionLink  to='/collection/details' onClick={toggleClass}>
                   Horror
                 </CollectionLink>
               </CollectionItem>
               <CollectionItem>
-                <CollectionLink to="/cartoons" onClick={toggleClass}>
+                <CollectionLink  to='/collection/details' onClick={toggleClass}>
                   Cartoons
                 </CollectionLink>
               </CollectionItem>
               <CollectionItem>
-                <CollectionLink to="/themes" onClick={toggleClass}>
+                <CollectionLink  to='/collection/details' onClick={toggleClass}>
                   Themes
                 </CollectionLink>
               </CollectionItem>
