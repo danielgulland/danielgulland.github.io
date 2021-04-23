@@ -56,9 +56,6 @@ const Cart = () => {
 
   return (
     <main>
-<<<<<<< Updated upstream
-
-=======
       <br/>
       <h1>Your Cart</h1>
       <Container>
@@ -204,7 +201,6 @@ const Cart = () => {
           </Row>
         </Form.Group>
       </Container>
->>>>>>> Stashed changes
     </main>
   );
 };
