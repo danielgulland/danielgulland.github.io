@@ -4,9 +4,10 @@ import styled from "styled-components";
 import { Image } from 'semantic-ui-react'
 import { Card, Segment, Icon, Dropdown, Label, Pagination } from 'semantic-ui-react';
 import Logo from "./assets/TeeDetails/Logo.jpg";
+import { Link } from "react-router-dom";
 
 const options = [
-  { key: 'Cult 80s Classics', text: 'Cult 80s Classics', value: 'Cult 80s Classics' },
+  { key: 'Cult 80s Classics', text: 'Cult 80s Classics', value: 'Cult 80s Classics', as:Link, to:"/collection/details"},
   { key: 'Cult 90s Classics', text: 'Cult 90s Classics', value: 'Cult 90s Classics' },
   { key: 'design', text: 'Graphic Design', value: 'design' },
   { key: 'Happy, Billy, and More', text: 'Happy, Billy, and More', value: 'Happy, Billy, and More' },
