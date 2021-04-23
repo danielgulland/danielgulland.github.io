@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from "styled-components";
 import logo from "./assets/80s.webp";
 
-import { Card, Segment, Dropdown, Label, Image, Icon } from 'semantic-ui-react';
+import { Card, Segment, Dropdown, Label, Image } from 'semantic-ui-react';
 
 const options = [
   { key: 'Cult 80s Classics', text: 'Cult 80s Classics', value: 'Cult 80s Classics' },
