@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles.css";
-import {Carousel, ListGroupItem, ListGroup, CardDeck ,Card, Container, Row, Col, Image, Dropdown, DropdownButton, Form, Button, Modal} from "react-bootstrap"
-import styled from "styled-components";
+import {Carousel, ListGroupItem, ListGroup, CardDeck ,Card, Container, Row, Col, Dropdown, DropdownButton, Form, Button, Modal} from "react-bootstrap"
 import youth from "./assets/Size Charts/1_-_Youth.png";
 import unisex from "./assets/Size Charts/2_-_Unisex.png";
 import tall from "./assets/Size Charts/3_-_Tall.png";

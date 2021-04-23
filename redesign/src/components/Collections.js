@@ -12,8 +12,6 @@ const Heading = styled.h1`
   text-transform: uppercase;
 `;
 
-const CollectionsContainer = styled.div``;
-
 const Grid = styled.ul`
   margin-left: -15px;
   margin-bottom: -15px;
@@ -92,12 +90,12 @@ const Collections = () => {
             <Icon name="chevron left" />
           </Heading>
         </Segment>
-        <Segment.Group>
+        <Segment.Group padded raised>
           <Segment>
             <Grid>
               <GridItem>
                 <CollectionItem>
-                  <CollectionItem_Link>
+                  <CollectionItem_Link to='/collection/details'>
                     <BackgroundImage
                       data-parent-fit="cover"
                       src="https://cdn.shopify.com/s/files/1/0278/2835/5139/collections/temp_53a33957-892d-4807-891b-5be444b43ed7.jpg?v=1611184848"
@@ -110,7 +108,7 @@ const Collections = () => {
               </GridItem>
               <GridItem>
                 <CollectionItem>
-                  <CollectionItem_Link>
+                  <CollectionItem_Link to='/collection/details'>
                     <BackgroundImage
                       data-parent-fit="cover"
                       src="https://cdn.shopify.com/s/files/1/0278/2835/5139/collections/temp_ce49b96c-1f28-4c9a-9a0e-b5beabe7fa5f.png?v=1611186152"
@@ -124,7 +122,7 @@ const Collections = () => {
               </GridItem>
               <GridItem>
                 <CollectionItem>
-                  <CollectionItem_Link>
+                  <CollectionItem_Link to='/collection/details'>
                     <BackgroundImage
                       data-parent-fit="cover"
                       src="https://cdn.shopify.com/s/files/1/0278/2835/5139/collections/temp_dd752d5d-d29a-4a72-8705-dd5322e4a17f_540x.png?v=1611185447"
@@ -138,7 +136,7 @@ const Collections = () => {
               </GridItem>
               <GridItem>
                 <CollectionItem>
-                  <CollectionItem_Link>
+                  <CollectionItem_Link to='/collection/details'>
                     <BackgroundImage
                       data-parent-fit="cover"
                       src="https://cdn.shopify.com/s/files/1/0278/2835/5139/collections/temp_4db03abc-90d2-43b8-adf2-a6e309b698ea_540x.jpg?v=1611185707"
@@ -152,7 +150,7 @@ const Collections = () => {
               </GridItem>
               <GridItem>
                 <CollectionItem>
-                  <CollectionItem_Link>
+                  <CollectionItem_Link to='/collection/details'>
                     <BackgroundImage
                       data-parent-fit="cover"
                       src="https://cdn.shopify.com/s/files/1/0278/2835/5139/collections/temp_8ba85557-c6c9-4c2e-a430-7ceaafde9c65.jpg?v=1611185332"
@@ -166,7 +164,7 @@ const Collections = () => {
               </GridItem>
               <GridItem>
                 <CollectionItem>
-                  <CollectionItem_Link>
+                  <CollectionItem_Link to='/collection/details'>
                     <BackgroundImage
                       data-parent-fit="cover"
                       src="https://cdn.shopify.com/s/files/1/0278/2835/5139/collections/temp_2cb8a73e-dc9d-4012-ba20-c05a690d9fb0.png?v=1611184913"
@@ -180,7 +178,7 @@ const Collections = () => {
               </GridItem>
               <GridItem>
                 <CollectionItem>
-                  <CollectionItem_Link>
+                  <CollectionItem_Link to='/collection/details'>
                     <BackgroundImage
                       data-parent-fit="cover"
                       src="https://cdn.shopify.com/s/files/1/0278/2835/5139/collections/temp_90596a79-3051-4aad-afa6-1e83e31d3139.jpg?v=1611185630"
@@ -194,7 +192,7 @@ const Collections = () => {
               </GridItem>
               <GridItem>
                 <CollectionItem>
-                  <CollectionItem_Link>
+                  <CollectionItem_Link to='/collection/details'>
                     <BackgroundImage
                       data-parent-fit="cover"
                       src="https://cdn.shopify.com/s/files/1/0278/2835/5139/collections/temp_7f4c6613-40bd-41d8-b0cc-615c1389bffa.png?v=1611185044"
@@ -208,7 +206,7 @@ const Collections = () => {
               </GridItem>
               <GridItem>
                 <CollectionItem>
-                  <CollectionItem_Link>
+                  <CollectionItem_Link to='/collection/details'>
                     <BackgroundImage
                       data-parent-fit="cover"
                       src="https://cdn.shopify.com/s/files/1/0278/2835/5139/collections/temp_02398a7d-8d01-49fe-9e2d-4e8153a6fc0b.jpg?v=1611185836"
@@ -223,7 +221,6 @@ const Collections = () => {
             </Grid>
           </Segment>
           <Segment>
-            <Segment.Group>
               <Pagination
                 defaultActivePage={5}
                 totalPages={10}
@@ -233,7 +230,6 @@ const Collections = () => {
                   margin: "0 auto",
                 }}
               />
-            </Segment.Group>
           </Segment>
         </Segment.Group>
       </Segment.Group>

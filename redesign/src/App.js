@@ -15,6 +15,8 @@ import TeeDetails from "./components/TeeDetails";
 import CollectionDetails from "./components/CollectionDetails";
 import Footer from "./components/Footer";
 import Login from './components/accounts/Login';
+import { Row } from 'react-bootstrap';
+import Register from './components/accounts/Register';
 
 function App() {
   return (
@@ -36,9 +38,6 @@ function App() {
         <Route exact path="/all-tees">
           <AllTees />
         </Route>
-        <Route path="/account/login">
-          <Login />
-        </Route>
         <Route path="/cart">
           <Cart />
         </Route>
@@ -47,6 +46,12 @@ function App() {
         </Route>
         <Route path="/collection/details">
           <CollectionDetails />
+        </Route>
+        <Route path="/account/register">
+          <Register />
+        </Route>
+        <Route path="/account/login">
+          <Login />
         </Route>
         <Route path="/account">
           <Account />
