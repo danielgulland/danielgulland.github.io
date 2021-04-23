@@ -141,7 +141,7 @@ const Home = () => {
 
       <Segment.Group>
         <Segment>
-          <Heading><Icon name='angle double up'/> NEW IN</Heading>
+          <Heading><Icon name='angle double up'/> What's NEW?</Heading>
         </Segment>
         <Segment.Group>
           <Segment>

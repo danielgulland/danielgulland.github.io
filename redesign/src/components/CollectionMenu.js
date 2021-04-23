@@ -91,7 +91,7 @@ export default class CollectionMenu extends Component {
         <Segment padded raised style={{marginLeft: '50px', marginRight:'150px'}}>
             <Heading> 
               <Image src={logo} avatar size='tiny' />
-              &nbsp;&nbsp;&nbsp;&nbsp; Cult 90s Classics
+              &nbsp;&nbsp;&nbsp;&nbsp; Cult 80s Classics
             </Heading>
             &nbsp;&nbsp;&nbsp;<Label color='pink' size='large' tag>8 shirts</Label>
               <Segment> 
