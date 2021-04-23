@@ -122,6 +122,17 @@ svg:not(:root) {
   outline: none;
 }
 
+/********************** Tee Details ***************************/
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  filter: invert(1);
+}
+ .card-text{
+    font-size:50px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
 /*** Mobile Nav ***/
 .mobile-nav--open .icon-close {
   display: none;

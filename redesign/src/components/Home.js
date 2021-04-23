@@ -112,8 +112,7 @@ const ColName = styled.a`
   color: #fff;
   background-color: brown;
   &:hover {
-    color: brown;
-    background-color: white;
+    background-color: black;
   }
   padding: 8px 5px;
 `;

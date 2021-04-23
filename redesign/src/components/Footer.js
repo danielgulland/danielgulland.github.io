@@ -4,11 +4,11 @@ import {InputGroup, FormControl, Button, Form } from "react-bootstrap";
 
 const Footer = () => {
   return (
-    <MDBFooter color="blue" className="font-small pt-4 mt-4">
+    <MDBFooter color="unique-color" className="font-small pt-4 mt-4">
       <MDBContainer fluid className="text-center">
         <MDBRow>
           <MDBCol md="6">
-            <h3 className="title">Contact Info</h3>
+            <h2 className="title">Contact Info</h2>
             <p>
                 18 Raitherm Road, North York, ON Canada M6B 1S6
             </p>
@@ -17,7 +17,7 @@ const Footer = () => {
             </li><br></br>
 
             <Form.Group controlId="formBasicPassword">
-                <h3 className="title">Join our Newsletter</h3>
+                <h2 className="title">Join our Newsletter</h2>
                 <Form.Control type="email" placeholder="Email address" />
                 <Button variant="success" type="submit">
                 SUBSCRIBE
@@ -27,7 +27,7 @@ const Footer = () => {
 
           </MDBCol>
           <MDBCol md="6">
-            <h5 className="title">Quick Links</h5>
+            <h2 className="title">Quick Links</h2>
             <ul>
               <li className="list-unstyled">
                 <a href="#!">Shipping Policy</a>
