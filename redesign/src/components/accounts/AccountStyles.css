@@ -1,3 +1,4 @@
+
 .page-width {
     width: 100vw;
 }
@@ -59,6 +60,10 @@ h1 {
     padding: 8px;
 }
 
+.note {
+    border: 1px solid black;
+}
+
 .checkLabel{
     margin-left: 10px;
     word-wrap:break-word;
@@ -87,4 +92,20 @@ h1 {
 .formCard {
     min-width: 443px;
     max-width: 500px;
+}
+
+.viewAddressWrapper {
+    margin-top: 10px;
+}
+.logOutWrapper {
+    margin-top: 20px;
+}
+
+#trackLink {
+    color: blue;
+}
+
+#trackLink:hover {
+    text-decoration: underline;
+    color: red;
 }

@@ -23,9 +23,6 @@ function App() {
     <Router>
       <Nav />
       <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
         <Route path="/sale">
           <Sale />
         </Route>
@@ -55,6 +52,9 @@ function App() {
         </Route>
         <Route path="/account">
           <Account />
+        </Route>
+        <Route exact path="/">
+          <Home />
         </Route>
       </Switch>
       <Footer />
