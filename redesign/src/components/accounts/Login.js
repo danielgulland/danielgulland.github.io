@@ -39,7 +39,7 @@ const Login = () => {
                       <Form.Control type="password" placeholder="password"></Form.Control>
                     </Form.Group>
                   </Form>
-                  <Card.Text>Forgot your password? <a href="/forgot">Reset Here</a></Card.Text>
+                  <Card.Text>Forgot your password? <a href="https://www.shirtpunch.com/account/login?return_url=%2Faccount">Reset Here</a></Card.Text>
                 </Card.Body>
                 <Button href="/account">
                   Login
