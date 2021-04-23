@@ -88,7 +88,7 @@ export default class CollectionMenu extends Component {
               <DropdownMenu_Horror></DropdownMenu_Horror>
         </MenuArea>
 
-        <Segment padded raised>
+        <Segment padded raised style={{marginLeft: '50px', marginRight:'150px'}}>
             <Heading> 
               <Image src={logo} avatar size='tiny' />
               &nbsp;&nbsp;&nbsp;&nbsp; Cult 90s Classics
